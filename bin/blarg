@@ -1,0 +1,210 @@
+#!/usr/bin/env python3
+import argparse
+import hashlib
+import json
+import os
+import subprocess
+import sys
+
+from dataclasses import dataclass
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from typing import List, Optional
+
+
+VERSION = "0.0.1"
+
+
+STDLIB = """
+
+# Generated code
+panic() {
+    echo "FATAL: ${*}" >&2
+    exit 1
+}
+
+log_verbose() {
+    if [ "${BLARG_VERBOSE+x}" == "x" ]; then
+        echo "${*}"
+    fi
+}
+
+depends_on() {
+    local this_dir
+    this_dir="$(dirname "${BLARG_TARGET_PATH}")"
+    for script_basename in "${@}"; do
+        "${this_dir}/${script_basename}.bash"
+    done
+}
+
+"""
+
+
+BASE = """
+
+# Generated code
+reached_if() {
+    false
+}
+
+apply() {
+    true
+}
+
+"""
+
+
+EXECUTOR = """
+
+# Generated code
+if ! reached_if &> /dev/null; then
+    log_verbose "${BLARG_TARGET_NAME} [running...]"
+    apply
+    log_verbose "${BLARG_TARGET_NAME} [done]"
+fi
+"""
+
+
+@dataclass
+class CliArgs:
+    script_path: Optional[Path]
+    dump_src: bool
+    version: bool
+    verbose: bool
+
+
+class CliParser(argparse.ArgumentParser):
+    def __init__(self):
+        super().__init__("blarg", description="Execute bash target files")
+        self.add_argument(
+            "script_path", help="Script file to execute", default=None, nargs="?"
+        )
+        self.add_argument(
+            "--dump-src",
+            "-d",
+            help="Don't run the script; just dump the full source that would be executed by Bash",
+            action="store_true",
+        )
+        self.add_argument(
+            "--version", help="Display version number", action="store_true"
+        )
+        self.add_argument(
+            "--verbose", "-v", help="Display verbose output", action="store_true"
+        )
+
+
+def parse_args() -> CliArgs:
+    args = CliParser().parse_args()
+    return CliArgs(
+        Path(args.script_path) if args.script_path else None,
+        args.dump_src,
+        args.version,
+        args.verbose,
+    )
+
+
+def list_dir_if_exists(dir_path: Path) -> List[Path]:
+    try:
+        return sorted([p.resolve() for p in dir_path.iterdir() if not p.is_dir()])
+    except (FileNotFoundError, NotADirectoryError):
+        return []
+
+
+def generate_script(script_path: Path) -> str:
+    script = f"# {script_path}\n" + script_path.read_text("utf8")
+    script_parts = [STDLIB]
+
+    lib_d_dir = Path("lib.d")  # lib.d dir in current working directory
+    for file in list_dir_if_exists(lib_d_dir):
+        if not str(file).endswith(".sh") and not str(file).endswith(".bash"):
+            continue
+        script_parts.append(f"# {file}\n{file.read_text('utf8')}\n")
+
+    return "".join(script_parts + [BASE, script, EXECUTOR])
+
+
+def main() -> int:
+    args = parse_args()
+
+    if args.version:
+        print(f"blarg version {VERSION}")
+        return 0
+
+    if not args.script_path:
+        CliParser().print_help()
+        return 0
+
+    script_path = args.script_path
+    if script_path.is_dir():
+        script_path = script_path / "main.bash"
+
+    if args.dump_src:
+        print(generate_script(script_path))
+        return 0
+
+    env = os.environ
+    resolved_path = script_path.resolve()
+    env["BLARG_TARGET_PATH"] = str(resolved_path)
+
+    is_verbose = args.verbose or "BLARG_VERBOSE" in env
+    if is_verbose:
+        env["BLARG_VERBOSE"] = str(is_verbose)
+
+    if not env.get("BLARG_CWD"):
+        env["BLARG_CWD"] = os.getcwd()
+
+    target_name = str(resolved_path.with_suffix(""))
+    _, _, target_name = target_name.partition(f"{os.getcwd()}/")
+    env["BLARG_TARGET_NAME"] = target_name
+
+    running_targets_unparsed = env.get("BLARG_RUNNING_TARGETS")
+    if running_targets_unparsed:
+        running_targets = json.loads(running_targets_unparsed)
+    else:
+        running_targets = []
+
+    if str(resolved_path) in running_targets:
+        stack_seperator = "\n-> "
+        print(
+            f"FATAL: Circular dependency detected at `{resolved_path}`:\n"
+            f"{stack_seperator.join(running_targets)}"
+            f"{stack_seperator}{resolved_path}",
+            file=sys.stderr,
+        )
+        return 1
+
+    running_targets.append(str(resolved_path))
+    env["BLARG_RUNNING_TARGETS"] = json.dumps(running_targets)
+
+    if temp_dir_path := env.get("BLARG_RUN_DIR"):
+        temp_dir = None  # a different blarg process is managing this directory
+    else:
+        temp_dir = TemporaryDirectory()
+        temp_dir_path = temp_dir.name
+        env["BLARG_RUN_DIR"] = temp_dir_path
+        os.mkdir(f"{temp_dir_path}/.target-markers")
+
+    script_path_digest = hashlib.sha1(str(resolved_path).encode("utf8")).hexdigest()
+    marker_file = Path(temp_dir_path) / ".target-markers" / script_path_digest
+    if marker_file.exists():
+        return 0  # this target has already been run
+    else:
+        marker_file.touch()
+
+    try:
+        result = subprocess.run(
+            ["bash", "-Eeuo", "pipefail"],
+            input=generate_script(script_path),
+            encoding="utf8",
+            env=env,
+        )
+    finally:
+        if temp_dir is not None:
+            temp_dir.cleanup()
+
+    return result.returncode
+
+
+if __name__ == "__main__":
+    exit_code = main()
+    quit(exit_code)

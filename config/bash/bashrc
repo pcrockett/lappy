@@ -1,0 +1,3 @@
+# shellcheck shell=bash
+
+PATH="/home/${USER}/.local/bin:${PATH}"
