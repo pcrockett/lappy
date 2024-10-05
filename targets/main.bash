@@ -11,6 +11,7 @@ targets=(
     btop-installed
     firefox-installed
     direnv/main
+    ssh/main
 )
 
 depends_on "${targets[@]}"
