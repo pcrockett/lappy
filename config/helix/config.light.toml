@@ -1,0 +1,22 @@
+theme = "catppuccin_latte"
+
+[editor]
+cursorline = true
+rulers = [100]
+text-width = 100
+bufferline = "multiple"
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "all"
+nnbsp = "all"
+newline = "none"
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+git-global = false
+
+[editor.cursor-shape]
+insert = "bar"
