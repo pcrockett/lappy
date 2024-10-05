@@ -9,6 +9,8 @@ targets=(
     man-installed
     login-shell-configured
     btop-installed
+    firefox-installed
+    direnv/main
 )
 
 depends_on "${targets[@]}"
