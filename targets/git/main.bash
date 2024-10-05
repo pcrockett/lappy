@@ -2,6 +2,7 @@
 
 targets=(
     git-installed
+    git-configured
 )
 
 depends_on "${targets[@]}"

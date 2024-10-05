@@ -1,0 +1,14 @@
+*.sublime-project
+*.sublime-workspace
+.devbox/
+.direnv/
+.dmypy.json
+.envrc
+.sdkmanrc
+.tags
+.tags_sorted_by_file
+/.phil/
+/.zed/
+devbox.d/
+devbox.json
+devbox.lock
