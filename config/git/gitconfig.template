@@ -3,11 +3,6 @@
 [user]
 	name = ${PUBLIC_NAME}
 	email = ${PUBLIC_EMAIL}
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 [alias]
 	st = status
 	graph = log --graph --format=format:'%C(dim white)⟵  %C(reset)%C(bold blue)%h%C(reset)%C(auto)%d%C(reset) %C(bold cyan)%an%C(reset) %C(bold magenta)%cs\n%C(bold blue)   ⎩ %C(reset)%s'
