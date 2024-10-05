@@ -7,4 +7,7 @@ reached_if() {
 apply() {
     rm -r ~/.config/fish
     ln --symbolic "${BLARG_CWD}/config/fish" ~/.config/fish
+
+    echo "Success! Restart your shell before continuing."
+    exit 1
 }

@@ -1,3 +1,5 @@
 # shellcheck shell=bash
 
-PATH="/home/${USER}/.local/bin:${PATH}"
+PATH="${HOME}/.local/bin:${PATH}"
+export RUSH_CONFIG="${HOME}/.config/rush/config"
+export RUSH_ROOT="${HOME}/.local/share/rush"

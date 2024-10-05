@@ -13,6 +13,7 @@ targets=(
     firefox-installed
     direnv/main
     ssh/main
+    rush/main
 )
 
 depends_on "${targets[@]}"
