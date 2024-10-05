@@ -4,6 +4,7 @@ targets=(
     helix/main
     bash-configured
     git/main
+    github-cli-installed
     fish/main
     yazi-installed
     man-installed
