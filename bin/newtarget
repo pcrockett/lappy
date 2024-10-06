@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+# usage: newtarget NAME TEMPLATE
+#
+# example: newtarget firefox-installed package
+
+NAMING_CONVENTION='[a-z0-9\-]+'
+
+init() {
+    TARGET_NAME="${1:?no target name specified}"
+    TEMPLATE_NAME="${2:?no template name specified}"
+}
+
+panic() {
+    echo "${*}" >&2
+    exit 1
+}
+
+check_name() {
+    # enforce naming convention
+    grep --quiet --perl-regexp --line-regexp "${NAMING_CONVENTION}" <<EOF
+${1}
+EOF
+}
+
+main() {
+    init "${@}"
+    if ! check_name "${TARGET_NAME}"; then
+        panic "${TARGET_NAME} does not match the naming convention (${NAMING_CONVENTION})."
+    fi
+
+    TARGET_PATH="targets/${TARGET_NAME}.bash"
+    if [ ! -e "${TARGET_PATH}" ]; then
+        mkdir --parent "$(dirname "${TARGET_PATH}")"
+        cp "templates/${TEMPLATE_NAME}.bash" "${TARGET_PATH}"
+    fi
+
+    "${EDITOR}" "${TARGET_PATH}"
+}
+
+main "${@}"

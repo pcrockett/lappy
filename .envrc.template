@@ -3,3 +3,5 @@ strict_env
 
 export PUBLIC_EMAIL="me@example.com"
 export PUBLIC_NAME="Phil Crockett"
+
+PATH_add bin
