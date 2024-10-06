@@ -14,6 +14,7 @@ targets=(
     direnv/main
     ssh/main
     rush/main
+    nextcloud-installed
 )
 
 depends_on "${targets[@]}"
