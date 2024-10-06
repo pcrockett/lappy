@@ -1,9 +1,10 @@
 #!/usr/bin/env blarg
 
 targets=(
-    cli/main
+    core/main
     helix/main
     git/main
+    cli/main
     github-cli-installed
     firefox-installed
     ssh/main
