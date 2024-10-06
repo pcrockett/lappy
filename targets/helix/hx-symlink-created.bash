@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on helix-installed ../local-bin-dir-created ../bash-configured
+depends_on helix-installed ../local-bin-dir-created ../cli/main
 
 reached_if() {
     command -v hx

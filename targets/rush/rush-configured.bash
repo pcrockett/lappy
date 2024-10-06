@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on ../fish/main  # we need our env vars
+depends_on ../cli/main  # we need our env vars
 
 reached_if() {
     test -d "${RUSH_ROOT}" && test -f "${RUSH_CONFIG}"

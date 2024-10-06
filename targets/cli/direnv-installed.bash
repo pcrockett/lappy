@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 reached_if() {
-    command -v direnv
+    package_is_installed direnv
 }
 
 apply() {

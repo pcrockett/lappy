@@ -5,7 +5,7 @@ set -Eeuo pipefail
 #
 # example: newtarget firefox-installed package
 
-NAMING_CONVENTION='[a-z0-9\-]+'
+NAMING_CONVENTION='[a-z0-9\-/]+'
 
 init() {
     TARGET_NAME="${1:?no target name specified}"
