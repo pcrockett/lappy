@@ -6,7 +6,7 @@ PACKAGE_NAME="TODO"
 panic "not implemented yet"
 
 reached_if() {
-    # command -v some-bin
+    false # command -v some-bin
 }
 
 apply() {

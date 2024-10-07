@@ -10,6 +10,7 @@ targets=(
     ssh/main
     rush/main
     nextcloud-installed
+    bash-dev/main
 )
 
 depends_on "${targets[@]}"
