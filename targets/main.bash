@@ -11,6 +11,7 @@ targets=(
     rush/main
     nextcloud-installed
     bash-dev/main
+    bluetooth/main
 )
 
 depends_on "${targets[@]}"
