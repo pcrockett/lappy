@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on rush/main fuse2-installed
+depends_on rush/main fuse2-installed keepassxc/main
 
 PACKAGE_NAME="nextcloud-desktop"
 
