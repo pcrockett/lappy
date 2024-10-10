@@ -4,7 +4,7 @@ targets=(
     bash-configured
     fish/main
     login-shell-configured
-    man-installed
+    man-db-enabled
     direnv-installed
     btop-installed
     yazi-installed
