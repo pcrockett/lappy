@@ -9,5 +9,6 @@ reached_if() {
 }
 
 apply() {
+    depends_on rush/rush-repo-pulled
     rush get "${PACKAGE_NAME}"
 }
