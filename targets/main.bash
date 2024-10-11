@@ -13,10 +13,10 @@ targets=(
     bash-dev/main
     bluetooth-killed
     python/main
-    qtile-configured
-    docker/main
     rofi/main
     hack-nerd-font-installed
+    qtile-configured
+    docker/main
 )
 
 depends_on "${targets[@]}"

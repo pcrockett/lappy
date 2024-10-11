@@ -1,5 +1,7 @@
 #!/usr/bin/env blarg
 
+depends_on rofi/main  # qtile launches rofi in config
+
 REPO_PATH="${BLARG_CWD}/config/qtile/config.py"
 SYSTEM_PATH=~/.config/qtile/config.py
 
