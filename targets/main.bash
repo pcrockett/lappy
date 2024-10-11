@@ -14,6 +14,7 @@ targets=(
     bluetooth-killed
     python/main
     qtile-configured
+    docker/main
 )
 
 depends_on "${targets[@]}"
