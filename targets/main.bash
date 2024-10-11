@@ -13,6 +13,7 @@ targets=(
     bash-dev/main
     bluetooth-killed
     python/main
+    qtile-configured
 )
 
 depends_on "${targets[@]}"
