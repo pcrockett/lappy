@@ -12,6 +12,7 @@ targets=(
     nextcloud-installed
     bash-dev/main
     bluetooth-killed
+    python/main
 )
 
 depends_on "${targets[@]}"
