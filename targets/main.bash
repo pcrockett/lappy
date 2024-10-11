@@ -15,6 +15,8 @@ targets=(
     python/main
     qtile-configured
     docker/main
+    rofi/main
+    hack-nerd-font-installed
 )
 
 depends_on "${targets[@]}"

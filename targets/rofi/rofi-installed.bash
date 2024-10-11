@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 PACKAGES=(
-    TODO
+    rofi
 )
 
 reached_if() {

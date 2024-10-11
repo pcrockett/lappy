@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 PACKAGES=(
-    TODO
+    ttf-hack-nerd
 )
 
 reached_if() {
