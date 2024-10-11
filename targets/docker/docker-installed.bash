@@ -3,6 +3,7 @@
 PACKAGES=(
     docker
     docker-compose
+    docker-buildx
 )
 
 reached_if() {
