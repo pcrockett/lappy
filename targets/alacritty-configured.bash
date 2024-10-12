@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on hack-nerd-font-installed
+depends_on fonts/main
 
 REPO_PATH="${BLARG_CWD}/config/alacritty"
 SYSTEM_PATH=~/.config/alacritty

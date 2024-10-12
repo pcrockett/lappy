@@ -14,11 +14,10 @@ targets=(
     bluetooth-killed
     python/main
     rofi/main
-    hack-nerd-font-installed
     qtile-configured
     docker/main
     alacritty-configured
-    gnu-free-fonts-removed
+    fonts/main
 )
 
 depends_on "${targets[@]}"

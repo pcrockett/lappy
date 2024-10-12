@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on ../hack-nerd-font-installed
+depends_on ../fonts/main
 
 THEME_DIR="${HOME}/.local/share/rofi/themes"
 THEME_NAME="catppuccin-mocha"
