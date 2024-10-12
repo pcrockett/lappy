@@ -1,15 +1,15 @@
 [font.bold]
-family = "Hack Nerd Font"
+family = "terminal-font"
 style = "Bold"
 
 [font.bold_italic]
-family  = "Hack Nerd Font"
+family  = "terminal-font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Hack Nerd Font"
+family = "terminal-font"
 style = "Italic"
 
 [font.normal]
-family = "Hack Nerd Font"
+family = "terminal-font"
 style = "Regular"
