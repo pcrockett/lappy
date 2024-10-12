@@ -10,4 +10,5 @@ reached_if() {
 
 apply() {
     install_package "${PACKAGES[@]}"
+    fc-cache --force
 }
