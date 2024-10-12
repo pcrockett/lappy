@@ -17,6 +17,8 @@ targets=(
     hack-nerd-font-installed
     qtile-configured
     docker/main
+    alacritty-configured
+    gnu-free-fonts-removed
 )
 
 depends_on "${targets[@]}"
