@@ -10,6 +10,7 @@ targets=(
     yazi-installed
     ripgrep-installed
     bat-installed
+    fx-installed
 )
 
 depends_on "${targets[@]}"
