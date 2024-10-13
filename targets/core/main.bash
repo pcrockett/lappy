@@ -11,6 +11,7 @@ targets=(
     ripgrep-installed
     bat-installed
     fx-installed
+    gum-installed
 )
 
 depends_on "${targets[@]}"
