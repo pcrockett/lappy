@@ -78,6 +78,7 @@ keys = [
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod], "escape", lazy.spawn("dm-tool lock"), desc="Lock the session"),
 ]
 
 # Add key bindings to switch VTs in Wayland.
