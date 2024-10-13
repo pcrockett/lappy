@@ -18,6 +18,7 @@ targets=(
     docker/main
     alacritty-configured
     fonts/main
+    tailscale/main
 )
 
 depends_on "${targets[@]}"
