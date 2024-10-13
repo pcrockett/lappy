@@ -9,8 +9,9 @@ reached_if() {
 apply() {
     sudo dd status=none of="/etc/systemd/system/${UNIT}" <<EOF
 [Unit]
-Description=Kill bluetooth on startup
+Description=Kill bluetooth
 Wants=bluetooth.target
+After=sleep.target
 
 [Service]
 Type=oneshot
