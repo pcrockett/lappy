@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 reached_if() {
-    command -v helix
+    package_is_installed helix
 }
 
 apply() {

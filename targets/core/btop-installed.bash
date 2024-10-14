@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 reached_if() {
-    command -v btop
+    package_is_installed btop
 }
 
 apply() {

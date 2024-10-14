@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 reached_if() {
-    command -v firefox
+    package_is_installed firefox
 }
 
 apply() {

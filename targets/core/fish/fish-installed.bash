@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 reached_if() {
-    command -v fish
+    package_is_installed fish
 }
 
 apply() {

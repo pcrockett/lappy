@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 reached_if() {
-    command -v man
+    package_is_installed man-db
 }
 
 apply() {

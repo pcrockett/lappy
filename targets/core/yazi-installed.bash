@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 reached_if() {
-    command -v yazi
+    package_is_installed yazi
 }
 
 apply() {
