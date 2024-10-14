@@ -2,26 +2,6 @@
 
 In the arch installer I installed the Desktop / Qtile profile.
 
-Good networking docs in Arch Wiki systemd-networkd page.
-
-```bash
-systemctl enable --now systemd-networkd
-systemctl enable --now systemd-resolved
-systemctl enable --now iwd
-```
-
-Created wlan.network in /etc/systemd/network
-
-Followed instructions in Arch wiki "iwd" page to connect via `iwd`:
-
-```bash
-iwctl station wlan0 scan
-iwctl station wlan0 get-networks
-iwctl station wlan0 connect "${SSID}"
-```
-
-Network bootstrapped!
-
 ```bash
 mkdir ~/.config/beekrpad/bin
 cd ~/.config/beekrpad/bin
