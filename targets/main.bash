@@ -11,7 +11,7 @@ targets=(
     rush/main
     nextcloud-installed
     bash-dev/main
-    bluetooth-killed
+    sleep-configured
     python/main
     rofi/main
     qtile-configured
