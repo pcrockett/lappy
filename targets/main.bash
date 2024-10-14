@@ -12,6 +12,7 @@ targets=(
     nextcloud-installed
     bash-dev/main
     sleep-configured
+    bluetooth-disabled-on-startup
     python/main
     rofi/main
     qtile-configured
