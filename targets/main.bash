@@ -20,6 +20,7 @@ targets=(
     alacritty-configured
     fonts/main
     tailscale/main
+    asdf/main
 )
 
 depends_on "${targets[@]}"

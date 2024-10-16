@@ -3,3 +3,9 @@
 PATH="${HOME}/.local/bin:${PATH}"
 export RUSH_CONFIG="${HOME}/.config/rush/config"
 export RUSH_ROOT="${HOME}/.local/share/rush"
+export ASDF_DIR="${HOME}/.local/share/asdf"
+
+if [ -d "${ASDF_DIR}" ]; then
+    # shellcheck disable=SC1091
+    . "${ASDF_DIR}/asdf.sh"
+fi
