@@ -2,6 +2,7 @@
 
 * [ ] fix blarg status output when applying targets that have no `apply` function
   * _\[running]... happens only after all the real work has been done._
+* [ ] firewall
 * [ ] software update script that handles (at least):
   * [ ] pacman
   * [ ] rush
