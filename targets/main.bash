@@ -21,6 +21,7 @@ targets=(
     fonts/main
     tailscale/main
     asdf/main
+    direnv-configured
 )
 
 depends_on "${targets[@]}"
