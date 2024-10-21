@@ -23,6 +23,7 @@ targets=(
     asdf/main
     direnv-configured
     wikiman-installed
+    firewall/main
 )
 
 depends_on "${targets[@]}"

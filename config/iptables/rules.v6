@@ -1,0 +1,23 @@
+# Copied from Arch's /etc/iptables/simple_firewall.rules
+# ... and modified a bit
+
+*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+-A INPUT -p icmp -j ACCEPT
+-A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -m conntrack --ctstate INVALID -j DROP
+-A INPUT -i lo -j ACCEPT
+
+# DHCP (well... the IPv6 equivalent)
+-A INPUT -d fe80::/64 -p udp -m udp --dport 546 -m conntrack --ctstate NEW -j ACCEPT
+
+# syncthing
+# -A INPUT -p tcp -i tailscale0 --dport 22000 -j ACCEPT
+
+-A INPUT -p tcp -j REJECT --reject-with tcp-reset
+-A INPUT -p udp -j REJECT --reject-with icmp6-port-unreachable
+-A INPUT -j REJECT
+
+COMMIT
