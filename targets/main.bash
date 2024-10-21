@@ -22,6 +22,7 @@ targets=(
     tailscale/main
     asdf/main
     direnv-configured
+    wikiman-installed
 )
 
 depends_on "${targets[@]}"
