@@ -1,6 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
+    network/main
     core/main
     helix/main
     git/main
