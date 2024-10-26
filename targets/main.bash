@@ -26,6 +26,7 @@ targets=(
     wikiman-installed
     firewall/main
     software-update-installed
+    tagref-installed
 )
 
 depends_on "${targets[@]}"

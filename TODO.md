@@ -3,7 +3,7 @@
 * [ ] flatpak
   * [ ] signal
 * [ ] try out Aerc for email
-* [ ] tagref
+* [x] tagref
 * [x] software update script that handles (at least):
   * [x] pacman
   * [x] rush
