@@ -25,6 +25,7 @@ targets=(
     direnv-configured
     wikiman-installed
     firewall/main
+    software-update-installed
 )
 
 depends_on "${targets[@]}"

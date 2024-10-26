@@ -2,12 +2,13 @@
 
 * [ ] flatpak
   * [ ] signal
-* [ ] software update script that handles (at least):
-  * [ ] pacman
-  * [ ] rush
-  * [ ] _eventually_ flatpak
 * [ ] try out Aerc for email
 * [ ] tagref
+* [x] software update script that handles (at least):
+  * [x] pacman
+  * [x] rush
+  * [x] pipx
+  * [x] _eventually_ flatpak
 * [x] firewall
 * [x] fix blarg status output when applying targets that have no `apply` function
   * _\[running]... happens only after all the real work has been done._
