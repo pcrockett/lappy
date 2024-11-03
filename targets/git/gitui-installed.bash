@@ -9,6 +9,6 @@ reached_if() {
 }
 
 apply() {
-    apply_target network/main
+    apply_target ../network/main
     install_package "${PACKAGES[@]}"
 }
