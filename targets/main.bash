@@ -25,7 +25,7 @@ targets=(
     direnv-configured
     wikiman-installed
     firewall/main
-    software-update-installed
+    updater-installed
     tagref-installed
 )
 
