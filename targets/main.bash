@@ -27,6 +27,7 @@ targets=(
     firewall/main
     updater-installed
     tagref-installed
+    mtr-installed
 )
 
 depends_on "${targets[@]}"
