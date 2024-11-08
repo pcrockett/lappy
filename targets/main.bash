@@ -6,7 +6,6 @@ targets=(
     helix/main
     git/main
     cli/main
-    github-cli-installed
     firefox-installed
     ssh/main
     rush/main
@@ -28,6 +27,7 @@ targets=(
     updater-installed
     tagref-installed
     mtr-installed
+    github/main
 )
 
 depends_on "${targets[@]}"
