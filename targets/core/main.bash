@@ -12,6 +12,7 @@ targets=(
     bat-installed
     fx-installed
     gum-installed
+    base-devel-installed
 )
 
 depends_on "${targets[@]}"
