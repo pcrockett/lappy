@@ -8,6 +8,8 @@ targets=(
     shellcheck-plugin-installed
     cue-plugin-installed
     shfmt-plugin-installed
+    nodejs-plugin-installed
+    pnpm-plugin-installed
 )
 
 depends_on "${targets[@]}"
