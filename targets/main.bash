@@ -28,6 +28,7 @@ targets=(
     tagref-installed
     mtr-installed
     github/main
+    signal-installed
 )
 
 depends_on "${targets[@]}"
