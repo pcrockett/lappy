@@ -79,6 +79,9 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "escape", lazy.spawn("dm-tool lock"), desc="Lock the session"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl_volume up"), desc="Increase audio volume"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pactl_volume down"), desc="Decrease audio volume"),
+    Key([], "XF86AudioMute", lazy.spawn("pactl_volume set 0"), desc="Mute audio volume"),
 ]
 
 # Add key bindings to switch VTs in Wayland.
