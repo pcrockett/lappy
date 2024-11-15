@@ -4,6 +4,7 @@ default:
 
 lint:
 	@shellcheck **/*.bash **/*.sh config/**/*.sh
+	@./bin/custom_lint.sh
 .PHONY: lint
 
 update-blarg:
