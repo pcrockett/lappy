@@ -1,7 +1,5 @@
 # to-do list
 
-* [ ] flatpak
-  * [ ] signal
 * [ ] try out Aerc for email
 * [x] tagref
 * [x] software update script that handles (at least):
@@ -14,3 +12,5 @@
   * _\[running]... happens only after all the real work has been done._
 * [x] lock screen (see [Session lock](https://wiki.archlinux.org/title/Session_lock))
 * [x] get pre-automation notes in README into actual targets (networking etc)
+* [x] flatpak
+* [x] signal
