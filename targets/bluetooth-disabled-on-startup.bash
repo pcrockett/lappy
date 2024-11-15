@@ -2,7 +2,7 @@
 
 UNIT="kill-bluetooth.service"
 
-reached_if() {
+satisfied_if() {
     test "$(systemctl is-enabled "${UNIT}")" == "enabled"
 }
 

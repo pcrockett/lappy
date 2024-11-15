@@ -4,7 +4,7 @@ depends_on rush/main
 
 PACKAGE_NAME="tagref"
 
-reached_if() {
+satisfied_if() {
     command -v tagref
 }
 

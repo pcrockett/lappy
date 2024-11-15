@@ -2,7 +2,7 @@
 
 DIR="/etc/systemd/resolved.conf.d"
 
-reached_if() {
+satisfied_if() {
     test -d "${DIR}"
 }
 

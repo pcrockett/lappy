@@ -4,7 +4,7 @@ depends_on fish/main
 
 FISH_PATH="$(command -v fish)"
 
-reached_if() {
+satisfied_if() {
     test "${SHELL}" == "${FISH_PATH}"
 }
 

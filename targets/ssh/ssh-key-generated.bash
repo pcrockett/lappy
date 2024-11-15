@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-reached_if() {
+satisfied_if() {
     test -f ~/.ssh/id_ed25519
 }
 

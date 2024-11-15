@@ -5,7 +5,7 @@ depends_on rush/main
 PACKAGE_NAME="TODO"
 panic "not implemented yet"
 
-reached_if() {
+satisfied_if() {
     false # command -v some-bin
 }
 

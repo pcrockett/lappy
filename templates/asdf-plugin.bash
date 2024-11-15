@@ -6,7 +6,7 @@ PLUGIN_NAME="TODO"
 PLUGIN_REPO="git@github.com:pcrockett/asdf-${PLUGIN_NAME}"
 # PLUGIN_REPO="https://github.com/asdf-community/asdf-${PLUGIN_NAME}.git"
 
-reached_if() {
+satisfied_if() {
     asdf plugin list | grep --fixed-strings --line-regexp "${PLUGIN_NAME}"
 }
 

@@ -3,7 +3,7 @@
 REPO_PATH="${BLARG_CWD}/config/asdf/tool-versions"
 SYSTEM_PATH=~/.tool-versions
 
-reached_if() {
+satisfied_if() {
     test_symlink "${REPO_PATH}" "${SYSTEM_PATH}"
 }
 

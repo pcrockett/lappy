@@ -5,7 +5,7 @@ depends_on rofi/main pactl-volume-installed  # qtile launches rofi and pactl_vol
 REPO_PATH="${BLARG_CWD}/config/qtile/config.py"
 SYSTEM_PATH=~/.config/qtile/config.py
 
-reached_if() {
+satisfied_if() {
     test_symlink "${REPO_PATH}" "${SYSTEM_PATH}"
 }
 

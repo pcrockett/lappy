@@ -4,7 +4,7 @@ depends_on ../rush/main ../core/main
 
 PACKAGE_NAME="pubip"
 
-reached_if() {
+satisfied_if() {
     command -v "${PACKAGE_NAME}"
 }
 

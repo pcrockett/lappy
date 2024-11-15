@@ -4,7 +4,7 @@ depends_on ../rush/main
 
 PACKAGE_NAME="git-main"
 
-reached_if() {
+satisfied_if() {
     command -v git-main
 }
 

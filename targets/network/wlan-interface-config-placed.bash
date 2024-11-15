@@ -3,7 +3,7 @@
 SOURCE_CONFIG_FILE="${BLARG_CWD}/config/network/50_wlan.network"
 DEST_CONFIG_FILE="/etc/systemd/network/50_wlan.network"
 
-reached_if() {
+satisfied_if() {
     files_are_same "${SOURCE_CONFIG_FILE}" "${DEST_CONFIG_FILE}"
 }
 

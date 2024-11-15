@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-reached_if() {
+satisfied_if() {
     test -d ~/.local/bin
 }
 

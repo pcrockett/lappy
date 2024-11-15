@@ -2,7 +2,7 @@
 
 depends_on ../core/main  # we need our env vars
 
-reached_if() {
+satisfied_if() {
     test -d "${RUSH_ROOT}" && test -f "${RUSH_CONFIG}"
 }
 

@@ -2,7 +2,7 @@
 
 depends_on tailscale-service-running
 
-reached_if() {
+satisfied_if() {
     tailscale status
 }
 

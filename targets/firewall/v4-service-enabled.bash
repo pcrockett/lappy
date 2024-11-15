@@ -4,7 +4,7 @@ UNIT="iptables.service"
 
 depends_on v4-rules-placed
 
-reached_if() {
+satisfied_if() {
     test "$(systemctl is-enabled "${UNIT}")" == "enabled"
 }
 

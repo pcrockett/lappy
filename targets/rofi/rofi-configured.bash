@@ -5,7 +5,7 @@ SYSTEM_PATH=~/.config/rofi
 
 depends_on rofi-theme-placed
 
-reached_if() {
+satisfied_if() {
     test_symlink "${REPO_PATH}" "${SYSTEM_PATH}"
 }
 

@@ -4,7 +4,7 @@ PACKAGES=(
     gitui
 )
 
-reached_if() {
+satisfied_if() {
     package_is_installed "${PACKAGES[@]}"
 }
 

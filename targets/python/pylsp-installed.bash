@@ -2,7 +2,7 @@
 
 depends_on pipx-installed
 
-reached_if() {
+satisfied_if() {
     command -v pylsp
 }
 

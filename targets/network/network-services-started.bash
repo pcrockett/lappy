@@ -8,7 +8,7 @@ SERVICES=(
     iwd
 )
 
-reached_if() {
+satisfied_if() {
     for service in "${SERVICES[@]}"
     do
         test "$(systemctl is-enabled "${service}.service")" == "enabled" || return 1

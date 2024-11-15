@@ -4,7 +4,7 @@ UNIT="TODO.service"
 
 depends_on TODO-installed
 
-reached_if() {
+satisfied_if() {
     test "$(systemctl is-enabled "${UNIT}")" == "enabled" \
         && test "$(systemctl is-active "${UNIT}")" == "active"
 }

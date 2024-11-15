@@ -4,7 +4,7 @@ UNIT="docker.service"
 
 depends_on docker-installed
 
-reached_if() {
+satisfied_if() {
     test "$(systemctl is-enabled "${UNIT}")" == "enabled" \
         && test "$(systemctl is-active "${UNIT}")" == "active"
 }

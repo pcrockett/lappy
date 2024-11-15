@@ -2,7 +2,7 @@
 
 depends_on man-installed
 
-reached_if() {
+satisfied_if() {
     test "$(systemctl is-enabled man-db.timer)" == "enabled"
 }
 

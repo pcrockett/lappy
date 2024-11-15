@@ -4,7 +4,7 @@ depends_on rush/main
 
 PACKAGE_NAME="pactl_volume"
 
-reached_if() {
+satisfied_if() {
     command -v pactl_volume
 }
 

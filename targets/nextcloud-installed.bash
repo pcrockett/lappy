@@ -4,7 +4,7 @@ depends_on rush/main fuse2-installed
 
 PACKAGE_NAME="nextcloud-desktop"
 
-reached_if() {
+satisfied_if() {
     command -v Nextcloud.AppImage
 }
 

@@ -6,7 +6,7 @@ THEME_DIR="${HOME}/.local/share/rofi/themes"
 THEME_NAME="catppuccin-mocha"
 THEME_PATH="${THEME_DIR}/${THEME_NAME}.rasi"
 
-reached_if() {
+satisfied_if() {
     test -f "${THEME_PATH}"
 }
 

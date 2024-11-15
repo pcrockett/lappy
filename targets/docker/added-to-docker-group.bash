@@ -2,7 +2,7 @@
 
 depends_on docker-installed
 
-reached_if() {
+satisfied_if() {
     groups | grep --word-regexp "docker"
 }
 

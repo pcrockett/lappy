@@ -2,7 +2,7 @@
 
 depends_on rush-configured rush-installed
 
-reached_if() {
+satisfied_if() {
     test -d "${RUSH_ROOT}/pcrockett"
 }
 

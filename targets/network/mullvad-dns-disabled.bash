@@ -2,7 +2,7 @@
 
 DNS_CONF="/etc/systemd/resolved.conf.d/99_mullvad.conf"
 
-reached_if() {
+satisfied_if() {
     ! test -f "${DNS_CONF}"
 }
 

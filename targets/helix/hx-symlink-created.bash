@@ -2,7 +2,7 @@
 
 depends_on helix-installed ../local-bin-dir-created ../core/main
 
-reached_if() {
+satisfied_if() {
     command -v hx
 }
 

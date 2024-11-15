@@ -3,7 +3,7 @@
 LOCAL_CONFIG="${BLARG_CWD}/config/helix"
 HELIX_CONFIG=~/.config/helix
 
-reached_if() {
+satisfied_if() {
     test_symlink "${LOCAL_CONFIG}" "${HELIX_CONFIG}"
 }
 

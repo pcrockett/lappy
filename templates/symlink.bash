@@ -3,7 +3,7 @@
 REPO_PATH="${BLARG_CWD}/config/TODO"
 SYSTEM_PATH=~/.config/TODO
 
-reached_if() {
+satisfied_if() {
     test_symlink "${REPO_PATH}" "${SYSTEM_PATH}"
 }
 

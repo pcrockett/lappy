@@ -2,7 +2,7 @@
 
 LINE_TO_ADD="source '${BLARG_CWD}/config/bash/bashrc'"
 
-reached_if() {
+satisfied_if() {
     grep --fixed-strings "${LINE_TO_ADD}" ~/.bashrc
 }
 

@@ -3,7 +3,7 @@
 SOURCE_FILE="${BLARG_CWD}/config/iptables/rules.v4"
 DEST_FILE="/etc/iptables/iptables.rules"
 
-reached_if() {
+satisfied_if() {
     files_are_same "${SOURCE_FILE}" "${DEST_FILE}"
 }
 

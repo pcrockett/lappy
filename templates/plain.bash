@@ -2,7 +2,7 @@
 
 # depends_on something
 
-reached_if() {
+satisfied_if() {
     false
 }
 

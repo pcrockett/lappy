@@ -2,7 +2,7 @@
 
 LOCAL_CONFIG="${BLARG_CWD}/config/git"
 
-reached_if() {
+satisfied_if() {
     test -f "${LOCAL_CONFIG}/.gitconfig" \
         && files_are_same "${LOCAL_CONFIG}/.gitconfig" "${HOME}/.gitconfig" \
         && test_symlink "${LOCAL_CONFIG}/gitignore_global" "${HOME}/.gitignore"

@@ -2,7 +2,7 @@
 
 PACKAGE_NAME="nushell"
 
-reached_if() {
+satisfied_if() {
     package_is_installed "${PACKAGE_NAME}"
 }
 

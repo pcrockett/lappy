@@ -4,7 +4,7 @@ depends_on rush/main
 
 PACKAGE_NAME="updater"
 
-reached_if() {
+satisfied_if() {
     command -v software-update
 }
 

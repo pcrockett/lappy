@@ -2,7 +2,7 @@
 
 depends_on ../core/main ../git/main
 
-reached_if() {
+satisfied_if() {
     test -d "${ASDF_DIR}/.git"
 }
 

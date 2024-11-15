@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-reached_if() {
+satisfied_if() {
     test -f ~/.config/fish/.phil-fish-config
 }
 

@@ -2,7 +2,7 @@
 
 PACKAGE_NAME="shellcheck"
 
-reached_if() {
+satisfied_if() {
     package_is_installed "${PACKAGE_NAME}"
 }
 

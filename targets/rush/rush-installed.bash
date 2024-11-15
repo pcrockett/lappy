@@ -2,7 +2,7 @@
 
 depends_on rush-configured
 
-reached_if() {
+satisfied_if() {
     command -v rush
 }
 

@@ -4,7 +4,7 @@ depends_on ../rush/main ../core/fzf-installed ../core/man-db-enabled
 
 PACKAGE_NAME="fzman"
 
-reached_if() {
+satisfied_if() {
     command -v fzman
 }
 
