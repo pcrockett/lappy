@@ -29,6 +29,7 @@ targets=(
     mtr-installed
     github/main
     signal-installed
+    yubikey/main
 )
 
 depends_on "${targets[@]}"
