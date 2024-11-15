@@ -13,6 +13,7 @@ AWK="/usr/bin/awk"
 GREP="/usr/bin/grep"
 
 active_bt_device_count() {
+    # shellcheck disable=SC2016  # dollar signs in single-quotes are not expanded
     "${RFKILL}" --output TYPE,SOFT --noheadings \
         | "${AWK}" '$1 == "bluetooth" { print $2 }' \
         | "${GREP}" --fixed-strings --count unblocked

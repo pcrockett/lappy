@@ -3,7 +3,7 @@ default:
 .PHONY: default
 
 lint:
-	@shellcheck **/*.bash **/*.sh
+	@shellcheck **/*.bash **/*.sh config/**/*.sh
 .PHONY: lint
 
 update-blarg:
