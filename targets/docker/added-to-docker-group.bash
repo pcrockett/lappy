@@ -7,9 +7,9 @@ satisfied_if() {
 }
 
 apply() {
-    sudo usermod --append --groups docker "${USER}"
+    as_root usermod --append --groups docker "${USER}"
     if [ "$(systemctl is-active docker.service)" == "active" ]; then
-        sudo systemctl restart docker.service
+        as_root systemctl restart docker.service
     fi
     echo "User added to \`docker\` group. Log out and in for settings to take effect."
 }

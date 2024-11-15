@@ -9,5 +9,5 @@ satisfied_if() {
 }
 
 apply() {
-    sudo chsh --shell "${FISH_PATH}" "${USER}"
+    as_root chsh --shell "${FISH_PATH}" "${USER}"
 }

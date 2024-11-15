@@ -10,5 +10,5 @@ satisfied_if() {
 }
 
 apply() {
-    sudo systemctl enable --now "${UNIT}"
+    as_root systemctl enable --now "${UNIT}"
 }

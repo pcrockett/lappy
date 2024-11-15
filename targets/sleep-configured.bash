@@ -8,7 +8,7 @@ satisfied_if() {
 }
 
 apply() {
-    sudo install --no-target-directory \
+    as_root install --no-target-directory \
         "${SOURCE_FILE}" \
         "${SLEEP_HOOK_PATH}"
 }

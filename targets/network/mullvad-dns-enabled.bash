@@ -10,6 +10,6 @@ satisfied_if() {
 }
 
 apply() {
-    sudo cp "${SOURCE_CONF}" "${DEST_CONF}"
-    sudo systemctl restart systemd-resolved.service
+    as_root cp "${SOURCE_CONF}" "${DEST_CONF}"
+    as_root systemctl restart systemd-resolved.service
 }

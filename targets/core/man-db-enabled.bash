@@ -7,5 +7,5 @@ satisfied_if() {
 }
 
 apply() {
-    sudo systemctl enable --now man-db.timer
+    as_root systemctl enable --now man-db.timer
 }

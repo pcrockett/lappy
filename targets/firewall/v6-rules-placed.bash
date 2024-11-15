@@ -8,5 +8,5 @@ satisfied_if() {
 }
 
 apply() {
-    sudo cp "${SOURCE_FILE}" "${DEST_FILE}"
+    as_root cp "${SOURCE_FILE}" "${DEST_FILE}"
 }

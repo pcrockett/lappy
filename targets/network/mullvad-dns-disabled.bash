@@ -7,6 +7,6 @@ satisfied_if() {
 }
 
 apply() {
-    sudo rm "${DNS_CONF}"
-    sudo systemctl restart systemd-resolved.service
+    as_root rm "${DNS_CONF}"
+    as_root systemctl restart systemd-resolved.service
 }

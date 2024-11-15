@@ -8,6 +8,6 @@ satisfied_if() {
 
 apply() {
     if ! tailscale up; then
-        sudo tailscale up --operator "${USER}"
+        as_root tailscale up --operator "${USER}"
     fi
 }

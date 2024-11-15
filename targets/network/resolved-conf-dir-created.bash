@@ -7,5 +7,5 @@ satisfied_if() {
 }
 
 apply() {
-    sudo mkdir "${DIR}"
+    as_root mkdir "${DIR}"
 }

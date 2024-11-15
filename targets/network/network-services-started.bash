@@ -19,6 +19,6 @@ satisfied_if() {
 apply() {
     for service in "${SERVICES[@]}"
     do
-        sudo systemctl enable --now "${service}.service"
+        as_root systemctl enable --now "${service}.service"
     done
 }
