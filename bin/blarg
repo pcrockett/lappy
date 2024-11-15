@@ -12,7 +12,7 @@ from tempfile import TemporaryDirectory
 from typing import List, Optional
 
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 
 
 STDLIB = """
@@ -35,7 +35,7 @@ depends_on() {
     BLARG_TARGET_DEPENDENCIES+=("$@")
 }
 
-apply_target() {
+satisfy() {
     local this_dir full_target_path
     this_dir="$(dirname "${BLARG_TARGET_PATH}")" || panic "unable to get directory name"
     for script_basename in "$@"; do
@@ -50,10 +50,18 @@ apply_target() {
 BASE = """
 
 reached_if() {
+    # this command will normally be unreachable; the user's `reached_if` implementation will
+    # very often override this one.
+    #
+    # shellcheck disable=SC2317
     false
 }
 
 apply() {
+    # this command will normally be unreachable; the user's `apply` implementation will
+    # very often override this one.
+    #
+    # shellcheck disable=SC2317
     true
 }
 
@@ -62,7 +70,7 @@ apply() {
 
 EXECUTOR = """
 log_verbose "${BLARG_INDENT}${BLARG_TARGET_NAME} [running...]"
-apply_target "${BLARG_TARGET_DEPENDENCIES[@]}" || exit $?
+satisfy "${BLARG_TARGET_DEPENDENCIES[@]}" || exit $?
 
 (
     set -Eeuo pipefail

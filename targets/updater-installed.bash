@@ -9,6 +9,6 @@ reached_if() {
 }
 
 apply() {
-    apply_target rush/rush-repo-pulled
+    satisfy rush/rush-repo-pulled
     rush get "${PACKAGE_NAME}"
 }

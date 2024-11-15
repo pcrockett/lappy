@@ -5,6 +5,6 @@ reached_if() {
 }
 
 apply() {
-    apply_target ../network/main
+    satisfy ../network/main
     install_package git
 }
