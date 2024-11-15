@@ -37,17 +37,37 @@ ignore() {
     "${command[@]}"
 }
 
+append() {
+    cat
+    for i in "${@}"; do
+        echo "${i}"
+    done
+}
+
+rule:shellcheck() {
+    local special_scripts=(
+        bin/newtarget
+        config/bash/bashrc
+        config/direnv/direnvrc
+    )
+    all_files \
+        | rg '\.(sh|bash)$' \
+        | append "${special_scripts[@]}" \
+        | xargs shellcheck
+}
+
 rule:no_raw_sudo() {
     ! all_files \
-        | ignore "bin/custom_lint\.sh" "lib\.d/50_as_root\.sh" \
+        | ignore "bin/lint\.sh" "lib\.d/50_as_root\.sh" \
         | xargs rg --word-regexp --fixed-strings "sudo"
 }
 
 main() {
+    rule:shellcheck || report_lint "shellcheck failed"
     rule:no_raw_sudo || report_lint "don't use raw \`sudo\` -- use \`as_root\` instead."
 
     if [ "${EXIT_STATUS}" -eq 0 ]; then
-        echo "no custom lint found"
+        echo "no lint found"
     fi
     exit "${EXIT_STATUS}"
 }
