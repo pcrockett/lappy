@@ -1,0 +1,15 @@
+#!/usr/bin/env blarg
+
+PACKAGES=(
+    ${PACKAGES}
+)
+
+satisfied_if() {
+    package_is_installed "$${PACKAGES[@]}"
+}
+
+apply() {
+    "$${BLARG_CWD}/targets/network/main.bash"
+    install_package "$${PACKAGES[@]}"
+}
+
