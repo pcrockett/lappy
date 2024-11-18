@@ -1,14 +1,8 @@
 #!/usr/bin/env blarg
+# shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
 
 PACKAGES=(
     signal-desktop
 )
 
-satisfied_if() {
-    package_is_installed "${PACKAGES[@]}"
-}
-
-apply() {
-    satisfy network/main
-    install_package "${PACKAGES[@]}"
-}
+snippet "packages-installed"

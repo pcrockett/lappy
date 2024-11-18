@@ -1,6 +1,8 @@
 #!/usr/bin/env blarg
 
 PACKAGES=(
+    noto-fonts
+    noto-fonts-emoji
     ttf-hack-nerd
 )
 

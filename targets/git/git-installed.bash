@@ -1,10 +1,8 @@
 #!/usr/bin/env blarg
+# shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
 
-satisfied_if() {
-    package_is_installed git
-}
+PACKAGES=(
+    git
+)
 
-apply() {
-    satisfy ../network/main
-    install_package git
-}
+snippet "packages-installed"

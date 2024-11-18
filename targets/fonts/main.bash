@@ -1,8 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
-    hack-nerd-font-installed
-    noto-fonts-installed
+    font-packages-installed
     gnu-free-fonts-removed
     fontconfig-placed
 )

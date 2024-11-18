@@ -1,8 +1,9 @@
 #!/usr/bin/env blarg
+# shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
 
-targets=(
-    shellcheck-installed
-    bash-language-server-installed
+PACKAGES=(
+    bash-language-server
+    shellcheck
 )
 
-depends_on "${targets[@]}"
+snippet "packages-installed"

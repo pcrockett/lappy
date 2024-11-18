@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on pipx-installed
+depends_on pacman-deps-installed
 
 satisfied_if() {
     command -v pylsp

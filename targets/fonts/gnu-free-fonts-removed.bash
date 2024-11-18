@@ -3,7 +3,7 @@
 # this package causes braille characters to not show up properly
 # replacing it with noto-fonts seems to solve the problem
 
-depends_on noto-fonts-installed
+depends_on font-packages-installed
 
 PACKAGES=(
     gnu-free-fonts

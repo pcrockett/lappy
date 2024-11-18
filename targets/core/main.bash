@@ -1,18 +1,12 @@
 #!/usr/bin/env blarg
 
 targets=(
+    pacman-deps-installed
     bash-configured
     fish/main
     login-shell-configured
     man-db-enabled
-    direnv-installed
-    btop-installed
-    yazi-installed
-    ripgrep-installed
-    bat-installed
-    fx-installed
-    gum-installed
-    base-devel-installed
+    fzf-installed
 )
 
 depends_on "${targets[@]}"

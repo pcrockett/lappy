@@ -1,12 +1,8 @@
 #!/usr/bin/env blarg
+# shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
 
-PACKAGE_NAME="fzf"
+PACKAGES=(
+    fzf
+)
 
-satisfied_if() {
-    package_is_installed "${PACKAGE_NAME}"
-}
-
-apply() {
-    satisfy ../network/main
-    install_package "${PACKAGE_NAME}"
-}
+snippet "packages-installed"
