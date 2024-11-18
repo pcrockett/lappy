@@ -1,8 +1,8 @@
 #!/usr/bin/env blarg
-# shellcheck disable=SC2034  # variables appear unused, but are used inside template
+# shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
 
 PACKAGES=(
     mtr
 )
 
-template "package"
+snippet "packages-installed"
