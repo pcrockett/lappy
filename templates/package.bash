@@ -1,4 +1,8 @@
 #!/usr/bin/env blarg
+# shellcheck disable=SC2034  # variables appear unused, but are used inside template
 
-export PACKAGES="TODO: space-delimited list of package names"
+PACKAGES=(
+    TODO
+)
+
 template "package"

@@ -1,8 +1,9 @@
 #!/usr/bin/env blarg
-
-PACKAGES=(
-    ${PACKAGES}
-)
+#
+# template parameters:
+#
+# * PACKAGES: bash array of package names
+#
 
 satisfied_if() {
     package_is_installed "$${PACKAGES[@]}"

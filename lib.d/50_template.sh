@@ -20,7 +20,7 @@ template() {
     # script and allow a little repetition into your life.
     #
     local template_name python_program
-    template_name="${1?expected template name}"
+    template_name="${1:?must specify template name}"
     python_program=$(cat <<EOF
 import os
 from pathlib import Path
