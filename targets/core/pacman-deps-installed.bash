@@ -9,6 +9,7 @@ PACKAGES=(
     fuse2
     fx
     gum
+    jq
     ripgrep
     yazi
 )
