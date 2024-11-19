@@ -30,6 +30,7 @@ targets=(
     github/main
     signal-installed
     yubikey/main
+    aur/main
 )
 
 depends_on "${targets[@]}"
