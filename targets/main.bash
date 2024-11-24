@@ -31,6 +31,7 @@ targets=(
     signal-installed
     yubikey/main
     aur/main
+    fzd/main
 )
 
 depends_on "${targets[@]}"
