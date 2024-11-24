@@ -6,6 +6,7 @@ targets=(
     git-main-installed
     fzman-installed
     pubip-installed
+    starship-installed
 )
 
 depends_on "${targets[@]}"
