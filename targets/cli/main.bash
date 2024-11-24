@@ -7,6 +7,7 @@ targets=(
     fzman-installed
     pubip-installed
     starship-installed
+    librespeed-cli-installed
 )
 
 depends_on "${targets[@]}"
