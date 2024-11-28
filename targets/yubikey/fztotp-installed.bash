@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on ../rush/main
+depends_on ../rush/main ../cli/xsel-installed
 
 PACKAGE_NAME="fztotp"
 
