@@ -164,8 +164,13 @@ screens = [
                 # widget.StatusNotifier(),
                 widget.Systray(),
                 widget.Clock(format="%Y-%m-%d %a %H:%M"),
-                widget.TextBox("bat: "),
-                widget.Battery(),
+                widget.TextBox("󰁹"),
+                widget.Battery(
+                    charge_char="",
+                    discharge_char="",
+                    empty_char="",
+                    full_char=""
+                ),
                 widget.QuickExit(default_text="[X]"),
             ],
             24,
