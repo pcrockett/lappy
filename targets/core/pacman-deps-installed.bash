@@ -10,6 +10,7 @@ PACKAGES=(
     fx
     gum
     jq
+    unzip
     ripgrep
     yazi
 )
