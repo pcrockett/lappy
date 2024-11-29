@@ -147,13 +147,18 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+
+def divider():
+    return widget.TextBox("󰇝")
+
+
 screens = [
     Screen(
         bottom=bar.Bar(
             [
                 widget.CurrentLayout(),
                 widget.GroupBox(),
-                widget.WindowName(),
+                widget.TaskList(),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
@@ -163,7 +168,9 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
+                divider(),
                 widget.Clock(format="%Y-%m-%d %a %H:%M"),
+                divider(),
                 widget.TextBox("󰁹"),
                 widget.Battery(
                     charge_char="",
@@ -171,7 +178,9 @@ screens = [
                     empty_char="",
                     full_char=""
                 ),
-                widget.QuickExit(default_text="[X]"),
+                divider(),
+                widget.QuickExit(default_text="󰩈", countdown_format="{}"),
+                divider(),
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
