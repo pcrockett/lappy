@@ -32,6 +32,7 @@ targets=(
     yubikey/main
     aur/main
     fzd/main
+    email/main
 )
 
 depends_on "${targets[@]}"
