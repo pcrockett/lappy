@@ -6,7 +6,7 @@ right_format = '$env_var'
 
 [character]
 # https://starship.rs/config/#character
-error_symbol = '[✖](bold red)'
+error_symbol = '[](bold red)'
 
 [battery]
 # https://starship.rs/config/#battery
