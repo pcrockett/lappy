@@ -17,16 +17,11 @@ targets=(
     rofi/main
     qtile-configured
     docker/main
-    alacritty-configured
     fonts/main
     tailscale/main
     asdf/main
-    direnv-configured
-    wikiman-installed
     firewall/main
     updater-installed
-    tagref-installed
-    mtr-installed
     github/main
     signal-installed
     yubikey/main

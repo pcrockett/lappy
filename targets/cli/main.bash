@@ -8,6 +8,10 @@ targets=(
     pubip-installed
     starship-installed
     librespeed-cli-installed
+    tagref-installed
+    alacritty-configured
+    mtr-installed
+    wikiman-installed
 )
 
 depends_on "${targets[@]}"

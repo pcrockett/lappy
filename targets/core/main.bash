@@ -7,6 +7,7 @@ targets=(
     login-shell-configured
     man-db-enabled
     fzf-installed
+    direnv-configured
 )
 
 depends_on "${targets[@]}"
