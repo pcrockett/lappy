@@ -33,6 +33,7 @@ targets=(
     aur/main
     fzd/main
     email/main
+    mouse/main
 )
 
 depends_on "${targets[@]}"
