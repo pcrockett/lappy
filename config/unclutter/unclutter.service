@@ -1,0 +1,11 @@
+[Unit]
+Description=Hide mouse after inactivity
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/unclutter --timeout 2
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target
