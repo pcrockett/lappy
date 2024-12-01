@@ -12,6 +12,7 @@ targets=(
     alacritty-configured
     mtr-installed
     wikiman-installed
+    srch-installed
 )
 
 depends_on "${targets[@]}"
