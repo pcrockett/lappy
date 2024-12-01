@@ -3,6 +3,8 @@
 
 PACKAGES=(
     aerc
+    dante  # for html emails
+    w3m    # for html emails
 )
 
 snippet "packages-installed"

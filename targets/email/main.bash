@@ -1,7 +1,8 @@
 #!/usr/bin/env blarg
 
 targets=(
-    aerc-installed
+    pacman-deps-installed
+    # TODO: aerc configuration
 )
 
 depends_on "${targets[@]}"
