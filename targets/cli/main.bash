@@ -1,18 +1,16 @@
 #!/usr/bin/env blarg
 
 targets=(
+    pacman-deps-installed
     kbg-installed
-    nushell-installed
     git-main-installed
     fzman-installed
     pubip-installed
-    starship-installed
     librespeed-cli-installed
     tagref-installed
     alacritty-configured
-    mtr-installed
-    wikiman-installed
     srch-installed
+    starship-configured
 )
 
 depends_on "${targets[@]}"
