@@ -5,6 +5,7 @@ PACKAGES=(
     arch-wiki-docs  # html files in `usr/share/doc/arch-wiki/html/en/`
     mtr
     nushell
+    rbw
     starship
     xsel
 )

@@ -11,6 +11,7 @@ targets=(
     alacritty-configured
     srch-installed
     starship-configured
+    bitwarden-device-registered
 )
 
 depends_on "${targets[@]}"

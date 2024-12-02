@@ -7,3 +7,7 @@ fi
 if [ "${PUBLIC_NAME:-}" == "" ]; then
     panic "Missing \$PUBLIC_NAME"
 fi
+
+if [ "${BITWARDEN_EMAIL:-}" == "" ]; then
+    panic "Missing \$BITWARDEN_EMAIL"
+fi
