@@ -1,3 +1,23 @@
 [[language]]
 name = "bash"
 indent = { tab-width = 4, unit = "    "}
+
+[language-server.pylsp.config.pylsp.plugins.pycodestyle]
+maxLineLength = 88
+
+# i can't figure out how to get `ruff` to work... :'(
+#
+# here's what i've tried so far:
+#
+# [language-server.pylsp.config.pylsp.plugins]
+# flake8 = { enabled = false }
+# autopep8 = { enabled = false }
+# mccabe = { enabled = false }
+# pycodestyle = { enabled = false }
+# pyflakes = { enabled = false }
+# pylint = { enabled = false }
+# yapf = { enabled = false }
+
+# [language-server.pylsp.config.pylsp.plugins.ruff]
+# enabled = true
+# lineLength = 88
