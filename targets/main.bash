@@ -29,6 +29,7 @@ targets=(
     fzd/main
     email/main
     mouse/main
+    bitwarden/main
 )
 
 depends_on "${targets[@]}"
