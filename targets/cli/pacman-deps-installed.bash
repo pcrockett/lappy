@@ -7,6 +7,7 @@ PACKAGES=(
     nushell
     starship
     xsel
+    zoxide
 )
 
 snippet "packages-installed"
