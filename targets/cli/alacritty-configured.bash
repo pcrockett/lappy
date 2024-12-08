@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on ../fonts/main
+depends_on fonts/main
 
 REPO_PATH="${BLARG_CWD}/config/alacritty"
 SYSTEM_PATH=~/.config/alacritty

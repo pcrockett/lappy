@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on asdf-installed ../ruby-installed ../core/main
+depends_on asdf-installed ruby-installed core/main
 
 PLUGIN_NAME="bashly"
 PLUGIN_REPO="git@github.com:pcrockett/asdf-${PLUGIN_NAME}"

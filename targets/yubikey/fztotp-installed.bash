@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on ../rush/main ../cli/main  # cli/main for `xsel`
+depends_on rush/main cli/main  # cli/main for `xsel`
 
 PACKAGE_NAME="fztotp"
 
@@ -9,6 +9,6 @@ satisfied_if() {
 }
 
 apply() {
-    satisfy ../rush/rush-repo-pulled
+    satisfy rush/rush-repo-pulled
     rush get "${PACKAGE_NAME}"
 }

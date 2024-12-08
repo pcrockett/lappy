@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on ../core/main ../git/main
+depends_on core/main git/main
 
 satisfied_if() {
     test -d "${ASDF_DIR}/.git"

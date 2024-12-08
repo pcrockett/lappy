@@ -8,7 +8,7 @@ satisfied_if() {
 }
 
 apply() {
-    "${BLARG_CWD}/targets/network/main.bash"
+    satisfy network/main
     install_package "${PACKAGES[@]}"
 }
 
