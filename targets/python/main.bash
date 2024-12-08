@@ -2,7 +2,7 @@
 
 targets=(
     pacman-deps-installed
-    pylsp-installed
+    pyright-installed
 )
 
 depends_on "${targets[@]}"
