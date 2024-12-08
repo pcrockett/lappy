@@ -12,6 +12,7 @@ PACKAGES=(
     jq
     unzip
     ripgrep
+    ueberzugpp  # image previews in terminal / yazi
     yazi
 )
 
