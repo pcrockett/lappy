@@ -1,6 +1,7 @@
 #!/usr/bin/env blarg
 
-depends_on rush/main
+# need arch-news-check so updater will abort updates when we haven't seen the latest news
+depends_on rush/main arch-news-check-installed
 
 PACKAGE_NAME="updater"
 
