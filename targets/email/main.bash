@@ -2,7 +2,7 @@
 
 targets=(
     pacman-deps-installed
-    # TODO: aerc configuration
+    aerc-configured
 )
 
 depends_on "${targets[@]}"

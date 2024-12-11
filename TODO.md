@@ -1,8 +1,8 @@
 # to-do list
 
-* [ ] try out Aerc for email
+* [x] try out Aerc for email
   * [ ] set up encryption / decryption commands for creds
-  * [ ] version control the config here (using templating `bw`)
+  * [x] version control the config here (using templating `bw`)
 * [x] tagref
 * [x] software update script that handles (at least):
   * [x] pacman
