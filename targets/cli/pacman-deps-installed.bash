@@ -6,7 +6,6 @@ PACKAGES=(
     mtr
     nushell
     starship
-    xsel
     zoxide
 )
 

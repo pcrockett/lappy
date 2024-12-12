@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on asdf-installed core/main
+depends_on asdf-installed core/direnv-installed core/direnv-configured
 
 PLUGIN_NAME="direnv"
 PLUGIN_REPO="https://github.com/asdf-community/asdf-${PLUGIN_NAME}.git"

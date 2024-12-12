@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on rush/main core/main
+depends_on rush/main git/git-installed core/base-devel-installed
 
 PACKAGE_NAME="yay"
 

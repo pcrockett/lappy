@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on rush/main core/main  # need fuse2 at least
+depends_on rush/main core/fuse2-installed
 
 PACKAGE_NAME="nextcloud-desktop"
 

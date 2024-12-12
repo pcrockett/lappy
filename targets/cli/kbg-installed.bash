@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on rush/main core/main
+depends_on rush/main core/ripgrep-installed core/bat-installed core/fzf-installed
 
 PACKAGE_NAME="kbgrep"
 

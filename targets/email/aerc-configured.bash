@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on core/main core/with-umask-installed  # for jq
+depends_on core/jq-installed core/with-umask-installed
 
 REPO_CONFIG_DIR="${BLARG_CWD}/config/aerc"
 SYSTEM_CONFIG_DIR="${HOME}/.config/aerc"

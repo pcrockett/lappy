@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on rush/main core/main
+depends_on rush/main core/jq-installed core/gum-installed
 
 PACKAGE_NAME="pubip"
 
