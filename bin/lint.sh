@@ -62,9 +62,16 @@ rule:no_raw_sudo() {
         | xargs rg --word-regexp --fixed-strings "sudo"
 }
 
+rule:no_core_main() {
+    ! all_files \
+        | ignore "bin/lint\.sh" "targets/main.bash" \
+        | xargs rg --word-regexp --fixed-strings 'core/main'
+}
+
 main() {
     rule:shellcheck || report_lint "shellcheck failed"
     rule:no_raw_sudo || report_lint "don't use raw \`sudo\` -- use \`as_root\` instead."
+    rule:no_core_main || report_lint "don't depend on core/main."
 
     if [ "${EXIT_STATUS}" -eq 0 ]; then
         echo "no lint found"
