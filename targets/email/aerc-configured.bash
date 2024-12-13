@@ -11,7 +11,7 @@ satisfied_if() {
 }
 
 apply() {
-    satisfy bitwarden/unlocked
+    satisfy bitwarden/synced
     CONFIG_JSON="$(bw get item beekrpad.aerc.personal)"
 
     PERSONAL_EMAIL_ACCT_NAME="$(get_value account-name)" \
