@@ -1,6 +1,7 @@
 [[language]]
 name = "bash"
 indent = { tab-width = 4, unit = "    "}
+file-types = ["sh", "bash", "bats"]
 
 [language-server.pyright]
 # thanks to <https://github.com/helix-editor/helix/discussions/5369#discussioncomment-6113408>
