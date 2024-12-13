@@ -30,6 +30,7 @@ targets=(
     email/main
     mouse/main
     bitwarden/main
+    archive/main
 )
 
 depends_on "${targets[@]}"
