@@ -1,11 +1,11 @@
 #!/usr/bin/env blarg
 
-depends_on rush/main cli/qq-installed
+depends_on rush/main
 
-PACKAGE_NAME="arch-news-check"
+PACKAGE_NAME="qq"
 
 satisfied_if() {
-    command -v arch-news-check
+    command -v qq
 }
 
 apply() {

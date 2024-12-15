@@ -10,5 +10,6 @@ satisfied_if() {
 
 apply() {
     satisfy network/main
+    satisfy arch-news-checked
     install_package "${PACKAGES[@]}"
 }
