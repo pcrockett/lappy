@@ -1,7 +1,9 @@
-# define the following before rendering this snippet:
-#
-# * PACKAGES: bash array of package names
-#
+#!/usr/bin/env blarg
+# shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
+
+PACKAGES=(
+    timeshift
+)
 
 satisfied_if() {
     package_is_installed "${PACKAGES[@]}"
@@ -9,7 +11,5 @@ satisfied_if() {
 
 apply() {
     satisfy network/main
-    satisfy snapshots/created
     install_package "${PACKAGES[@]}"
 }
-
