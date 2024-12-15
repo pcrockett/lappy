@@ -7,7 +7,6 @@ PACKAGES=(
     pacman-contrib  # rankmirrors
     unzip
     ueberzugpp  # image previews in terminal / yazi
-    w3m
     yazi
 )
 

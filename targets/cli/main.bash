@@ -12,6 +12,7 @@ targets=(
     srch-installed
     starship-configured
     fzmake-installed
+    archwiki-installed
 )
 
 depends_on "${targets[@]}"
