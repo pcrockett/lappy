@@ -1,5 +1,7 @@
 # to-do list
 
+* [ ] pacdiff
+  * currently waiting for .pacnew files to show up before i add this
 * [x] try out Aerc for email
   * [ ] set up encryption / decryption commands for creds
   * [x] version control the config here (using templating `bw`)
