@@ -8,6 +8,7 @@ targets=(
     fish/main
     login-shell-configured
     man-db-enabled
+    man-pages-installed
     fzf-installed
     direnv-configured
 )
