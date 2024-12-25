@@ -3,7 +3,8 @@
 depends_on \
     rush/main \
     rclone-installed \
-    core/jq-installed
+    core/jq-installed \
+    core/fuse3-installed
 
 satisfied_if() {
     test -d ~/Cloud
