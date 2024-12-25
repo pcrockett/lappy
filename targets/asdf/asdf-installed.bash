@@ -14,4 +14,5 @@ apply() {
     git clone https://github.com/asdf-vm/asdf.git "${temp_dir}/asdf" --branch "${latest_tag}" --depth 1
     mv "${temp_dir}/asdf" "${ASDF_DIR}"
     rmdir "${temp_dir}"
+    panic "Success! Now restart your terminal."
 }
