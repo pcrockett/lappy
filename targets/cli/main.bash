@@ -13,6 +13,7 @@ targets=(
     starship-configured
     fzmake-installed
     archwiki-installed
+    httpie-installed
 )
 
 depends_on "${targets[@]}"
