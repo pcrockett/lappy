@@ -31,6 +31,7 @@ targets=(
     mouse/main
     bitwarden/main
     archive/main
+    backup/configured
 )
 
 depends_on "${targets[@]}"
