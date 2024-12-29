@@ -8,6 +8,7 @@ PACKAGES=(
     unzip
     ueberzugpp  # image previews in terminal / yazi
     yazi
+    zip
 )
 
 snippet "packages-installed"
