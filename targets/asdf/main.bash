@@ -10,6 +10,7 @@ targets=(
     shfmt-plugin-installed
     nodejs-plugin-installed
     pnpm-plugin-installed
+    age-plugin-installed
     default-tools-configured
 )
 
