@@ -32,6 +32,7 @@ targets=(
     bitwarden/main
     archive/main
     backup/configured
+    osm/main
 )
 
 depends_on "${targets[@]}"
