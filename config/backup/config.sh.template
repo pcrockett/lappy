@@ -19,6 +19,7 @@ BACKUP_PATHS=(
     "${HOME}/.ssh"
     "${HOME}/Nextcloud"
     "${HOME}/Repo"
+    "${HOME}/Games"
 )
 
 # shellcheck disable=SC2016  # dollar signs don't expand in single quotes (see $RECYCLE.BIN)
