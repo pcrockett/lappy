@@ -14,6 +14,7 @@ targets=(
     fzmake-installed
     archwiki-installed
     httpie-installed
+    aria2-installed
 )
 
 depends_on "${targets[@]}"
