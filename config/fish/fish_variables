@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export ASDF_DIR:/home/phil/\x2elocal/share/asdf
 SETUVAR --export EDITOR:/usr/bin/helix
+SETUVAR --export FCEUX_HOME:/home/phil/\x2econfig/fceux
 SETUVAR --export RUSH_CONFIG:/home/phil/\x2econfig/rush/config
 SETUVAR --export RUSH_ROOT:/home/phil/\x2elocal/share/rush
 SETUVAR --export VISUAL:/usr/bin/helix
