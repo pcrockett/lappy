@@ -3,5 +3,9 @@ strict_env
 
 export PUBLIC_EMAIL="me@example.com"
 export PUBLIC_NAME="Phil Crockett"
+export PODCAST_ARCHIVER_FEEDS="$(cat <<EOF
+  # feeds here (keep 2 spaces in front of each line)
+EOF
+)"
 
 PATH_add bin

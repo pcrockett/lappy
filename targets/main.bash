@@ -34,6 +34,7 @@ targets=(
     backup/configured
     osm/main
     office/libreoffice-installed
+    archiving/main
 )
 
 depends_on "${targets[@]}"
