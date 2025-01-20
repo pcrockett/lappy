@@ -1,7 +1,8 @@
 #!/usr/bin/env blarg
 
 targets=(
-    pacman-deps-installed
+    mypy-installed
+    pipx-installed
     pyright-installed
 )
 
