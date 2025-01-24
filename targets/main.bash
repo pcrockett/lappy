@@ -35,6 +35,7 @@ targets=(
     osm/main
     office/libreoffice-installed
     archiving/main
+    media/main
 )
 
 depends_on "${targets[@]}"
