@@ -1,6 +1,7 @@
 #!/usr/bin/env blarg
 
 depends_on rush/main
+before_apply rush/rush-repo-pulled
 
 PACKAGE_NAME="TODO"
 panic "not implemented yet"
@@ -10,6 +11,5 @@ satisfied_if() {
 }
 
 apply() {
-    satisfy rush/rush-repo-pulled
     rush get "${PACKAGE_NAME}"
 }
