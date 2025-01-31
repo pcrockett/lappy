@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on wlan-interface-config-placed
+depends_on network-config-placed
 
 SERVICES=(
     systemd-networkd

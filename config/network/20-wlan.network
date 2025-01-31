@@ -1,0 +1,27 @@
+# Config file copy-paste-modified from Arch default config
+
+[Match]
+Name=wl*
+
+[Link]
+RequiredForOnline=routable
+
+[Network]
+DHCP=yes
+MulticastDNS=no
+IgnoreCarrierLoss=3s
+
+[DHCPv4]
+RouteMetric=600
+UseDNS=no  # change this if you're on a trusted network
+
+# I think this mitigates TunnelVision:
+#
+#     <https://www.leviathansecurity.com/blog/tunnelvision>
+#
+# If you have networking issues on a big corporate network or something, try changing
+# this.
+# UseRoutes=no
+
+[IPv6AcceptRA]
+RouteMetric=600

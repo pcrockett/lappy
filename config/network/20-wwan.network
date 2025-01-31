@@ -1,0 +1,31 @@
+# Config file copy-paste-modified from Arch default config
+
+[Match]
+Name=ww*
+
+[Link]
+RequiredForOnline=routable
+
+[Network]
+DHCP=yes
+MulticastDNS=no
+
+# systemd-networkd does not set per-interface-type default route metrics
+# https://github.com/systemd/systemd/issues/17698
+# Explicitly set route metric, so that Ethernet is preferred over Wi-Fi and Wi-Fi is preferred over mobile broadband.
+# Use values from NetworkManager. From nm_device_get_route_metric_default in
+# https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/blob/main/src/core/devices/nm-device.c
+[DHCPv4]
+RouteMetric=700
+UseDNS=no  # change this if you're on a trusted network
+
+# I think this mitigates TunnelVision:
+#
+#     <https://www.leviathansecurity.com/blog/tunnelvision>
+#
+# If you have networking issues on a big corporate network or something, try changing
+# this.
+# UseRoutes=no
+
+[IPv6AcceptRA]
+RouteMetric=700

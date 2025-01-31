@@ -1,7 +1,8 @@
 #!/usr/bin/env blarg
 
 targets=(
-    wlan-interface-config-placed
+    dns-defaults-placed
+    network-config-placed
     network-services-started
     mullvad-dns-enabled
 )
