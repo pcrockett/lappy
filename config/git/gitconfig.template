@@ -24,7 +24,6 @@
 	now = !git commit -m \"$(date --iso-8601=minutes)\"
 	credit = !git-blame-ignore-revs.sh
 	tempmerge = merge --no-ff --no-commit
-	wipbr = !wipbr
 	wip = !git commit -m "wip"
 	rmwip = !git branch --format '%(refname:short)' \
 		| grep "phil/wip/" \
