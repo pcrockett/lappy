@@ -1,18 +1,14 @@
 #!/usr/bin/env blarg
 
-depends_on core/bash-configured core/fish/main git/main
+depends_on rush/main
+
+PACKAGE_NAME="asdf"
 
 satisfied_if() {
-    test -d "${ASDF_DIR}/.git"
+    command -v asdf
 }
 
 apply() {
-    rm -rf "${ASDF_DIR}"
-    mkdir --parent "$(dirname "${ASDF_DIR}")"
-    latest_tag="$(github_latest_tag asdf-vm asdf)"
-    temp_dir="$(mktemp --directory)"
-    git clone https://github.com/asdf-vm/asdf.git "${temp_dir}/asdf" --branch "${latest_tag}" --depth 1
-    mv "${temp_dir}/asdf" "${ASDF_DIR}"
-    rmdir "${temp_dir}"
-    panic "Success! Now restart your terminal."
+    satisfy rush/rush-repo-pulled
+    rush get "${PACKAGE_NAME}"
 }
