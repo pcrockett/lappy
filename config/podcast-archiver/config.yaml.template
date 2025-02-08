@@ -7,7 +7,7 @@
 #
 feeds: [
 ${PODCAST_ARCHIVER_FEEDS}
-]
+  ]
 
 # Field 'opml_files': OPML files containing feed URLs to archive. OPML files can
 #   be exported from a variety of podcatchers.
