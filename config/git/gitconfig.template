@@ -12,12 +12,12 @@
 	)\" \"$(git rev-parse --abbrev-ref HEAD)\"
 	chbr = !git checkout \"$( \
 		git rev-parse --abbrev-ref --remotes | sort | uniq \
-			| fzf --ansi --preview=\"git --no-pager graph --color --max-count 25 {}\" \
+			| fzf --ansi --preview=\"git --no-pager graph --color --max-count 25 {} -- \" \
 			| sed 's|^[[:alnum:]]*/||' \
 	)\"
 	prunebr = !git branch --format '%(refname:short)' \
 		| fzf --ansi --multi --preview=\" \
-			git --no-pager graph --color --max-count 25 '{}' \
+			git --no-pager graph --color --max-count 25 '{}' -- \
 		\" \
 		| xargs git branch -D
 	today = !git commit -m \"$(date --iso-8601)\"
@@ -28,10 +28,13 @@
 	rmwip = !git branch --format '%(refname:short)' \
 		| grep "phil/wip/" \
 		| fzf --ansi --multi --preview=\" \
-			git --no-pager graph --color --max-count 25 '{}' \
+			git --no-pager graph --color --max-count 25 '{}' -- \
 		\" \
 		| xargs git branch -D
+	poi = !gh poi
+	pr = !gh pr create --fill --draft --assignee pcrock-thmdo
 [init]
 	defaultBranch = main
 [pull]
 	ff = only
+
