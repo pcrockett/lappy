@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on asdf-installed
+depends_on asdf-installed core/base-devel-installed asdf/default-tools-configured
 
 PLUGIN_NAME="python"
 PLUGIN_REPO="https://github.com/pcrockett/asdf-${PLUGIN_NAME}.git"
