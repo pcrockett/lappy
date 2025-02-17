@@ -17,6 +17,7 @@ targets=(
     aria2-installed
     fastfetch-installed
     ouch-installed
+    pandoc-installed
 )
 
 depends_on "${targets[@]}"
