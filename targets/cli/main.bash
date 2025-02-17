@@ -16,6 +16,7 @@ targets=(
     httpie-installed
     aria2-installed
     fastfetch-installed
+    ouch-installed
 )
 
 depends_on "${targets[@]}"
