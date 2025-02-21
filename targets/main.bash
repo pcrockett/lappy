@@ -23,11 +23,10 @@ targets=(
     firewall/main
     updater-installed
     github/main
-    signal-installed
     yubikey/main
     aur/main
     fzd/main
-    email/main
+    comms/main
     mouse/main
     bitwarden/main
     archive/main
