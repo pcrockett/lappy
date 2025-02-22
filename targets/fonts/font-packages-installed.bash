@@ -3,7 +3,11 @@
 PACKAGES=(
     noto-fonts
     noto-fonts-emoji
+    ttf-font-awesome
     ttf-hack-nerd
+    ttf-nerd-fonts-symbols
+    ttf-nerd-fonts-symbols-common
+    ttf-nerd-fonts-symbols-mono
 )
 
 satisfied_if() {
