@@ -11,5 +11,5 @@ function archivebox
 
     set --append docker_cmd docker.io/archivebox/archivebox:latest $argv
 
-    echo $docker_cmd
+    $docker_cmd
 end
