@@ -7,5 +7,6 @@ export PODCAST_ARCHIVER_FEEDS="$(cat <<EOF
     # feeds here (keep 4 spaces in front of each line)
 EOF
 )"
+export SIGNAL_PHONE_NUMBER="+XXXXXXXXXXX"
 
 PATH_add bin

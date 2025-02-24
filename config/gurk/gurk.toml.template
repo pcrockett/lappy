@@ -1,0 +1,20 @@
+data_path = "${HOME}/.local/share/gurk/gurk.data.json"
+signal_db_path = "${HOME}/.local/share/gurk/signal-db"
+first_name_only = false
+show_receipts = true
+notifications = true
+bell = true
+colored_messages = false
+default_keybindings = true
+
+[user]
+name = "Phil"
+phone_number = "${SIGNAL_PHONE_NUMBER}"
+
+[sqlite]
+enabled = false
+url = "sqlite://${HOME}/.local/share/gurk/gurk.sqlite"
+_preserve_unencryped = false
+
+[keybindings]
+message_selected.ctrl-o = "open_file"
