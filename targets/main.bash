@@ -33,6 +33,7 @@ targets=(
     office/libreoffice-installed
     archiving/main
     media/main
+    rust/main
     # bt/main  # not needed if you disable bluetooth in BIOS
 )
 
