@@ -11,8 +11,6 @@ targets=(
     rush/main
     nextcloud-installed
     bash-dev/main
-    sleep-configured
-    bluetooth-disabled-on-startup
     python/main
     rofi/main
     qtile-configured
@@ -35,6 +33,7 @@ targets=(
     office/libreoffice-installed
     archiving/main
     media/main
+    # bt/main  # not needed if you disable bluetooth in BIOS
 )
 
 depends_on "${targets[@]}"
