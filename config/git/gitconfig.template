@@ -32,7 +32,6 @@
 		\" \
 		| xargs git branch -D
 	poi = !gh poi
-	pr = !gh pr create --fill --draft --assignee pcrock-thmdo
 [init]
 	defaultBranch = main
 [pull]

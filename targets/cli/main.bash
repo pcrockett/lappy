@@ -2,6 +2,7 @@
 
 targets=(
     pacman-deps-installed
+    nushell-installed
     kbg-installed
     git-main-installed
     fzman-installed
