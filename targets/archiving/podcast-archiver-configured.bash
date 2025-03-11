@@ -7,14 +7,12 @@ SYSTEM_PATH=~/.config/podcast-archiver
 
 satisfied_if() {
     test_symlink "${REPO_PATH}" "${SYSTEM_PATH}" \
-        && test -f "${SYSTEM_PATH}/config.yaml"
+        && template_was_rendered "${REPO_PATH}/config.yaml.template"
 }
 
 apply() {
     rm -rf "${SYSTEM_PATH}"
     ln --symbolic "${REPO_PATH}" "${SYSTEM_PATH}"
     PODCAST_ARCHIVER_FEEDS="${PODCAST_ARCHIVER_FEEDS:-}" \
-        envsubst \
-        < "${REPO_PATH}/config.yaml.template" \
-        > "${REPO_PATH}/config.yaml"
+        template_render "${REPO_PATH}/config.yaml.template"
 }
