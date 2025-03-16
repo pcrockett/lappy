@@ -1,3 +1,6 @@
+[general]
+import = ["sonokai.toml"]
+
 [font.bold]
 family = "terminal-font"
 style = "Bold"

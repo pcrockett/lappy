@@ -1,9 +1,9 @@
-theme = "catppuccin_frappe"
+theme = "sonokai"
 
 [editor]
 cursorline = true
-rulers = [100]
-text-width = 100
+rulers = [88]
+text-width = 88
 bufferline = "multiple"
 
 [editor.whitespace.render]
@@ -20,3 +20,25 @@ git-global = false
 
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
+
+# <https://docs.helix-editor.com/remapping.html>
+[keys.normal]
+"ret" = ["open_below"]
+
+# create a new minor mode bound to `+`
+[keys.normal."+"]
+m = ":run-shell-command make"
+
+# d for "docker"
+[keys.normal."+".d]
+u = ":run-shell-command docker compose up --detach"
+d = ":run-shell-command docker compose down"
+
+# g for "git"
+[keys.normal."+".g]
+d = ":run-shell-command git diff"
+s = ":run-shell-command git status"

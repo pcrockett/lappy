@@ -2,8 +2,8 @@ theme = "catppuccin_latte"
 
 [editor]
 cursorline = true
-rulers = [100]
-text-width = 100
+rulers = [88]
+text-width = 88
 bufferline = "multiple"
 
 [editor.whitespace.render]
