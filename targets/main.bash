@@ -6,7 +6,7 @@ targets=(
     helix/main
     git/main
     cli/main
-    firefox-installed
+    web/main
     ssh/main
     rush/main
     nextcloud-installed
