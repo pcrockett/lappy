@@ -1,0 +1,28 @@
+[Default Applications]
+x-scheme-handler/nc=com.nextcloud.desktopclient.nextcloud.desktop
+
+# the following copy / pasted from firefox.desktop
+application/json=librewolf.desktop
+application/pdf=librewolf.desktop
+application/rdf+xml=librewolf.desktop
+application/rss+xml=librewolf.desktop
+application/x-xpinstall=librewolf.desktop
+application/xhtml+xml=librewolf.desktop
+application/xml=librewolf.desktop
+audio/flac=librewolf.desktop
+audio/ogg=librewolf.desktop
+audio/webm=librewolf.desktop
+image/avif=librewolf.desktop
+image/gif=librewolf.desktop
+image/jpeg=librewolf.desktop
+image/png=librewolf.desktop
+image/svg+xml=librewolf.desktop
+image/webp=librewolf.desktop
+text/html=librewolf.desktop
+text/xml=librewolf.desktop
+video/ogg=librewolf.desktop
+video/webm=librewolf.desktop
+x-scheme-handler/chrome=librewolf.desktop
+x-scheme-handler/http=librewolf.desktop
+x-scheme-handler/https=librewolf.desktop
+x-scheme-handler/mailto=librewolf.desktop

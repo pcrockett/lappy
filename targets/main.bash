@@ -35,6 +35,7 @@ targets=(
     media/main
     rust/main
     # bt/main  # not needed if you disable bluetooth in BIOS
+    default-apps-configured
 )
 
 depends_on "${targets[@]}"
