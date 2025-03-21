@@ -29,16 +29,24 @@ other-lines = "error"
 [keys.normal]
 "ret" = ["open_below"]
 
-# create a new minor mode bound to `+`
-[keys.normal."+"]
-m = ":run-shell-command make"
+# create a new minor mode bound to `<space>;`
+[keys.normal." ".";"]
+# run `fzmake` in current directory in a pop-up alacritty window
+m = ":run-shell-command alacritty --class dialog --title fzmake --option window.dimensions.columns=70 --option window.dimensions.lines=30 --command fzmake"
 
 # d for "docker"
-[keys.normal."+".d]
+[keys.normal." ".";".d]
 u = ":run-shell-command docker compose up --detach"
 d = ":run-shell-command docker compose down"
 
 # g for "git"
-[keys.normal."+".g]
+[keys.normal." ".";".g]
 d = ":run-shell-command git diff"
 s = ":run-shell-command git status"
+
+# checkbox checking and unchecking
+[keys.normal." ".";".c]
+c = "@X<space>;c<C-c>"
+u = "@X<space>;c<C-u>"
+C-c = ":pipe sed -r 's|\\* \\[ \\]|* [x]|'"
+C-u = ":pipe sed -r 's|\\* \\[.\\]|* [ ]|'"

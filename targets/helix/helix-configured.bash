@@ -10,6 +10,4 @@ satisfied_if() {
 apply() {
     rm -rf "${HELIX_CONFIG}"
     ln --symbolic "${LOCAL_CONFIG}" "${HELIX_CONFIG}"
-    test -f "${LOCAL_CONFIG}/config.toml" \
-        || cp -H "${LOCAL_CONFIG}/config.dark.toml" "${LOCAL_CONFIG}/config.toml"
 }
