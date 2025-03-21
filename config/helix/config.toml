@@ -28,12 +28,10 @@ other-lines = "error"
 # <https://docs.helix-editor.com/remapping.html>
 [keys.normal]
 "ret" = ["open_below"]
+# run `fzmake` in current directory in a pop-up alacritty window
+C-m = ":run-shell-command alacritty --class dialog --title fzmake --hold --option window.dimensions.columns=70 --option window.dimensions.lines=30 --command fzmake"
 
 # create a new minor mode bound to `<space>;`
-[keys.normal." ".";"]
-# run `fzmake` in current directory in a pop-up alacritty window
-m = ":run-shell-command alacritty --class dialog --title fzmake --option window.dimensions.columns=70 --option window.dimensions.lines=30 --command fzmake"
-
 # d for "docker"
 [keys.normal." ".";".d]
 u = ":run-shell-command docker compose up --detach"
