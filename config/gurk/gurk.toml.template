@@ -16,3 +16,4 @@ _preserve_unencryped = false
 
 [keybindings]
 message_selected.ctrl-o = "open_file"
+message_selected.ctrl-u = "open_url"
