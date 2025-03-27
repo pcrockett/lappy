@@ -31,6 +31,11 @@ other-lines = "error"
 # run `fzmake` in current directory in a pop-up alacritty window
 C-m = ":run-shell-command alacritty --class dialog --title fzmake --hold --option window.dimensions.columns=70 --option window.dimensions.lines=30 --command fzmake"
 
+[keys.normal." ".";"]
+# open URLs, file paths, etc.
+# use :pipe-to to ignore the output of xdg-open
+o = ":pipe-to xargs xdg-open"
+
 # create a new minor mode bound to `<space>;`
 # d for "docker"
 [keys.normal." ".";".d]
