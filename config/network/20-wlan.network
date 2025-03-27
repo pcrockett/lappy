@@ -13,7 +13,9 @@ IgnoreCarrierLoss=3s
 
 [DHCPv4]
 RouteMetric=600
-UseDNS=no  # change this if you're on a trusted network
+
+# change this if you're on a trusted network
+UseDNS=no
 
 # I think this mitigates TunnelVision:
 #
