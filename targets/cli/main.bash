@@ -19,6 +19,7 @@ targets=(
     fastfetch-installed
     ouch-installed
     pandoc-installed
+    tree-installed
 )
 
 depends_on "${targets[@]}"
