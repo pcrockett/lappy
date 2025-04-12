@@ -1,6 +1,12 @@
+*.sublime-workspace
 .direnv/
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/
+.terraform/
+.tox/
+/target/CACHEDIR.TAG
+/target/debug/
+/target/release/
 __pycache__/
 node_modules/

@@ -1,4 +1,4 @@
-signal_db_path = "${HOME}/.local/share/gurk/signal-db"
+data_dir = "${HOME}/.local/share/gurk"
 first_name_only = false
 show_receipts = true
 notifications = true
@@ -9,10 +9,6 @@ default_keybindings = true
 [user]
 name = "Phil"
 phone_number = "${SIGNAL_PHONE_NUMBER}"
-
-[sqlite]
-url = "sqlite://${HOME}/.local/share/gurk/gurk.sqlite"
-_preserve_unencryped = false
 
 [keybindings]
 message_selected.ctrl-o = "open_file"
