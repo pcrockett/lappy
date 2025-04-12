@@ -13,6 +13,6 @@ satisfied_if() {
 apply() {
     rm -rf "${SYSTEM_PATH}"
     ln --symbolic "${REPO_PATH}" "${SYSTEM_PATH}"
-    PODCAST_ARCHIVER_FEEDS="${PODCAST_ARCHIVER_FEEDS:-}" \
+    PODCAST_FEEDS="${PODCAST_FEEDS:-}" \
         template_render "${REPO_PATH}/config.yaml.template"
 }

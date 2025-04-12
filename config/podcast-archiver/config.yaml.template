@@ -6,7 +6,7 @@
 # Equivalent command line option: --feeds
 #
 feeds: [
-${PODCAST_ARCHIVER_FEEDS}
+${PODCAST_FEEDS}
   ]
 
 # Field 'opml_files': OPML files containing feed URLs to archive. OPML files can
