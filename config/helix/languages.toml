@@ -19,3 +19,11 @@ roots = ["setup.py", "setup.cfg", "pyproject.toml"]
 comment-token = "#"
 language-servers = [ "pyright" ]
 indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "json"
+formatter = { command = "jq", args = ["--indent", "4"]}
+
+[language-server.vscode-json-language-server]
+command = "vscode-json-languageserver"
+config = { provideFormatter = true }

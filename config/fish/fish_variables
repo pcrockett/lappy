@@ -5,6 +5,7 @@ SETUVAR --export ASDF_DATA_DIR:/home/phil/\x2elocal/state/asdf
 SETUVAR --export EDITOR:/usr/bin/helix
 SETUVAR --export FCEUX_HOME:/home/phil/\x2econfig/fceux
 SETUVAR --export PIP_REQUIRE_VIRTUALENV:true
+SETUVAR --export PNPM_HOME:/home/phil/\x2elocal/share/pnpm
 SETUVAR --export RUSH_CONFIG:/home/phil/\x2econfig/rush/config
 SETUVAR --export RUSH_ROOT:/home/phil/\x2elocal/share/rush
 SETUVAR --export VISUAL:/usr/bin/helix
@@ -38,4 +39,4 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/phil/\x2elocal/bin\x1e/home/phil/\x2elocal/state/asdf/shims\x1e/home/phil/\x2ecargo/bin
+SETUVAR fish_user_paths:/home/phil/\x2elocal/bin\x1e/home/phil/\x2elocal/state/asdf/shims\x1e/home/phil/\x2ecargo/bin\x1e/home/phil/\x2elocal/share/pnpm
