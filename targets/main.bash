@@ -37,6 +37,7 @@ targets=(
     # bt/main  # not needed if you disable bluetooth in BIOS
     default-apps-configured
     meshtastic/main
+    dev/main
 )
 
 depends_on "${targets[@]}"
