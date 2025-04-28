@@ -38,6 +38,7 @@ targets=(
     default-apps-configured
     meshtastic/main
     dev/main
+    gleam/main
 )
 
 depends_on "${targets[@]}"

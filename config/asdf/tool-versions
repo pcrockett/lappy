@@ -1,4 +1,7 @@
+erlang 27.3.3
+gleam 1.10.0
 nodejs system
 pnpm system
 python system
+rebar 3.24.0
 shellcheck system
