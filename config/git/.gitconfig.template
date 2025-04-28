@@ -5,6 +5,7 @@
 	email = ${PUBLIC_EMAIL}
 [alias]
 	st = status
+	sw = switch
 	graph = log --graph --format=format:'%C(dim white)⟵  %C(reset)%C(bold blue)%h%C(reset)%C(auto)%d%C(reset) %C(bold cyan)%an%C(reset) %C(bold magenta)%cs\n%C(bold blue)   ⎩ %C(reset)%s'
 	bigpicture = log --graph --simplify-by-decoration --format=format:'%C(bold blue)%h%C(reset) %C(auto)%D%C(reset) - %C(bold cyan)%an%C(reset) %ar'
 	chbr = !git checkout \"$( \
