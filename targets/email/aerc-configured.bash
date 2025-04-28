@@ -19,6 +19,7 @@ apply() {
     PERSONAL_EMAIL_SMTP="$(get_value smtp)" \
     PERSONAL_EMAIL_USER_FULL_NAME="$(get_value user-full-name)" \
     PERSONAL_EMAIL_ADDRESS="$(get_value address)" \
+    PERSONAL_EMAIL_DOMAIN="$(get_value domain)" \
         envsubst < "${REPO_CONFIG_DIR}/accounts.conf.template" \
         | with-umask u=rw,g=,o= dd "of=${REPO_CONFIG_DIR}/accounts.conf" status=none
 
