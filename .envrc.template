@@ -1,6 +1,7 @@
 # shellcheck shell=bash
 strict_env
 
+export DNS_PROFILE="all" # mullvad: block everything
 export PUBLIC_EMAIL="me@example.com"
 export PUBLIC_NAME="Phil Crockett"
 export PODCAST_FEEDS="$(cat <<EOF

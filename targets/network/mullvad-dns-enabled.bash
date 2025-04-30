@@ -2,7 +2,8 @@
 
 depends_on resolved-conf-dir-created
 
-SOURCE_CONF="${BLARG_CWD}/config/network/mullvad-vanilla-dns.conf"
+DNS_PROFILE="${DNS_PROFILE:-vanilla}"
+SOURCE_CONF="${BLARG_CWD}/config/network/mullvad-${DNS_PROFILE}-dns.conf"
 DEST_CONF="/etc/systemd/resolved.conf.d/99_mullvad.conf"
 
 satisfied_if() {
