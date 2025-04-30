@@ -2,6 +2,7 @@
 
 targets=(
     gleam-installed
+    deno-installed
 )
 
 depends_on "${targets[@]}"
