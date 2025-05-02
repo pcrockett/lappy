@@ -2,6 +2,7 @@
 
 targets=(
     tailscale-up
+    mullvad-shuffle-installed
 )
 
 depends_on "${targets[@]}"
