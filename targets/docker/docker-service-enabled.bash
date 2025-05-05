@@ -2,7 +2,7 @@
 
 UNIT="docker.service"
 
-depends_on docker-installed
+depends_on docker-installed daemon-config-placed
 
 satisfied_if() {
     test "$(systemctl is-enabled "${UNIT}")" == "enabled" \

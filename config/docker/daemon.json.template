@@ -1,0 +1,5 @@
+{
+  "dns": [
+    "${DOCKER_DNS_SERVER}"
+  ]
+}
