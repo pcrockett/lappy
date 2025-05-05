@@ -21,8 +21,8 @@ template_was_rendered() {
     __validate_template_file_name "${template}"
     output="$(__get_template_output_file "${template}")"
     test -f "${output}" || return 1
-    output_modified="$(stat --format %Y "${output}")"
-    template_modified="$(stat --format %Y "${template}")"
+    output_modified="$(file_timestamp "${output}")"
+    template_modified="$(file_timestamp "${template}")"
     test "${template_modified}" -lt "${output_modified}"
 }
 
