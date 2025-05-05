@@ -22,7 +22,7 @@ indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "json"
-formatter = { command = "jq", args = ["--indent", "4"]}
+formatter = { command = "jq", args = ["--indent", "2"]}
 
 [language-server.vscode-json-language-server]
 command = "vscode-json-languageserver"
