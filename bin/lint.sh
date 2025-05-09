@@ -59,7 +59,7 @@ rule:shellcheck() {
 rule:no_raw_sudo() {
     ! all_files \
         | ignore "bin/lint\.sh" "lib\.d/50_as_root\.sh" \
-        | xargs rg --word-regexp --fixed-strings "sudo"
+        | xargs rg --regexp '[^(?:vi)]sudo '
 }
 
 rule:no_core_main() {

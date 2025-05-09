@@ -11,6 +11,7 @@ targets=(
     man-pages-installed
     fzf-installed
     direnv-configured
+    sudo-configured
 )
 
 depends_on "${targets[@]}"

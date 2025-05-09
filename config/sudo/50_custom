@@ -1,0 +1,3 @@
+# disable password timeout so long-running processes that temporarily elevate to root
+# don't die while waiting for you to notice a password prompt.
+Defaults passwd_timeout=0
