@@ -20,6 +20,7 @@ targets=(
     ouch-installed
     pandoc-installed
     tree-installed
+    bat-installed
 )
 
 depends_on "${targets[@]}"
