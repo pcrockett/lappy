@@ -54,3 +54,10 @@ c = "@X<space>;c<C-c>"
 u = "@X<space>;c<C-u>"
 C-c = ":pipe sed -r 's|\\* \\[ \\]|* [x]|'"
 C-u = ":pipe sed -r 's|\\* \\[.\\]|* [ ]|'"
+
+# tagref
+[keys.normal." ".";".t]
+y = "@ma[y"             # copy tag
+P = "@P<space>;t<C-r>"  # paste tag as a ref
+C-r = ":pipe sed -r 's|^\\[tag:|[ref:|'"  # replace `[tag:` with `[ref:`
+C-t = ":pipe sed -r 's|^\\[ref:|[tag:|'"  # replace `[ref:` with `[tag:`
