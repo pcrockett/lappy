@@ -18,4 +18,5 @@ apply() {
     for f in "${FILES[@]}"; do
         as_root cp "${SOURCE_CONFIG_DIR}/${f}.network" "${DEST_CONFIG_DIR}/${f}.network"
     done
+    as_root systemctl restart systemd-networkd.service
 }
