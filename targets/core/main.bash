@@ -1,7 +1,5 @@
 #!/usr/bin/env blarg
 
-# TODO: reduce this list to nothing. core targets should be specific dependencies of other actual
-# "use case" targets.
 targets=(
     pacman-deps-installed
     bash-configured
@@ -12,6 +10,7 @@ targets=(
     fzf-installed
     direnv-configured
     sudo-configured
+    net-tools-installed
 )
 
 depends_on "${targets[@]}"
