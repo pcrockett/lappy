@@ -2,8 +2,7 @@
 
 depends_on rush/main
 
-PACKAGE_NAME="TODO"
-panic "don't forget to double-check satisfied_if"
+PACKAGE_NAME="askii"
 
 satisfied_if() {
     command -v "${PACKAGE_NAME}"
