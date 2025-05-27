@@ -1,5 +1,7 @@
 #!/usr/bin/env blarg
 
+depends_on dev/delta-installed
+
 LOCAL_CONFIG="${BLARG_CWD}/config/git"
 
 satisfied_if() {

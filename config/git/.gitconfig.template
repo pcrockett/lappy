@@ -1,5 +1,8 @@
 [core]
 	excludesFile = ~/.gitignore
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
 [user]
 	name = ${PUBLIC_NAME}
 	email = ${PUBLIC_EMAIL}
@@ -54,3 +57,7 @@
 	autoupdate = true
 [merge]
 	conflictStyle = zdiff3
+[delta]
+	navigate = true  # use n and N to move between diff sections
+	line-numbers = true
+	syntax-theme = Catppuccin Frappe
