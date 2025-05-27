@@ -1,14 +1,8 @@
 #!/usr/bin/env blarg
+# shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
 
-depends_on rush/main
+PACKAGES=(
+    git-delta
+)
 
-PACKAGE_NAME="delta"
-
-satisfied_if() {
-    command -v "${PACKAGE_NAME}"
-}
-
-apply() {
-    satisfy rush/rush-repo-pulled
-    rush get "${PACKAGE_NAME}"
-}
+snippet "packages-installed"
