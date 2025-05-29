@@ -5,7 +5,7 @@ cursorline = true
 rulers = [88]
 text-width = 88
 bufferline = "multiple"
-end-of-line-diagnostics = "info"
+end-of-line-diagnostics = "hint"
 
 [editor.whitespace.render]
 space = "all"
