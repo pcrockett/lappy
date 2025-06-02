@@ -1,8 +1,8 @@
 #!/usr/bin/env blarg
 
 targets=(
-    firefox-installed
     librewolf-installed
+    firefox-removed
     profile-sync-daemon-started
 )
 
