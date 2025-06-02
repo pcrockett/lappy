@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on rush/main core/fuse2-installed
+depends_on rush/main core/fuse2-installed core/gnome-keyring-started
 
 PACKAGE_NAME="nextcloud-desktop"
 
