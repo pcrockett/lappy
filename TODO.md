@@ -1,6 +1,6 @@
 # to-do list
 
-* [ ] pacdiff
+* [x] pacdiff
   * currently waiting for .pacnew files to show up before i add this
 * [x] try out Aerc for email
   * [ ] set up encryption / decryption commands for creds
@@ -18,3 +18,4 @@
 * [x] get pre-automation notes in README into actual targets (networking etc)
 * [x] flatpak
 * [x] signal
+* [ ] secret service
