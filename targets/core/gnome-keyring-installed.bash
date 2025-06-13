@@ -4,6 +4,7 @@
 PACKAGES=(
     gnome-keyring
     libsecret
+    seahorse  # not strictly required, but good for managing the keyring
 )
 
 snippet "packages-installed"
