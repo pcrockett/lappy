@@ -52,8 +52,8 @@ s = ":run-shell-command git status"
 [keys.normal." ".";".c]
 c = "@X<space>;c<C-c>"
 u = "@X<space>;c<C-u>"
-C-c = ":pipe sed -r 's|\\* \\[ \\]|* [x]|'"
-C-u = ":pipe sed -r 's|\\* \\[.\\]|* [ ]|'"
+C-c = ":pipe sed -r 's|[\\*-] \\[ \\]|* [x]|'"
+C-u = ":pipe sed -r 's|[\\*-] \\[.\\]|* [ ]|'"
 
 # tagref
 [keys.normal." ".";".t]
