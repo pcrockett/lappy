@@ -16,3 +16,7 @@ update-blarg:
 	@chmod +x bin/blarg.tmp
 	@mv bin/blarg.tmp bin/blarg
 .PHONY: update-blarg
+
+run-target:
+	@./bin/blarg --verbose "targets/$(shell cd targets && fzf)"
+.PHONY: run-target
