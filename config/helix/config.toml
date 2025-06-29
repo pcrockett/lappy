@@ -50,7 +50,7 @@ s = ":run-shell-command git status"
 
 # markdown checkbox functions
 [keys.normal." ".";".c]
-c = "@X<space>;c<C-c>"     # check a checkbox
+c = "@X<space>;c<C-c>;l"   # check a checkbox
 u = "@X<space>;c<C-u>"     # uncheck a checkbox
 n = "@gll<space>;c<C-n>A"  # new checkbox
 
