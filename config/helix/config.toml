@@ -48,12 +48,16 @@ d = ":run-shell-command docker compose down"
 d = ":run-shell-command git diff"
 s = ":run-shell-command git status"
 
-# checkbox checking and unchecking
+# markdown checkbox functions
 [keys.normal." ".";".c]
-c = "@X<space>;c<C-c>"
-u = "@X<space>;c<C-u>"
+c = "@X<space>;c<C-c>"     # check a checkbox
+u = "@X<space>;c<C-u>"     # uncheck a checkbox
+n = "@gll<space>;c<C-n>A"  # new checkbox
+
+# "internal" keybindings (only used to enable the above):
 C-c = ":pipe sed -r 's|[\\*-] \\[ \\]|* [x]|'"
 C-u = ":pipe sed -r 's|[\\*-] \\[.\\]|* [ ]|'"
+C-n = ":pipe echo; echo '* [ ] '"
 
 # tagref
 [keys.normal." ".";".t]
