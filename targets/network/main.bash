@@ -4,7 +4,7 @@ targets=(
     dns-defaults-placed
     network-config-placed
     network-services-started
-    mullvad-dns-enabled
+    lappy-dns-enabled
 )
 
 depends_on "${targets[@]}"

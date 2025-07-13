@@ -1,7 +1,7 @@
 # shellcheck shell=bash
 strict_env
 
-export DNS_PROFILE="all" # mullvad: block everything
+export DNS_PROFILE="mullvad-all" # block everything
 export DOCKER_DNS_SERVER="9.9.9.9" # quad9 is better for Docker
 export PUBLIC_EMAIL="me@example.com"
 export PUBLIC_NAME="Phil Crockett"
