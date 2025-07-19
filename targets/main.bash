@@ -34,11 +34,9 @@ targets=(
     archiving/main
     media/main
     rust/main
-    # bt/main  # not needed if you disable bluetooth in BIOS
     default-apps-configured
     meshtastic/main
     dev/main
-    gleam/main
 )
 
 depends_on "${targets[@]}"
