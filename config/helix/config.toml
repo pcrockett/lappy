@@ -24,7 +24,6 @@ insert = "bar"
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
-other-lines = "error"
 
 # <https://docs.helix-editor.com/remapping.html>
 [keys.normal]
