@@ -4,7 +4,7 @@ targets=(
     helix-installed
     hx-symlink-created
     helix-configured
-    markdown-oxide-installed
+    # markdown-oxide-installed
     vscode-json-langserver-installed
 )
 
