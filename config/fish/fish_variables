@@ -6,6 +6,7 @@ SETUVAR --export DENO_INSTALL:/home/phil/\x2elocal/share/deno
 SETUVAR --export DIFFPROG:/usr/bin/delta
 SETUVAR --export EDITOR:/usr/bin/helix
 SETUVAR --export FCEUX_HOME:/home/phil/\x2econfig/fceux
+SETUVAR --export --path GOPATH:/home/phil/\x2elocal/share/golang
 SETUVAR --export PIP_REQUIRE_VIRTUALENV:true
 SETUVAR --export PNPM_HOME:/home/phil/\x2elocal/share/pnpm
 SETUVAR --export RUSH_CONFIG:/home/phil/\x2econfig/rush/config
