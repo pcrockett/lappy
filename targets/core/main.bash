@@ -1,6 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
+    environment-configured
     pacman-deps-installed
     bash-configured
     fish/main

@@ -1,0 +1,19 @@
+# shellcheck shell=sh
+# [tag:lappy-profile]
+#
+# lightdm runs this script when starting a user session, so all child processes launched
+# within my interactive X session will inherit these values.
+#
+export ASDF_CONFIG_FILE="${HOME}/.config/asdf/asdfrc"
+export ASDF_DATA_DIR="${HOME}/.local/state/asdf"
+export DENO_INSTALL="${HOME}/.local/share/deno"
+export DIFFPROG="/usr/bin/delta"
+export EDITOR="/usr/bin/helix"
+export FCEUX_HOME="${HOME}/.config/fceux"
+export GOPATH="${HOME}/.local/share/golang"
+export PATH="/home/phil/.local/bin:/home/phil/.local/state/asdf/shims:/home/phil/.cargo/bin:/home/phil/.local/share/pnpm:${PATH}"
+export PIP_REQUIRE_VIRTUALENV="true"
+export PNPM_HOME="${HOME}/.local/share/pnpm"
+export RUSH_CONFIG="${HOME}/.config/rush/config"
+export RUSH_ROOT="${HOME}/.local/share/rush"
+export VISUAL="/usr/bin/helix"

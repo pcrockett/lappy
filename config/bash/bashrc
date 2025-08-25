@@ -1,7 +1,3 @@
 # shellcheck shell=bash
 # [tag:lappy-bashrc]
-
-export RUSH_CONFIG="${HOME}/.config/rush/config"
-export RUSH_ROOT="${HOME}/.local/share/rush"
-export ASDF_DATA_DIR="${HOME}/.local/state/asdf"
-PATH="${HOME}/.local/bin:${ASDF_DATA_DIR}/shims:${PATH}"
+# i used to put environment variables here, but now i use [ref:lappy-profile] for that
