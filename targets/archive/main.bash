@@ -2,6 +2,7 @@
 
 targets=(
     configured
+    copyparty-installed
 )
 
 depends_on "${targets[@]}"
