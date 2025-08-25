@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-LINE_TO_ADD="source '${BLARG_CWD}/config/bash/bashrc'"
+LINE_TO_ADD="source '${BLARG_CWD}/config/bash/bashrc'"  # [ref:lappy-bashrc]
 
 satisfied_if() {
     grep --fixed-strings "${LINE_TO_ADD}" ~/.bashrc
@@ -8,6 +8,5 @@ satisfied_if() {
 
 apply() {
     echo "${LINE_TO_ADD}" >> ~/.bashrc
-    echo "Bash successfully configured. Close your terminal and restart it."
-    exit 1
+    echo "Bash successfully configured."
 }

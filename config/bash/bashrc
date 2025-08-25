@@ -1,4 +1,5 @@
 # shellcheck shell=bash
+# [tag:lappy-bashrc]
 
 export RUSH_CONFIG="${HOME}/.config/rush/config"
 export RUSH_ROOT="${HOME}/.local/share/rush"
