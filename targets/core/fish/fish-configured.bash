@@ -1,5 +1,7 @@
 #!/usr/bin/env blarg
 
+depends_on core/environment-configured
+
 REPO_PATH="${BLARG_CWD}/config/fish"
 SYSTEM_PATH=~/.config/fish
 
