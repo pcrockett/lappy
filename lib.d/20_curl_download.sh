@@ -1,4 +1,5 @@
 # shellcheck shell=bash
+# [tag:curl-download]
 
 curl_download() {
     local url="${1}"
