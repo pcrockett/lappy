@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-# usage: newtarget NAME TEMPLATE
+# usage: newtarget NAME [TEMPLATE]
 #
 # example: newtarget firefox-installed package
 
@@ -9,7 +9,19 @@ NAMING_CONVENTION='[a-z0-9\-/]+'
 
 init() {
     TARGET_NAME="${1:?no target name specified}"
-    TEMPLATE_NAME="${2:?no template name specified}"
+    template_query="${2:-}"
+
+    pushd templates &>/dev/null
+    TEMPLATE_NAME="$(
+        fzf \
+            --query "${template_query}" \
+            --select-1 \
+            --ansi \
+            --preview 'bat --color always {}' \
+            --preview-window 'up,70%'
+    )"
+    TEMPLATE_NAME="$(basename "${TEMPLATE_NAME}" .bash)"
+    popd &>/dev/null
 }
 
 panic() {
@@ -37,6 +49,7 @@ main() {
     fi
 
     "${EDITOR}" "${TARGET_PATH}"
+    exit $?
 }
 
 main "${@}"
