@@ -1,8 +1,14 @@
 #!/usr/bin/env blarg
-# shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
 
-PACKAGES=(
-    pandoc
-)
+depends_on rush/main
 
-snippet "packages-installed"
+PACKAGE_NAME="pandoc"
+
+satisfied_if() {
+    command -v "${PACKAGE_NAME}"
+}
+
+apply() {
+    satisfy rush/rush-repo-pulled
+    rush get "${PACKAGE_NAME}"
+}
