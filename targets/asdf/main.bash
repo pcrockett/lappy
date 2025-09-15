@@ -11,6 +11,7 @@ targets=(
     pnpm-plugin-installed
     age-plugin-installed
     default-tools-configured
+    default-tools-installed
 )
 
 depends_on "${targets[@]}"

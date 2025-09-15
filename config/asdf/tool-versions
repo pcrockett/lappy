@@ -1,4 +1,4 @@
 nodejs system
 pnpm system
 python system
-shellcheck system
+shellcheck 0.11.0
