@@ -21,5 +21,6 @@ jobs:
     - name: lint
       run: |
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-        brew install ripgrep tagref
+        brew install ripgrep tagref pipx
+        pipx install pre-commit
         make lint

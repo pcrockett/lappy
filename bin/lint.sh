@@ -37,25 +37,6 @@ ignore() {
     "${command[@]}"
 }
 
-append() {
-    cat
-    for i in "${@}"; do
-        echo "${i}"
-    done
-}
-
-rule:shellcheck() {
-    local special_scripts=(
-        bin/newtarget
-        config/bash/bashrc
-        config/direnv/direnvrc
-    )
-    all_files \
-        | rg '\.(sh|bash)$' \
-        | append "${special_scripts[@]}" \
-        | xargs shellcheck
-}
-
 rule:no_raw_sudo() {
     ! all_files \
         | ignore "bin/lint\.sh" "lib\.d/50_as_root\.sh" \
@@ -69,9 +50,10 @@ rule:no_core_main() {
 }
 
 main() {
-    rule:shellcheck || report_lint "shellcheck failed"
     rule:no_raw_sudo || report_lint "don't use raw \`sudo\` -- use \`as_root\` instead."
     rule:no_core_main || report_lint "don't depend on core/main."
+    pre-commit run --all --show-diff-on-failure --color=always || report_lint "pre-commit failed"
+    tagref check || report_lint "tagref failed"
 
     if [ "${EXIT_STATUS}" -eq 0 ]; then
         echo "no lint found"

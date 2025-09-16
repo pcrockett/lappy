@@ -4,7 +4,6 @@ default:
 
 lint:
 	@./bin/lint.sh
-	@tagref check
 .PHONY: lint
 
 update-blarg:
