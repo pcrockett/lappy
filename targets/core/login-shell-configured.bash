@@ -5,9 +5,9 @@ depends_on fish/main
 FISH_PATH="$(command -v fish)"
 
 satisfied_if() {
-    test "${SHELL}" == "${FISH_PATH}"
+  test "${SHELL}" == "${FISH_PATH}"
 }
 
 apply() {
-    as_root chsh --shell "${FISH_PATH}" "${USER}"
+  as_root chsh --shell "${FISH_PATH}" "${USER}"
 }

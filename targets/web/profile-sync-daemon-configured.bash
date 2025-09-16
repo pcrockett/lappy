@@ -9,19 +9,19 @@ REPO_PSD_CONF="${BLARG_CWD}/config/profile-sync-daemon"
 USER_PSD_CONF="${HOME}/.config/psd"
 
 satisfied_if() {
-    test -f "${LIBREWOLF_CONFIG}" &&
-        test "$(file_timestamp "${FIREFOX_CONFIG}")" -lt "$(file_timestamp "${LIBREWOLF_CONFIG}")" &&
-        test_symlink "${REPO_PSD_CONF}" "${USER_PSD_CONF}"
+  test -f "${LIBREWOLF_CONFIG}" &&
+    test "$(file_timestamp "${FIREFOX_CONFIG}")" -lt "$(file_timestamp "${LIBREWOLF_CONFIG}")" &&
+    test_symlink "${REPO_PSD_CONF}" "${USER_PSD_CONF}"
 }
 
 apply() {
-    sed 's|\.mozilla/firefox|.librewolf|g' "${FIREFOX_CONFIG}" |
-        as_root with-umask u=rwx,g=r,o=r dd of="${LIBREWOLF_CONFIG}" status=none
+  sed 's|\.mozilla/firefox|.librewolf|g' "${FIREFOX_CONFIG}" |
+    as_root with-umask u=rwx,g=r,o=r dd of="${LIBREWOLF_CONFIG}" status=none
 
-    rm -rf "${USER_PSD_CONF}"
-    ln --symbolic "${REPO_PSD_CONF}" "${USER_PSD_CONF}"
+  rm -rf "${USER_PSD_CONF}"
+  ln --symbolic "${REPO_PSD_CONF}" "${USER_PSD_CONF}"
 
-    if [ "$(systemctl --user is-active psd.service)" == "active" ]; then
-        systemctl --user restart psd.service
-    fi
+  if [ "$(systemctl --user is-active psd.service)" == "active" ]; then
+    systemctl --user restart psd.service
+  fi
 }

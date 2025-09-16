@@ -13,36 +13,36 @@ AWK="/usr/bin/awk"
 GREP="/usr/bin/grep"
 
 active_bt_device_count() {
-    # shellcheck disable=SC2016  # dollar signs in single-quotes are not expanded
-    "${RFKILL}" --output TYPE,SOFT --noheadings |
-        "${AWK}" '$1 == "bluetooth" { print $2 }' |
-        "${GREP}" --fixed-strings --count unblocked
+  # shellcheck disable=SC2016  # dollar signs in single-quotes are not expanded
+  "${RFKILL}" --output TYPE,SOFT --noheadings |
+    "${AWK}" '$1 == "bluetooth" { print $2 }' |
+    "${GREP}" --fixed-strings --count unblocked
 }
 
 on_sleep() {
-    echo "sleeping..."
+  echo "sleeping..."
 }
 
 on_wake() {
-    while [ "$(active_bt_device_count)" -ne 0 ]; do
-        "${RFKILL}" block bluetooth
-        sleep 1
-    done
+  while [ "$(active_bt_device_count)" -ne 0 ]; do
+    "${RFKILL}" block bluetooth
+    sleep 1
+  done
 }
 
 main() {
-    case "${PHASE}" in
-    "pre")
-        on_sleep
-        ;;
-    "post")
-        on_wake
-        ;;
-    *)
-        echo "unrecognized PHASE: ${PHASE}" >&2
-        exit 1
-        ;;
-    esac
+  case "${PHASE}" in
+  "pre")
+    on_sleep
+    ;;
+  "post")
+    on_wake
+    ;;
+  *)
+    echo "unrecognized PHASE: ${PHASE}" >&2
+    exit 1
+    ;;
+  esac
 }
 
 main

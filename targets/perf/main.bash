@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
-    cpupower-installed
+  cpupower-installed
 )
 
 depends_on "${targets[@]}"

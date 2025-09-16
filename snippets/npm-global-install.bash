@@ -7,11 +7,11 @@
 depends_on helix/pnpm-installed core/environment-configured
 
 satisfied_if() {
-    for p in "${PACKAGES[@]}"; do
-        command -v "${p}" || return 1
-    done
+  for p in "${PACKAGES[@]}"; do
+    command -v "${p}" || return 1
+  done
 }
 
 apply() {
-    pnpm install --global "${PACKAGES[@]}"
+  pnpm install --global "${PACKAGES[@]}"
 }

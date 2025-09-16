@@ -3,5 +3,5 @@
 depends_on rush-repo-cloned
 
 apply() {
-    rush pull
+  rush pull
 }

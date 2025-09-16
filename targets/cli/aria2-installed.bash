@@ -2,7 +2,7 @@
 # shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
 
 PACKAGES=(
-    aria2
+  aria2
 )
 
 snippet "packages-installed"

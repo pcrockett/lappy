@@ -2,15 +2,15 @@
 # shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
 
 PACKAGES=(
-    timeshift
+  timeshift
 )
 
 satisfied_if() {
-    package_is_installed "${PACKAGES[@]}"
+  package_is_installed "${PACKAGES[@]}"
 }
 
 apply() {
-    satisfy network/main
-    satisfy arch-news-checked
-    install_package "${PACKAGES[@]}"
+  satisfy network/main
+  satisfy arch-news-checked
+  install_package "${PACKAGES[@]}"
 }

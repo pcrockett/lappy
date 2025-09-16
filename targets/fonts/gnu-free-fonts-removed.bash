@@ -6,13 +6,13 @@
 depends_on font-packages-installed
 
 PACKAGES=(
-    gnu-free-fonts
+  gnu-free-fonts
 )
 
 satisfied_if() {
-    ! package_is_installed "${PACKAGES[@]}"
+  ! package_is_installed "${PACKAGES[@]}"
 }
 
 apply() {
-    remove_package "${PACKAGES[@]}"
+  remove_package "${PACKAGES[@]}"
 }

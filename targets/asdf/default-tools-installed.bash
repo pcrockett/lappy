@@ -3,11 +3,11 @@
 depends_on default-tools-configured shellcheck-plugin-installed
 
 satisfied_if() {
-    shellcheck --version
+  shellcheck --version
 }
 
 apply() {
-    cd ~ || panic "Unable to cd HOME?"
-    asdf install || true
-    shellcheck --version &>/dev/null || panic "Shellcheck didn't install correctly."
+  cd ~ || panic "Unable to cd HOME?"
+  asdf install || true
+  shellcheck --version &>/dev/null || panic "Shellcheck didn't install correctly."
 }

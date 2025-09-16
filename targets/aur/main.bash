@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
-    yay-installed
+  yay-installed
 )
 
 depends_on "${targets[@]}"

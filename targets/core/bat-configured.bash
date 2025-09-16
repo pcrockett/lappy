@@ -4,10 +4,10 @@ REPO_PATH="${BLARG_CWD}/config/bat"
 SYSTEM_PATH=~/.config/bat
 
 satisfied_if() {
-    test_symlink "${REPO_PATH}" "${SYSTEM_PATH}"
+  test_symlink "${REPO_PATH}" "${SYSTEM_PATH}"
 }
 
 apply() {
-    rm -rf "${SYSTEM_PATH}"
-    ln --symbolic "${REPO_PATH}" "${SYSTEM_PATH}"
+  rm -rf "${SYSTEM_PATH}"
+  ln --symbolic "${REPO_PATH}" "${SYSTEM_PATH}"
 }

@@ -7,10 +7,10 @@ THEME_NAME="catppuccin-mocha"
 THEME_PATH="${THEME_DIR}/${THEME_NAME}.rasi"
 
 satisfied_if() {
-    test -f "${THEME_PATH}"
+  test -f "${THEME_PATH}"
 }
 
 apply() {
-    mkdir --parent "${THEME_DIR}"
-    cp "${BLARG_CWD}/config/rofi/${THEME_NAME}.rasi" "${THEME_PATH}"
+  mkdir --parent "${THEME_DIR}"
+  cp "${BLARG_CWD}/config/rofi/${THEME_NAME}.rasi" "${THEME_PATH}"
 }

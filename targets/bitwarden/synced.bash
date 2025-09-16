@@ -3,5 +3,5 @@
 depends_on unlocked
 
 apply() {
-    bw sync
+  bw sync
 }

@@ -1,8 +1,8 @@
 #!/usr/bin/env blarg
 
 targets=(
-    rust-installed
-    rust-analyzer-installed
+  rust-installed
+  rust-analyzer-installed
 )
 
 depends_on "${targets[@]}"

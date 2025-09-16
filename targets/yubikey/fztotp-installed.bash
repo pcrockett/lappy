@@ -5,10 +5,10 @@ depends_on rush/main cli/xsel-installed
 PACKAGE_NAME="fztotp"
 
 satisfied_if() {
-    command -v fztotp
+  command -v fztotp
 }
 
 apply() {
-    satisfy rush/rush-repo-pulled
-    rush get "${PACKAGE_NAME}"
+  satisfy rush/rush-repo-pulled
+  rush get "${PACKAGE_NAME}"
 }

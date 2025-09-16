@@ -13,14 +13,14 @@ SOURCE_CONFIG="${BLARG_CWD}/config/sudo/50_custom"
 DEST_CONFIG="/etc/sudoers.d/50_custom"
 
 satisfied_if() {
-    test -f "${MARKER_FILE}" &&
-        test "$(file_timestamp "${SOURCE_CONFIG}")" -lt "$(file_timestamp "${MARKER_FILE}")"
+  test -f "${MARKER_FILE}" &&
+    test "$(file_timestamp "${SOURCE_CONFIG}")" -lt "$(file_timestamp "${MARKER_FILE}")"
 }
 
 apply() {
-    visudo --check --strict --file "${SOURCE_CONFIG}"
-    mkdir --parent "${STATE_DIR}"
-    as_root with-umask u=r,g=r,o= cp "${SOURCE_CONFIG}" "${DEST_CONFIG}"
-    as_root visudo --check --strict
-    touch "${MARKER_FILE}"
+  visudo --check --strict --file "${SOURCE_CONFIG}"
+  mkdir --parent "${STATE_DIR}"
+  as_root with-umask u=r,g=r,o= cp "${SOURCE_CONFIG}" "${DEST_CONFIG}"
+  as_root visudo --check --strict
+  touch "${MARKER_FILE}"
 }

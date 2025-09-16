@@ -6,10 +6,10 @@
 depends_on network/main
 
 satisfied_if() {
-    package_is_installed "${PACKAGES[@]}"
+  package_is_installed "${PACKAGES[@]}"
 }
 
 apply() {
-    satisfy arch-news-checked
-    install_package "${PACKAGES[@]}"
+  satisfy arch-news-checked
+  install_package "${PACKAGES[@]}"
 }

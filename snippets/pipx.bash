@@ -6,12 +6,12 @@
 depends_on python/pipx-installed
 
 satisfied_if() {
-    for package in "${PACKAGES[@]}"; do
-        pipx list --short | grep --fixed-strings --word-regexp "${package}" ||
-            return 1
-    done
+  for package in "${PACKAGES[@]}"; do
+    pipx list --short | grep --fixed-strings --word-regexp "${package}" ||
+      return 1
+  done
 }
 
 apply() {
-    pipx install "${PACKAGES[@]}"
+  pipx install "${PACKAGES[@]}"
 }

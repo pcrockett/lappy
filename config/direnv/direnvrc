@@ -1,27 +1,27 @@
 # shellcheck shell=bash
 
 layout_asdf_python() {
-    # 1. use asdf to manage your python versions
-    # 2. set correct virtualenv in your shell
-    #
-    # example .envrc usage:
-    #
-    #     layout asdf_python
-    #
-    use asdf
+  # 1. use asdf to manage your python versions
+  # 2. set correct virtualenv in your shell
+  #
+  # example .envrc usage:
+  #
+  #     layout asdf_python
+  #
+  use asdf
 
-    local python_path
-    python_path="$(command -v python)"
-    layout python "${python_path}"
+  local python_path
+  python_path="$(command -v python)"
+  layout python "${python_path}"
 }
 
 layout_pyright_lsp() {
-    if [ "${VIRTUAL_ENV:-}" == "" ]; then
-        echo "No virtual env is activated!"
-        exit 1
-    fi
+  if [ "${VIRTUAL_ENV:-}" == "" ]; then
+    echo "No virtual env is activated!"
+    exit 1
+  fi
 
-    cat >pyrightconfig.json <<EOF
+  cat >pyrightconfig.json <<EOF
 {
   "venvPath": "$(dirname "${VIRTUAL_ENV}")",
   "venv": "$(basename "${VIRTUAL_ENV}")"

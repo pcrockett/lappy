@@ -5,10 +5,10 @@ depends_on rush/main core/ripgrep-installed core/bat-installed core/fzf-installe
 PACKAGE_NAME="kbgrep"
 
 satisfied_if() {
-    command -v kbg
+  command -v kbg
 }
 
 apply() {
-    satisfy rush/rush-repo-pulled
-    rush get "${PACKAGE_NAME}"
+  satisfy rush/rush-repo-pulled
+  rush get "${PACKAGE_NAME}"
 }

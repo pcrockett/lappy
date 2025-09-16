@@ -5,10 +5,10 @@ depends_on rush/main core/fzf-installed core/man-db-enabled
 PACKAGE_NAME="fzman"
 
 satisfied_if() {
-    command -v fzman
+  command -v fzman
 }
 
 apply() {
-    satisfy rush/rush-repo-pulled
-    rush get "${PACKAGE_NAME}"
+  satisfy rush/rush-repo-pulled
+  rush get "${PACKAGE_NAME}"
 }

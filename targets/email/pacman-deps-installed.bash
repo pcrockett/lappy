@@ -4,8 +4,8 @@
 depends_on core/w3m-installed
 
 PACKAGES=(
-    aerc
-    dante # for html emails
+  aerc
+  dante # for html emails
 )
 
 snippet "packages-installed"

@@ -1,8 +1,8 @@
 #!/usr/bin/env blarg
 
 targets=(
-    configured
-    copyparty-installed
+  configured
+  copyparty-installed
 )
 
 depends_on "${targets[@]}"

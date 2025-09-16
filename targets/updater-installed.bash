@@ -6,10 +6,10 @@ depends_on rush/main arch-news-check-installed
 PACKAGE_NAME="updater"
 
 satisfied_if() {
-    command -v software-update
+  command -v software-update
 }
 
 apply() {
-    satisfy rush/rush-repo-pulled
-    rush get "${PACKAGE_NAME}"
+  satisfy rush/rush-repo-pulled
+  rush get "${PACKAGE_NAME}"
 }

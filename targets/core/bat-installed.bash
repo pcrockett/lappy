@@ -4,7 +4,7 @@
 depends_on bat-configured
 
 PACKAGES=(
-    bat
+  bat
 )
 
 snippet "packages-installed"

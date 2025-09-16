@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
-    ssh-key-generated
+  ssh-key-generated
 )
 
 depends_on "${targets[@]}"

@@ -3,9 +3,9 @@
 depends_on cli-installed yubikey/fztotp-installed
 
 satisfied_if() {
-    bw login --check
+  bw login --check
 }
 
 apply() {
-    panic "As of right now, this step is manual. Please run \`bw login\` and try again."
+  panic "As of right now, this step is manual. Please run \`bw login\` and try again."
 }

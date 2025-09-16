@@ -3,9 +3,9 @@
 # depends_on something
 
 satisfied_if() {
-    false
+  false
 }
 
 apply() {
-    panic "not implemented yet"
+  panic "not implemented yet"
 }

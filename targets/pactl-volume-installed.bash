@@ -5,10 +5,10 @@ depends_on rush/main
 PACKAGE_NAME="pactl_volume"
 
 satisfied_if() {
-    command -v pactl_volume
+  command -v pactl_volume
 }
 
 apply() {
-    satisfy rush/rush-repo-pulled
-    rush get "${PACKAGE_NAME}"
+  satisfy rush/rush-repo-pulled
+  rush get "${PACKAGE_NAME}"
 }

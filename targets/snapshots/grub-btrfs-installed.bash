@@ -3,15 +3,15 @@
 depends_on inotify-tools-installed
 
 PACKAGES=(
-    grub-btrfs
+  grub-btrfs
 )
 
 satisfied_if() {
-    package_is_installed "${PACKAGES[@]}"
+  package_is_installed "${PACKAGES[@]}"
 }
 
 apply() {
-    satisfy network/main
-    satisfy arch-news-checked
-    install_package "${PACKAGES[@]}"
+  satisfy network/main
+  satisfy arch-news-checked
+  install_package "${PACKAGES[@]}"
 }
