@@ -1,7 +1,5 @@
 #!/usr/bin/env blarg
 # shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
-#
-# https://github.com/Microsoft/vscode/tree/main/extensions/json-language-features/server
 
-PACKAGES=("vscode-json-languageserver")
+PACKAGES=("awk-language-server")
 snippet npm-global-install
