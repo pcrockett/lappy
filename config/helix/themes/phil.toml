@@ -1,7 +1,7 @@
 inherits = "sonokai"
 
 # just copy / pasted from sonokai theme, but added "primary" to the key name
-# TODO: create PR to fix this upstream
+# TODO: remove this hack if <https://github.com/helix-editor/helix/pull/14461> is ever merged
 "ui.cursor.primary" = { modifiers = ['reversed'] }
 "ui.cursor.primary.match" = { bg = "bg4" }
 "ui.cursor.primary.insert" = { fg = "black", bg = "grey" }
