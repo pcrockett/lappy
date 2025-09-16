@@ -1,0 +1,8 @@
+inherits = "sonokai"
+
+# just copy / pasted from sonokai theme, but added "primary" to the key name
+# TODO: create PR to fix this upstream
+"ui.cursor.primary" = { modifiers = ['reversed'] }
+"ui.cursor.primary.match" = { bg = "bg4" }
+"ui.cursor.primary.insert" = { fg = "black", bg = "grey" }
+"ui.cursor.primary.select" = { fg = "bg0", bg = "blue" }
