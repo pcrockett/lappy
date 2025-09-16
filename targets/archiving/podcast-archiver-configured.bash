@@ -6,8 +6,8 @@ REPO_PATH="${BLARG_CWD}/config/podcast-archiver"
 SYSTEM_PATH=~/.config/podcast-archiver
 
 satisfied_if() {
-    test_symlink "${REPO_PATH}" "${SYSTEM_PATH}" \
-        && template_was_rendered "${REPO_PATH}/config.yaml.template"
+    test_symlink "${REPO_PATH}" "${SYSTEM_PATH}" &&
+        template_was_rendered "${REPO_PATH}/config.yaml.template"
 }
 
 apply() {

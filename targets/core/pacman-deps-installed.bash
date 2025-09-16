@@ -4,9 +4,9 @@
 PACKAGES=(
     btop
     fx
-    pacman-contrib  # rankmirrors and pacdiff
+    pacman-contrib # rankmirrors and pacdiff
     unzip
-    ueberzugpp  # image previews in terminal / yazi
+    ueberzugpp # image previews in terminal / yazi
     yazi
     zip
 )

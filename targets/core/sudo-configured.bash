@@ -13,8 +13,8 @@ SOURCE_CONFIG="${BLARG_CWD}/config/sudo/50_custom"
 DEST_CONFIG="/etc/sudoers.d/50_custom"
 
 satisfied_if() {
-    test -f "${MARKER_FILE}" \
-        && test "$(file_timestamp "${SOURCE_CONFIG}")" -lt "$(file_timestamp "${MARKER_FILE}")"
+    test -f "${MARKER_FILE}" &&
+        test "$(file_timestamp "${SOURCE_CONFIG}")" -lt "$(file_timestamp "${MARKER_FILE}")"
 }
 
 apply() {

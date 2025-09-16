@@ -11,6 +11,5 @@ satisfied_if() {
 
 apply() {
     satisfy arch-news-checked
-#    satisfy snapshots/created
     install_package "${PACKAGES[@]}"
 }

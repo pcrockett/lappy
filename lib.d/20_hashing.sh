@@ -7,7 +7,7 @@ get_hash() {
 get_file_hash() {
     local path="${1}"
     test -f "${path}" || return 0 # Return nothing
-    get_hash < "${path}"
+    get_hash <"${path}"
 }
 
 files_are_same() {

@@ -11,7 +11,7 @@ apply() {
     local dest_dir="${HOME}/.local/bin"
     local temp_file
     temp_file="$(mktemp)"
-    curl_download "${dl_url}" > "${temp_file}"
+    curl_download "${dl_url}" >"${temp_file}"
     chmod +x "${temp_file}"
     mkdir --parent "${dest_dir}"
     mv "${temp_file}" "${dest_dir}/rush"

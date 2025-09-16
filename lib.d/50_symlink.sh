@@ -22,6 +22,6 @@ test_symlink() {
     local dest_canonical
     dest_canonical="$(readlink --canonicalize-existing "${dest}")"
 
-    test -L "${dest}" \
-        && test "${source_canonical}" == "${dest_canonical}"
+    test -L "${dest}" &&
+        test "${source_canonical}" == "${dest_canonical}"
 }

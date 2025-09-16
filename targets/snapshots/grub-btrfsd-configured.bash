@@ -10,5 +10,5 @@ satisfied_if() {
 }
 
 apply() {
-    as_root systemctl edit --full --stdin grub-btrfsd.service < "${REPO_FILE}"
+    as_root systemctl edit --full --stdin grub-btrfsd.service <"${REPO_FILE}"
 }

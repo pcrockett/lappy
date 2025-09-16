@@ -18,5 +18,5 @@ curl_download() {
 
 THIS_DIR="$(dirname "$(readlink -f "${0}")")"
 DEST_FILE="${THIS_DIR}/rustup-init"
-curl_download https://sh.rustup.rs > "${DEST_FILE}"
+curl_download https://sh.rustup.rs >"${DEST_FILE}"
 chmod +x "${DEST_FILE}"

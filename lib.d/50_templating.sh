@@ -30,5 +30,5 @@ template_render() {
     local template="${1}" output
     __validate_template_file_name "${template}"
     output="$(__get_template_output_file "${template}")"
-    envsubst < "${template}" > "${output}"
+    envsubst <"${template}" >"${output}"
 }

@@ -10,8 +10,8 @@ satisfied_if() {
         # docker daemon shouldn't be configured
         test ! -f "${SYSTEM_CONFIG_DIR}/daemon.json"
     else
-        template_was_rendered "${REPO_CONFIG_DIR}/daemon.json.template" \
-            && files_are_same "${REPO_CONFIG_DIR}/daemon.json" "${SYSTEM_CONFIG_DIR}/daemon.json"
+        template_was_rendered "${REPO_CONFIG_DIR}/daemon.json.template" &&
+            files_are_same "${REPO_CONFIG_DIR}/daemon.json" "${SYSTEM_CONFIG_DIR}/daemon.json"
     fi
 }
 

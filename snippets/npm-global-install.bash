@@ -7,8 +7,7 @@
 depends_on helix/pnpm-installed core/environment-configured
 
 satisfied_if() {
-    for p in "${PACKAGES[@]}";
-    do
+    for p in "${PACKAGES[@]}"; do
         command -v "${p}" || return 1
     done
 }

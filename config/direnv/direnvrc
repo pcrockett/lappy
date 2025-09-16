@@ -21,7 +21,7 @@ layout_pyright_lsp() {
         exit 1
     fi
 
-    cat > pyrightconfig.json <<EOF
+    cat >pyrightconfig.json <<EOF
 {
   "venvPath": "$(dirname "${VIRTUAL_ENV}")",
   "venv": "$(basename "${VIRTUAL_ENV}")"

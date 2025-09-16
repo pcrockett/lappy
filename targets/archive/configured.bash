@@ -15,9 +15,9 @@ apply() {
 
     CONFIG_JSON="$(bw get item beekrpad.backblaze.archive)"
     ARCHIVE_BUCKET_NAME="$(get_value bucket)" \
-        ARCHIVE_APPLICATION_KEY_ID="$(get_value key.id)" \
-        ARCHIVE_APPLICATION_KEY_SECRET="$(get_value key.secret)" \
-        ARCHIVE_ENCRYPTION_KEY="$(get_value rclone.encryption-key)" \
+    ARCHIVE_APPLICATION_KEY_ID="$(get_value key.id)" \
+    ARCHIVE_APPLICATION_KEY_SECRET="$(get_value key.secret)" \
+    ARCHIVE_ENCRYPTION_KEY="$(get_value rclone.encryption-key)" \
         rush get rclone-archive --force
 }
 
