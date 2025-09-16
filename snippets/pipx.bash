@@ -16,4 +16,3 @@ satisfied_if() {
 apply() {
     pipx install "${PACKAGES[@]}"
 }
-

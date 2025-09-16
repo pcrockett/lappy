@@ -14,4 +14,3 @@ apply() {
 #    satisfy snapshots/created
     install_package "${PACKAGES[@]}"
 }
-

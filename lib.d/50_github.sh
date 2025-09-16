@@ -7,4 +7,3 @@ github_latest_tag() {
         | grep --perl-regexp --only-matching '(?<="tag_name":)\s*"\S+"' \
         | tr --delete '" '
 }
-

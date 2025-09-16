@@ -16,4 +16,3 @@ apply() {
     satisfy network/main
     yay -Syu --aur --noconfirm "${PACKAGES[@]}"
 }
-
