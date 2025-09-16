@@ -24,3 +24,4 @@ repos:
     rev: v0.11.0
     hooks:
     - id: shellcheck
+      exclude: rustup-init
