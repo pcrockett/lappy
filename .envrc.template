@@ -10,5 +10,6 @@ export PODCAST_FEEDS="$(cat <<EOF
 EOF
 )"
 export SIGNAL_PHONE_NUMBER="+XXXXXXXXXXX"
+export SCANNER_IP_ADDRESS="xxx.xxx.xxx.xxx"
 
 PATH_add bin

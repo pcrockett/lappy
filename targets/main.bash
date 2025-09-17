@@ -37,6 +37,7 @@ targets=(
   default-apps-configured
   meshtastic/main
   dev/main
+  scanner/main
 )
 
 depends_on "${targets[@]}"
