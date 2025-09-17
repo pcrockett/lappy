@@ -5,8 +5,8 @@ UNIT="tailscaled.service"
 depends_on tailscale-installed
 
 satisfied_if() {
-  test "$(systemctl is-enabled "${UNIT}")" == "enabled" &&
-    test "$(systemctl is-active "${UNIT}")" == "active"
+  test "$(systemctl is-enabled "${UNIT}")" == "enabled" \
+    && test "$(systemctl is-active "${UNIT}")" == "active"
 }
 
 apply() {

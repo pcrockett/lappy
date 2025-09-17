@@ -23,8 +23,8 @@ apply() {
   BUCKET_URL="$(get_value bucket.url)" \
   HOSTNAME="$(hostnamectl hostname)" \
   HOME="${HOME}" \
-    envsubst '$RESTIC_E2EE_PASSWORD $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY $BUCKET_URL $HOSTNAME $HOME' <"${REPO_CONFIG_DIR}/config.sh.template" |
-    as_root with-umask u=rw,g=,o= dd of=/etc/backup.tmp/config.sh status=none
+    envsubst '$RESTIC_E2EE_PASSWORD $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY $BUCKET_URL $HOSTNAME $HOME' <"${REPO_CONFIG_DIR}/config.sh.template" \
+    | as_root with-umask u=rw,g=,o= dd of=/etc/backup.tmp/config.sh status=none
   as_root mv /etc/backup.tmp /etc/backup
 }
 

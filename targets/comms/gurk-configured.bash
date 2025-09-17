@@ -4,9 +4,9 @@ REPO_PATH="${BLARG_CWD}/config/gurk"
 SYSTEM_PATH=~/.config/gurk
 
 satisfied_if() {
-  test_symlink "${REPO_PATH}" "${SYSTEM_PATH}" &&
-    test -f "${SYSTEM_PATH}/gurk.toml" &&
-    template_was_rendered "${REPO_PATH}/gurk.toml.template"
+  test_symlink "${REPO_PATH}" "${SYSTEM_PATH}" \
+    && test -f "${SYSTEM_PATH}/gurk.toml" \
+    && template_was_rendered "${REPO_PATH}/gurk.toml.template"
 }
 
 apply() {

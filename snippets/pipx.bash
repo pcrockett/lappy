@@ -7,8 +7,8 @@ depends_on python/pipx-installed
 
 satisfied_if() {
   for package in "${PACKAGES[@]}"; do
-    pipx list --short | grep --fixed-strings --word-regexp "${package}" ||
-      return 1
+    pipx list --short | grep --fixed-strings --word-regexp "${package}" \
+      || return 1
   done
 }
 

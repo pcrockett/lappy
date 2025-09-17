@@ -5,10 +5,10 @@ depends_on dev/delta-installed
 LOCAL_CONFIG="${BLARG_CWD}/config/git"
 
 satisfied_if() {
-  test -f "${LOCAL_CONFIG}/.gitconfig" &&
-    template_was_rendered "${LOCAL_CONFIG}/.gitconfig.template" &&
-    files_are_same "${LOCAL_CONFIG}/.gitconfig" "${HOME}/.gitconfig" &&
-    test_symlink "${LOCAL_CONFIG}/gitignore_global" "${HOME}/.gitignore"
+  test -f "${LOCAL_CONFIG}/.gitconfig" \
+    && template_was_rendered "${LOCAL_CONFIG}/.gitconfig.template" \
+    && files_are_same "${LOCAL_CONFIG}/.gitconfig" "${HOME}/.gitconfig" \
+    && test_symlink "${LOCAL_CONFIG}/gitignore_global" "${HOME}/.gitignore"
 }
 
 apply() {
