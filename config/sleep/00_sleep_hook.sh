@@ -32,16 +32,16 @@ on_wake() {
 
 main() {
   case "${PHASE}" in
-  "pre")
-    on_sleep
-    ;;
-  "post")
-    on_wake
-    ;;
-  *)
-    echo "unrecognized PHASE: ${PHASE}" >&2
-    exit 1
-    ;;
+    "pre")
+      on_sleep
+      ;;
+    "post")
+      on_wake
+      ;;
+    *)
+      echo "unrecognized PHASE: ${PHASE}" >&2
+      exit 1
+      ;;
   esac
 }
 
