@@ -1,16 +1,8 @@
 #!/usr/bin/env blarg
 
-depends_on aur/main
-
+# shellcheck disable=SC2034  # PACKAGES used in aur snippet
 PACKAGES=(
   librespeed-cli-bin
 )
 
-satisfied_if() {
-  package_is_installed "${PACKAGES[@]}"
-}
-
-apply() {
-  satisfy network/main
-  yay -Syu --aur --noconfirm "${PACKAGES[@]}"
-}
+snippet aur
