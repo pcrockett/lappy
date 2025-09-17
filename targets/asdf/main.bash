@@ -10,6 +10,7 @@ targets=(
   nodejs-plugin-installed
   pnpm-plugin-installed
   age-plugin-installed
+  pre-commit-plugin-installed
   default-tools-configured
   default-tools-installed
 )
