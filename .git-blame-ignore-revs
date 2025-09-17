@@ -1,3 +1,4 @@
 e76cea3dd36b2b28884438ae163b6619e400770d  # when pre-commit was introduced
 a9960badc19a5411378c5086e3f010d6b6706f6a  # when shfmt was introduced
 84864d2eed74bb651a0b93f6d4a2efb50fd81d4c  # reformat indent size 4 to 2
+7c8b5da6064250bbfcd56c460f22981c02d4045f  # reformat binary ops and pipes to next line
