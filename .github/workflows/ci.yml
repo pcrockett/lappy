@@ -19,8 +19,4 @@ jobs:
     - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
     - name: lint
-      run: |
-        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-        brew install ripgrep tagref pipx
-        pipx install pre-commit
-        make lint
+      run: make ci

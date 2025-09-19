@@ -1,6 +1,12 @@
+CI_IMAGE ?= lappy-ci
+
 default:
 	@PATH="$(PWD)/bin:${PATH}" ./bin/blarg --verbose ./targets
 .PHONY: default
+
+ci: ci-image
+	docker run --rm -it "$(CI_IMAGE)" make lint
+.PHONY: ci
 
 lint:
 	@./bin/lint.sh
@@ -20,3 +26,7 @@ update-blarg:
 run-target:
 	@./bin/blarg --verbose "targets/$(shell cd targets && fzf)"
 .PHONY: run-target
+
+ci-image:
+	docker build --tag "$(CI_IMAGE)" .
+.PHONY: ci-image

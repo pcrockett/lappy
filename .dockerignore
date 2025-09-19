@@ -1,0 +1,11 @@
+.dockerignore
+.envrc
+.envrc.template
+.git-blame-ignore-revs
+.git/
+.helix/
+/config/helix/runtime/
+Dockerfile
+LICENSE
+README.md
+TODO.md
