@@ -1,4 +1,5 @@
 nodejs system
 pnpm system
+pre-commit system
 python system
 shellcheck 0.11.0
