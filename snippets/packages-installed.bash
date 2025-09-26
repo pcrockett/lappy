@@ -10,6 +10,6 @@ satisfied_if() {
 }
 
 apply() {
-  satisfy arch-news-checked
+  satisfy core/arch-news-checked
   install_package "${PACKAGES[@]}"
 }

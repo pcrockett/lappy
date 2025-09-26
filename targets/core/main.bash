@@ -13,6 +13,7 @@ targets=(
   direnv-configured
   sudo-configured
   net-tools-installed
+  updater-installed
 )
 
 depends_on "${targets[@]}"

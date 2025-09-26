@@ -19,7 +19,6 @@ targets=(
   tailscale/main
   asdf/main
   firewall/main
-  updater-installed
   github/main
   yubikey/main
   aur/main
