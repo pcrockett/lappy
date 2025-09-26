@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on rofi/main pactl-volume-installed # qtile launches rofi and pactl_volume in config
+depends_on rofi-installed rofi-configured pactl-volume-installed # qtile launches rofi and pactl_volume in config
 
 REPO_PATH="${BLARG_CWD}/config/qtile/config.py"
 SYSTEM_PATH=~/.config/qtile/config.py

@@ -12,8 +12,7 @@ targets=(
   nextcloud-installed
   bash-dev/main
   python/main
-  rofi/main
-  qtile-configured
+  desktop/main
   docker/main
   fonts/main
   tailscale/main
