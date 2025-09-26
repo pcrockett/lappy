@@ -9,7 +9,6 @@ targets=(
   web/main
   ssh/main
   rush/main
-  nextcloud-installed
   bash-dev/main
   python/main
   desktop/main
@@ -28,7 +27,7 @@ targets=(
   archive/main
   backup/configured
   osm/main
-  office/libreoffice-installed
+  office/main
   archiving/main
   media/main
   rust/main
