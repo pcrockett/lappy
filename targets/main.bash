@@ -25,7 +25,7 @@ targets=(
   mouse/main
   bitwarden/main
   archive/main
-  backup/configured
+  backup/main
   osm/main
   office/main
   archiving/main
