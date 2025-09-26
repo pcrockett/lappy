@@ -5,7 +5,7 @@ default:
 .PHONY: default
 
 ci: ci-image
-	docker run --rm -it "$(CI_IMAGE)" make lint
+	docker run --rm "$(CI_IMAGE)" make lint
 .PHONY: ci
 
 lint:
