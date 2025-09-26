@@ -32,7 +32,6 @@ targets=(
   archiving/main
   media/main
   rust/main
-  default-apps-configured
   meshtastic/main
   dev/main
   scanner/main

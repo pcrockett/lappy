@@ -5,6 +5,7 @@ targets=(
   pactl-volume-installed
   rofi-installed
   rofi-configured
+  default-apps-configured
 )
 
 depends_on "${targets[@]}"
