@@ -2,6 +2,7 @@
 
 targets=(
   environment-configured
+  local-bin-dir-created
   pacman-deps-installed
   bash-configured
   fish/main
