@@ -22,7 +22,7 @@ apply() {
   else
     template_render "${REPO_CONFIG_DIR}/daemon.json.template"
     as_root with-umask u=rwx,g=rx,o=rx mkdir --parent "${SYSTEM_CONFIG_DIR}"
-    as_root with-umask u=rwx,g=r,o=r cp "${REPO_CONFIG_DIR}/daemon.json" "${SYSTEM_CONFIG_DIR}"
+    as_root with-umask u=rw,g=r,o=r cp "${REPO_CONFIG_DIR}/daemon.json" "${SYSTEM_CONFIG_DIR}"
   fi
 
   if [ "$(systemctl is-active docker.service)" == "active" ]; then
