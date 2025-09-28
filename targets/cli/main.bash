@@ -22,6 +22,7 @@ targets=(
   tree-installed
   core/bat-installed
   askii-installed
+  ugrep-installed
 )
 
 depends_on "${targets[@]}"
