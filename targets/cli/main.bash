@@ -23,6 +23,7 @@ targets=(
   core/bat-installed
   askii-installed
   ugrep-installed
+  systemctl-tui-installed
 )
 
 depends_on "${targets[@]}"
