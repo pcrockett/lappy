@@ -1,6 +1,7 @@
 #!/usr/bin/env blarg
 
 depends_on \
+  arch-wiki-docs-installed \
   rush/main \
   core/w3m-installed \
   core/ripgrep-installed \
