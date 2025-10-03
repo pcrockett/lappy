@@ -24,6 +24,7 @@ targets=(
   askii-installed
   ugrep-installed
   systemctl-tui-installed
+  qrencode-installed
 )
 
 depends_on "${targets[@]}"
