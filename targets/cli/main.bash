@@ -25,6 +25,8 @@ targets=(
   ugrep-installed
   systemctl-tui-installed
   qrencode-installed
+  bgstart-installed
+  bgopen-installed
 )
 
 depends_on "${targets[@]}"
