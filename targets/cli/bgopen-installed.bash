@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on rush/main bgstart-installed
+depends_on rush/main bgstart-installed core/fzf-installed
 
 PACKAGE_NAME="bgopen"
 
