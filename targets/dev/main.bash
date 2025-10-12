@@ -6,6 +6,7 @@ targets=(
   delta-installed
   copier-installed
   yamlfmt-installed
+  yamllint-installed
 )
 
 depends_on "${targets[@]}"
