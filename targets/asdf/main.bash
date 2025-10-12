@@ -11,6 +11,7 @@ targets=(
   pnpm-plugin-installed
   age-plugin-installed
   pre-commit-plugin-installed
+  yamlfmt-plugin-installed
   default-tools-configured
   default-tools-installed
 )
