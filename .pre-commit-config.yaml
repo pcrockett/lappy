@@ -20,6 +20,10 @@ repos:
     rev: 0cec2598f76713675989870f0c8343cb4d49614d
     hooks:
       - id: gitleaks-system
+  - repo: https://github.com/adrienverge/yamllint
+    rev: 79a6b2b1392eaf49cdd32ac4f14be1a809bbd8f7  # v1.37.1
+    hooks:
+      - id: yamllint
   - repo: local
     hooks:
       - name: shellcheck
