@@ -27,6 +27,7 @@ targets=(
   qrencode-installed
   bgstart-installed
   bgopen-installed
+  kagi-installed
 )
 
 depends_on "${targets[@]}"
