@@ -3,7 +3,7 @@ RUN pacman -Syu --noconfirm --verbose git pre-commit gitleaks shellcheck actionl
 
 FROM base AS my-tools
 RUN curl -SsfL https://philcrockett.com/yolo/v1.sh \
-    | bash -s -- tagref
+    | bash -s -- tagref yamlfmt
 
 FROM base
 COPY --from=my-tools /usr/local/bin/tagref /usr/local/bin/tagref
