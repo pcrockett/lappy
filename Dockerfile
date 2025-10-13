@@ -7,6 +7,7 @@ RUN curl -SsfL https://philcrockett.com/yolo/v1.sh \
 
 FROM base
 COPY --from=my-tools /usr/local/bin/tagref /usr/local/bin/tagref
+COPY --from=my-tools /usr/local/bin/yamlfmt /usr/local/bin/yamlfmt
 RUN useradd --create-home user && \
 mkdir /repo && \
 chown -R user:user /repo
