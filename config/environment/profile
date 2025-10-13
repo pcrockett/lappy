@@ -11,6 +11,7 @@ export DIFFPROG="/usr/bin/delta"
 export EDITOR="/usr/bin/helix"
 export FCEUX_HOME="${HOME}/.config/fceux"
 export GOPATH="${HOME}/.local/share/golang"
+export KAGI_OPEN_COMMAND=bgopen
 export PATH="/home/phil/.local/bin:/home/phil/.local/state/asdf/shims:/home/phil/.cargo/bin:/home/phil/.local/share/pnpm:${PATH}"
 export PIP_REQUIRE_VIRTUALENV="true"
 export PNPM_HOME="${HOME}/.local/share/pnpm"
