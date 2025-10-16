@@ -35,6 +35,7 @@ C-m = ":run-shell-command alacritty --class dialog --title fzmake --hold --optio
 # open URLs, file paths, etc.
 # use :pipe-to to ignore the output of xdg-open
 o = ":pipe-to xargs xdg-open"
+r = ":reflow"
 
 # create a new minor mode bound to `<space>;`
 # d for "docker"
