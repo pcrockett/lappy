@@ -5,4 +5,5 @@ function tmpshell
     fish
     cd -
     rm -rf $temp_dir
+    echo "Cleaned up $temp_dir"
 end
