@@ -11,5 +11,6 @@ EOF
 )"
 export SIGNAL_PHONE_NUMBER="+XXXXXXXXXXX"
 export SCANNER_IP_ADDRESS="xxx.xxx.xxx.xxx"
+export KHAL_DEFAULT_CALENDAR="phil"
 
 PATH_add bin

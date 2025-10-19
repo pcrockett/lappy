@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on core/with-umask-installed
+depends_on core/jq-installed core/with-umask-installed bitwarden/cli-installed
 
 FILE_NAME="config"
 REPO_CONFIG_DIR="${BLARG_CWD}/config/vdirsyncer"
@@ -12,7 +12,13 @@ satisfied_if() {
 }
 
 apply() {
-  template_render "${REPO_CONFIG_DIR}/${FILE_NAME}.template"
-  with-umask u=rwx,g=,o= mkdir --parent "${SYSTEM_CONFIG_DIR}"
+  satisfy bitwarden/synced
+  load_bw_item beekrpad.vdirsyncer
+
+  FASTMAIL_USER_ACCT="$(bw_value fastmail-user)" \
+  FASTMAIL_CALDAV_PASSWORD="$(bw_value caldav-password)" \
+  CALENDARS_TO_SYNC="$(bw_value calendars)" \
+    template_render "${REPO_CONFIG_DIR}/${FILE_NAME}.template"
+  with-umask u=rwx,g=,o= mkdir --parent "${SYSTEM_CONFIG_DIR}" "${HOME}/.local/share/lappy-pim/calendar"
   with-umask u=rw,g=,o= cp "${REPO_CONFIG_DIR}/${FILE_NAME}" "${SYSTEM_CONFIG_DIR}"
 }

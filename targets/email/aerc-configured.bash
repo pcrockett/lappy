@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on core/jq-installed core/with-umask-installed
+depends_on core/jq-installed core/with-umask-installed bitwarden/cli-installed
 
 REPO_CONFIG_DIR="${BLARG_CWD}/config/aerc"
 SYSTEM_CONFIG_DIR="${HOME}/.config/aerc"
@@ -12,27 +12,16 @@ satisfied_if() {
 
 apply() {
   satisfy bitwarden/synced
-  CONFIG_JSON="$(bw get item beekrpad.aerc.personal)"
+  load_bw_item beekrpad.aerc.personal
 
-  PERSONAL_EMAIL_ACCT_NAME="$(get_value account-name)" \
-  PERSONAL_EMAIL_IMAP="$(get_value imap)" \
-  PERSONAL_EMAIL_SMTP="$(get_value smtp)" \
-  PERSONAL_EMAIL_USER_FULL_NAME="$(get_value user-full-name)" \
-  PERSONAL_EMAIL_ADDRESS="$(get_value address)" \
-  PERSONAL_EMAIL_DOMAIN="$(get_value domain)" \
-    envsubst <"${REPO_CONFIG_DIR}/accounts.conf.template" \
-    | with-umask u=rw,g=,o= dd "of=${REPO_CONFIG_DIR}/accounts.conf" status=none
+  PERSONAL_EMAIL_ACCT_NAME="$(bw_value account-name)" \
+  PERSONAL_EMAIL_IMAP="$(bw_value imap)" \
+  PERSONAL_EMAIL_SMTP="$(bw_value smtp)" \
+  PERSONAL_EMAIL_USER_FULL_NAME="$(bw_value user-full-name)" \
+  PERSONAL_EMAIL_ADDRESS="$(bw_value address)" \
+  PERSONAL_EMAIL_DOMAIN="$(bw_value domain)" \
+    template_render "${REPO_CONFIG_DIR}/accounts.conf.template"
 
   rm -rf "${SYSTEM_CONFIG_DIR}"
   ln --symbolic "${REPO_CONFIG_DIR}" "${SYSTEM_CONFIG_DIR}"
-}
-
-get_value() {
-  key="${1}"
-  echo "${CONFIG_JSON}" | jq --raw-output "
-    .fields | map(
-        select(
-            .name == \"${key}\"
-        )
-    )[].value"
 }
