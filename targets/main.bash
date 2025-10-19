@@ -34,6 +34,7 @@ targets=(
   meshtastic/main
   dev/main
   scanner/main
+  pim/main
 )
 
 depends_on "${targets[@]}"
