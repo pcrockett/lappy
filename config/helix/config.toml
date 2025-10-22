@@ -34,7 +34,7 @@ C-m = ":run-shell-command alacritty --class dialog --title fzmake --hold --optio
 [keys.normal." ".";"]
 # open URLs, file paths, etc.
 # use :pipe-to to ignore the output of xdg-open
-o = ":pipe-to xargs xdg-open"
+o = ":pipe-to xargs bgopen"
 r = ":reflow"
 
 # create a new minor mode bound to `<space>;`
