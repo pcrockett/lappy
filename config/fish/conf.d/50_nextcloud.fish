@@ -1,1 +1,1 @@
-abbr --add nextcloud --position command bgstart Nextcloud.AppImage
+abbr --add nxc --position command bgstart Nextcloud.AppImage
