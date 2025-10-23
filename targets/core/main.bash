@@ -1,6 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
+  root-bash-configured
   environment-configured
   local-bin-dir-created
   pacman-deps-installed

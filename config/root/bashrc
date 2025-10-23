@@ -1,0 +1,7 @@
+# shellcheck shell=bash
+
+alias ll='ls -lh'
+alias hx='helix'
+umask u=rwx,g=,o=
+export ENTE_CLI_CONFIG_DIR="${HOME}/.config/ente"
+export ENTE_CLI_SECRETS_PATH="${HOME}/.local/share/ente/secrets"
