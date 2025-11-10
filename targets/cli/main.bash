@@ -28,6 +28,7 @@ targets=(
   bgstart-installed
   bgopen-installed
   kagi-installed
+  atuin-installed
 )
 
 depends_on "${targets[@]}"
