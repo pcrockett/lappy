@@ -29,6 +29,7 @@ targets=(
   bgopen-installed
   kagi-installed
   atuin-installed
+  atuin-configured
 )
 
 depends_on "${targets[@]}"
