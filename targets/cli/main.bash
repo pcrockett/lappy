@@ -30,6 +30,7 @@ targets=(
   kagi-installed
   atuin-installed
   atuin-configured
+  atuin-logged-in
 )
 
 depends_on "${targets[@]}"
