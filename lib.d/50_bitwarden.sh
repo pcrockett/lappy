@@ -26,3 +26,27 @@ bw_value() {
       select(.name == \"${key}\")
     )[].value"
 }
+
+bw_username() {
+  # get login username out of a previously-loaded bitwarden item.
+  #
+  # assumes you've already called `load_bw_item`
+  #
+  # needs these targets to work:
+  #
+  # * core/jq-installed
+  #
+  echo "${BITWARDEN_ITEM_JSON}" | jq --raw-output ".login.username"
+}
+
+bw_password() {
+  # get login password out of a previously-loaded bitwarden item.
+  #
+  # assumes you've already called `load_bw_item`
+  #
+  # needs these targets to work:
+  #
+  # * core/jq-installed
+  #
+  echo "${BITWARDEN_ITEM_JSON}" | jq --raw-output ".login.password"
+}
