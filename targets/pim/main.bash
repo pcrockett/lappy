@@ -7,6 +7,7 @@ targets=(
   vdirsyncer-config-rendered
   khal-config-rendered
   khal-initialized
+  taskwarrior-installed
 )
 
 depends_on "${targets[@]}"
