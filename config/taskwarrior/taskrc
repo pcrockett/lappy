@@ -1,0 +1,81 @@
+# [Created by task 3.4.2 11/14/2025 12:19:18]
+news.version=3.4.2
+data.location=~/.local/share/task
+hooks.location=~/.config/task/hooks
+
+# Color theme (uncomment one to use)
+#include light-16.theme
+#include light-256.theme
+#include bubblegum-256.theme
+#include dark-16.theme
+#include dark-256.theme
+#include dark-red-256.theme
+#include dark-green-256.theme
+#include dark-blue-256.theme
+#include dark-violets-256.theme
+#include dark-yellow-green.theme
+#include dark-gray-256.theme
+include dark-gray-blue-256.theme
+#include solarized-dark-256.theme
+#include solarized-light-256.theme
+#include no-color.theme
+
+urgency.user.tag.hobby.coefficient=-4
+urgency.user.tag.waiting.coefficient=-100
+
+# assigning a project to a task shouldn't affect its urgency
+urgency.project.coefficient=0
+
+# "impact" UDA:
+#
+# * 1, 2, 3 are considered "low" impact
+# * 4, 5, 6 are considered "high" impact
+# * this is intentionally NOT a numeric value, but a string
+#
+# i use this to put tasks into categories according to the eisenhower matrix. see custom
+# reports further below. "focus", "schedule", "upkeep", and "unscheduled" correspond to
+# the 4 quadrants in the eisenhower matrix.
+uda.impact.type=string
+uda.impact.label=Imp
+uda.impact.values=1,2,3,4,5,6
+
+# make "next" report take `impact` into account
+report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency,impact
+report.next.labels=ID,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg,Imp
+report.next.sort=urgency-,impact+,project+
+
+report.focus.description=Urgent and impactful tasks
+report.focus.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.focus.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
+report.focus.sort=urgency-,impact+,project+
+report.focus.filter=(impact:4 or impact:5 or impact:6) and urgency >= 3 and status:pending -WAITING limit:page
+
+report.upkeep.description=Urgent, yet not impactful tasks
+report.upkeep.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.upkeep.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
+report.upkeep.sort=urgency-,impact+,project+
+report.upkeep.filter=(impact:1 or impact:2 or impact:3) and urgency >= 3 status:pending -WAITING limit:page
+
+report.schedule.description=Impactful, yet not urgent tasks
+report.schedule.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.schedule.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
+report.schedule.sort=urgency-,impact+
+report.schedule.filter=(impact:4 or impact:5 or impact:6) and urgency < 3 and status:pending -WAITING limit:page
+
+report.unscheduled.description=Low impact, low urgency tasks
+report.unscheduled.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.unscheduled.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
+report.unscheduled.sort=urgency-,impact+
+report.unscheduled.filter=(impact:1 or impact:2 or impact:3) and urgency < 3 and status:pending -WAITING limit:page
+
+report.impact.description=Impactful tasks, regardless of urgency
+report.impact.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.impact.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
+report.impact.sort=impact+,urgency-
+report.impact.filter=(impact:4 or impact:5 or impact:6) and status:pending -WAITING limit:page
+
+report.urgent.description=Urgent tasks, regardless of impact
+report.urgent.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.urgent.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
+report.urgent.sort=urgency-,impact+,project+
+report.urgent.filter=urgency >= 3 status:pending -WAITING limit:page

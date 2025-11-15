@@ -8,6 +8,7 @@ targets=(
   khal-config-rendered
   khal-initialized
   taskwarrior-installed
+  taskwarrior-configured
 )
 
 depends_on "${targets[@]}"
