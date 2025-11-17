@@ -66,7 +66,7 @@ report.unscheduled.description=Low impact, low urgency tasks
 report.unscheduled.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
 report.unscheduled.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.unscheduled.sort=urgency-,impact+
-report.unscheduled.filter=(impact:1 or impact:2 or impact:3) and urgency < 3 and status:pending -WAITING limit:page
+report.unscheduled.filter=(impact:1 or impact:2 or impact:3) and urgency < 3 and due: and status:pending -WAITING limit:page
 
 report.impact.description=Impactful tasks, regardless of urgency
 report.impact.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
@@ -79,3 +79,9 @@ report.urgent.columns=id,depends,urgency,impact,priority,tags,scheduled.countdow
 report.urgent.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.urgent.sort=urgency-,impact+,project+
 report.urgent.filter=urgency >= 3 status:pending -WAITING limit:page
+
+report.needsimpact.description=Tasks with no impact assigned
+report.needsimpact.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.needsimpact.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
+report.needsimpact.sort=urgency-
+report.needsimpact.filter=impact: and status:pending limit:page
