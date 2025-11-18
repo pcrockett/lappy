@@ -21,7 +21,7 @@ include dark-gray-blue-256.theme
 #include no-color.theme
 
 urgency.user.tag.hobby.coefficient=-4
-urgency.user.tag.waiting.coefficient=-100
+urgency.user.tag.security.coefficient=1
 
 # assigning a project to a task shouldn't affect its urgency
 urgency.project.coefficient=0
@@ -33,7 +33,7 @@ urgency.project.coefficient=0
 # * this is intentionally NOT a numeric value, but a string
 #
 # i use this to put tasks into categories according to the eisenhower matrix. see custom
-# reports further below. "focus", "schedule", "upkeep", and "unscheduled" correspond to
+# reports further below. "focus", "schedule", "upkeep", and "forgettable" correspond to
 # the 4 quadrants in the eisenhower matrix.
 uda.impact.type=string
 uda.impact.label=Imp
@@ -60,13 +60,19 @@ report.schedule.description=Impactful, yet not urgent tasks
 report.schedule.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
 report.schedule.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.schedule.sort=urgency-,impact+
-report.schedule.filter=(impact:4 or impact:5 or impact:6) and urgency < 3 and due: and status:pending -WAITING limit:page
+report.schedule.filter=(impact:4 or impact:5 or impact:6) and urgency < 3 and schedule: and status:pending -WAITING limit:page
 
-report.unscheduled.description=Low impact, low urgency tasks
-report.unscheduled.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
-report.unscheduled.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
-report.unscheduled.sort=urgency-,impact+
-report.unscheduled.filter=(impact:1 or impact:2 or impact:3) and urgency < 3 and due: and status:pending -WAITING limit:page
+report.forgettable.description=Low impact, low urgency tasks
+report.forgettable.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.forgettable.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
+report.forgettable.sort=urgency-,impact+
+report.forgettable.filter=(impact:1 or impact:2 or impact:3) and urgency < 3 and schedule: and status:pending -WAITING limit:page
+
+report.scheduled.description=All scheduled tasks
+report.scheduled.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.scheduled.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
+report.scheduled.sort=scheduled+,urgency-,impact+
+report.scheduled.filter=+SCHEDULED and (status:pending or status:waiting) -PARENT limit:page
 
 report.impact.description=Impactful tasks, regardless of urgency
 report.impact.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
