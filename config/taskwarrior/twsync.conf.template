@@ -1,0 +1,3 @@
+sync.encryption_secret=${TASKWARRIOR_SYNC_ENCRYPTION_SECRET}
+sync.server.url=${TASKWARRIOR_SYNC_URL}
+sync.server.client_id=${TASKWARRIOR_SYNC_CLIENT_ID}

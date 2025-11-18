@@ -91,3 +91,5 @@ report.needsimpact.columns=id,depends,urgency,impact,priority,tags,scheduled.cou
 report.needsimpact.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.needsimpact.sort=urgency-
 report.needsimpact.filter=impact: and status:pending limit:page
+
+include twsync.conf
