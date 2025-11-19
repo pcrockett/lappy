@@ -3,7 +3,7 @@
 
 PACKAGES=(
   task
-  vit
+  taskwarrior-tui
 )
 
 snippet "packages-installed"
