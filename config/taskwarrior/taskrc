@@ -39,6 +39,12 @@ uda.impact.type=string
 uda.impact.label=Imp
 uda.impact.values=1,2,3,4,5,6
 
+uda.link.type=string
+uda.link.label=Link
+
+uda.kb.type=string
+uda.kb.label=Knowledgebase
+
 # make "next" report take `impact` into account
 report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency,impact
 report.next.labels=ID,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg,Imp
