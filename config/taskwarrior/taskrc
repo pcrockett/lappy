@@ -90,7 +90,7 @@ report.urgent.description=Urgent tasks, regardless of impact
 report.urgent.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
 report.urgent.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.urgent.sort=urgency-,impact+,project+
-report.urgent.filter=urgency >= 3 status:pending -WAITING limit:page
+report.urgent.filter=status:pending and -WAITING and (urgency >= 3 or due.before:72h or scheduled.before:24h) limit:page
 
 report.needsimpact.description=Tasks with no impact assigned
 report.needsimpact.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
