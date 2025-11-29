@@ -4,6 +4,6 @@ if status is-interactive
         direnv hook fish | source
     end
     if command -v atuin &>/dev/null
-        atuin init fish | source
+        atuin init fish --disable-up-arrow | source
     end
 end
