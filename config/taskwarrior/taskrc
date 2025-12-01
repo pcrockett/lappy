@@ -18,11 +18,17 @@ hooks.location=~/.config/task/hooks
 #include dark-gray-blue-256.theme
 #include solarized-dark-256.theme
 #include solarized-light-256.theme
-#include no-color.theme
+include no-color.theme
 
 nag=
 urgency.user.tag.hobby.coefficient=-4
 urgency.user.tag.security.coefficient=1
+
+# settings required for proper urgency inheritance, i.e. making
+# sure that blocking tasks inherit urgency from their dependents
+urgency.inherit=1
+urgency.blocking.coefficient=2
+urgency.blocked.coefficient=0
 
 # assigning a project to a task shouldn't affect its urgency
 urgency.project.coefficient=0
