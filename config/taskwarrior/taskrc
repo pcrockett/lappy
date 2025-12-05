@@ -84,7 +84,7 @@ report.forgettable.filter=(impact:1 or impact:2 or impact:3) and urgency < 3 and
 report.scheduled.description=All scheduled tasks
 report.scheduled.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
 report.scheduled.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
-report.scheduled.sort=scheduled+,urgency-,impact+
+report.scheduled.sort=scheduled+,due+,urgency-,impact+
 report.scheduled.filter=+SCHEDULED and (status:pending or status:waiting) -PARENT limit:page
 
 report.impact.description=Impactful tasks, regardless of urgency
