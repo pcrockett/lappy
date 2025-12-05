@@ -6,7 +6,7 @@ def main [...args: string] {
   # We don't modify the task; return it unmodified as feedback
   ($task | to json --raw | print)
 
-  if ($env.TASKWARRIOR_ECHO | is-not-empty) {
+  if ($env | get --optional TASKWARRIOR_ECHO | is-not-empty) {
     (
       $"
 script args:
