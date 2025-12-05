@@ -53,54 +53,60 @@ uda.kb.type=string
 uda.kb.label=Knowledgebase
 
 # make "next" report take `impact` into account
-report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency,impact
+report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.relative,due.relative,until.remaining,description,urgency,impact
 report.next.labels=ID,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg,Imp
 report.next.sort=urgency-,impact+,project+
 
 report.focus.description=Urgent and impactful tasks
-report.focus.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.focus.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
 report.focus.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.focus.sort=urgency-,impact+,project+
 report.focus.filter=(impact:4 or impact:5 or impact:6) and urgency >= 3 and status:pending -WAITING -BLOCKED limit:page
 
 report.upkeep.description=Urgent, yet not impactful tasks
-report.upkeep.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.upkeep.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
 report.upkeep.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.upkeep.sort=urgency-,impact+,project+
 report.upkeep.filter=(impact:1 or impact:2 or impact:3) and urgency >= 3 status:pending -WAITING limit:page
 
 report.schedule.description=Impactful, yet not urgent tasks
-report.schedule.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.schedule.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
 report.schedule.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.schedule.sort=urgency-,impact+
 report.schedule.filter=(impact:4 or impact:5 or impact:6) and urgency < 3 and schedule: and status:pending -WAITING limit:page
 
 report.forgettable.description=Low impact, low urgency tasks
-report.forgettable.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.forgettable.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
 report.forgettable.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.forgettable.sort=urgency-,impact+
 report.forgettable.filter=(impact:1 or impact:2 or impact:3) and urgency < 3 and schedule: and status:pending -WAITING limit:page
 
 report.scheduled.description=All scheduled tasks
-report.scheduled.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.scheduled.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
 report.scheduled.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.scheduled.sort=scheduled+,due+,urgency-,impact+
 report.scheduled.filter=+SCHEDULED and (status:pending or status:waiting) -PARENT limit:page
 
+report.reschedule.description=Scheduled or due tasks that are overdue
+report.reschedule.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
+report.reschedule.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
+report.reschedule.sort=due+,scheduled+,urgency-,impact+
+report.reschedule.filter=(status:pending or status:waiting) and ((+SCHEDULED schedule.before:today) or +OVERDUE) -PARENT limit:page
+
 report.impact.description=Impactful tasks, regardless of urgency
-report.impact.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.impact.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
 report.impact.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.impact.sort=impact+,urgency-
 report.impact.filter=(impact:4 or impact:5 or impact:6) and status:pending -WAITING limit:page
 
 report.urgent.description=Urgent tasks, regardless of impact
-report.urgent.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.urgent.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
 report.urgent.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.urgent.sort=urgency-,impact+,project+
 report.urgent.filter=status:pending and -WAITING -PARENT -BLOCKED and (urgency >= 3 or due.before:72h or scheduled.before:24h or +ACTIVE) limit:page
 
 report.needsimpact.description=Tasks with no impact assigned
-report.needsimpact.columns=id,depends,urgency,impact,priority,tags,scheduled.countdown,due.relative,until.remaining,description,project,entry.age
+report.needsimpact.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
 report.needsimpact.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.needsimpact.sort=urgency-
 report.needsimpact.filter=impact: and status:pending limit:page
