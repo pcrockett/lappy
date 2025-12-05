@@ -46,6 +46,12 @@ uda.impact.type=string
 uda.impact.label=Imp
 uda.impact.values=1,2,3,4,5,6
 
+uda.calendaruid.type=string
+uda.calendaruid.label=Calendar UID
+
+uda.calendarseq.type=string
+uda.calendarseq.label=Calendar Seq
+
 uda.link.type=string
 uda.link.label=Link
 

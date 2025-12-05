@@ -12,7 +12,7 @@ def main [...args: string] {
   }
 
   if ($args | where { $in == "api:2" } | is-empty) {
-    "WARNING: Impact warning script has only been tested with hooks API v2" | print
+    "WARNING: Impact warning hook has only been tested with hooks API v2" | print
   }
 
   ignore
