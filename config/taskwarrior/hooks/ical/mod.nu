@@ -45,8 +45,10 @@ export def render [
   )
 
   $"BEGIN:VCALENDAR
+
 VERSION:2.0
 PRODID:-//philcrockett.com//lappy-taskwarrior-ical-integraion 0.1//EN
+
 BEGIN:VTIMEZONE
 TZID:($TIMEZONE.id)
 BEGIN:STANDARD
@@ -62,13 +64,20 @@ TZOFFSETFROM:($TIMEZONE.daylight.offset_before)
 TZOFFSETTO:($TIMEZONE.daylight.offset_after)
 END:DAYLIGHT
 END:VTIMEZONE
+
 BEGIN:VEVENT
 SUMMARY:($spec.description | escape-text)
 DTSTART;TZID=($TIMEZONE.id):($scheduled_timestamp_local)
 DTEND;TZID=($TIMEZONE.id):($end_timestamp_local)
 DTSTAMP:($modified_timestamp_utc)
 UID:($spec.uuid)
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT10M
+DESCRIPTION:($spec.description | escape-text)
+END:VALARM
 END:VEVENT
+
 END:VCALENDAR
 "
 }
