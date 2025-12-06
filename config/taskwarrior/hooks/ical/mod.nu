@@ -16,20 +16,22 @@ const TIMEZONE = {
 }
 
 export def render [
-  --uuid: string
-  --description: string
-  --scheduled: datetime
-  --modified: datetime
-  --duration: duration
+  spec: record<
+    uuid: string
+    description: string
+    scheduled: datetime
+    modified: datetime
+    duration: duration
+  >
 ] {
 
   let scheduled_timestamp_local = (
-    $scheduled
+    $spec.scheduled
     | date to-timezone local
     | format date "%Y%m%dT%H%M%S"
   )
 
-  let end_time = $scheduled + $duration
+  let end_time = $spec.scheduled + $spec.duration
   let end_timestamp_local = (
     $end_time
     | date to-timezone local
@@ -37,7 +39,7 @@ export def render [
   )
 
   let modified_timestamp_utc = (
-    $modified
+    $spec.modified
     | date to-timezone UTC
     | format date "%Y%m%dT%H%M%SZ"
   )
@@ -61,11 +63,11 @@ TZOFFSETTO:($TIMEZONE.daylight.offset_after)
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
-SUMMARY:($description | escape-text)
+SUMMARY:($spec.description | escape-text)
 DTSTART;TZID=($TIMEZONE.id):($scheduled_timestamp_local)
 DTEND;TZID=($TIMEZONE.id):($end_timestamp_local)
 DTSTAMP:($modified_timestamp_utc)
-UID:($uuid)
+UID:($spec.uuid)
 END:VEVENT
 END:VCALENDAR
 "

@@ -28,12 +28,13 @@ def main [...args: string] {
   let duration = $task | get --optional duration | default --empty "30min" | into duration
 
   (
-    ical render
-      --uuid $calendar_uid
-      --description $task.description
-      --scheduled $scheduled_time_utc
-      --modified $now_utc
-      --duration $duration
+    ical render {
+      uuid: $calendar_uid
+      description: $task.description
+      scheduled: $scheduled_time_utc
+      modified: $now_utc
+      duration: $duration
+    }
     | save $ics_path
   )
   ($task | to json --raw | print)
