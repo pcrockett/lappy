@@ -26,7 +26,7 @@ def main [...args: string] {
     # no way to put this on the calendar.
     if ($calendar_uid.modified | is-not-empty) {
       rm --force (ical event-path $calendar_uid.modified)
-      "removed from calendar" | print
+      "Removed from calendar" | print
     }
     ($task.modified | to json --raw | print)
     return
@@ -48,6 +48,7 @@ def main [...args: string] {
   let ics_path = ical event-path $calendar_uid.output
   let scheduled_time_utc = $scheduled_timestamp | into datetime | date to-timezone UTC
   let now_utc = date now | date to-timezone UTC
+  let duration = $output_task | get --optional duration | default --empty "30min" | into duration
 
   (
     ical render
@@ -55,7 +56,7 @@ def main [...args: string] {
       --description $output_task.description
       --scheduled $scheduled_time_utc
       --modified $now_utc
-      --duration 10min
+      --duration $duration
     | save --force $ics_path
   )
   ($output_task | to json --raw | print)

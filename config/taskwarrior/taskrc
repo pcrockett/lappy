@@ -52,6 +52,10 @@ uda.calendaruid.label=Calendar UID
 uda.calendarseq.type=string
 uda.calendarseq.label=Calendar Seq
 
+# for calendar integration, should be specified in Nushell duration format
+uda.duration.type=string
+uda.duration.label=Duration
+
 uda.link.type=string
 uda.link.label=Link
 

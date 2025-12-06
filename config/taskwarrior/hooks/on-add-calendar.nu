@@ -25,6 +25,7 @@ def main [...args: string] {
   let ics_path = ical event-path $calendar_uid
   let scheduled_time_utc = $scheduled_timestamp | into datetime | date to-timezone UTC
   let now_utc = date now | date to-timezone UTC
+  let duration = $task | get --optional duration | default --empty "30min" | into duration
 
   (
     ical render
@@ -32,7 +33,7 @@ def main [...args: string] {
       --description $task.description
       --scheduled $scheduled_time_utc
       --modified $now_utc
-      --duration 10min
+      --duration $duration
     | save $ics_path
   )
   ($task | to json --raw | print)
