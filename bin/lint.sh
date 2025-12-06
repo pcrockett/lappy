@@ -39,7 +39,7 @@ ignore() {
 
 rule:no_raw_sudo() {
   ! all_files \
-    | ignore "bin/lint\.sh" "lib\.d/50_as_root\.sh" \
+    | ignore "bin/lint\.sh" "lib\.d/50_as_root\.sh" "config/fish/.+" \
     | xargs rg --regexp '[^(?:vi)]sudo '
 }
 
