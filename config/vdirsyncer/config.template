@@ -6,6 +6,18 @@ a = "calendar_fastmail"
 b = "calendar_local"
 collections = [${CALENDARS_TO_SYNC}]
 
+[pair partner]
+a = "calendar_fastmail"
+b = "calendar_local"
+collections = [${PARTNER_CALENDARS_TO_SYNC}]
+conflict_resolution = "a wins"
+
+[pair taskwarrior]
+a = "calendar_fastmail"
+b = "calendar_local"
+collections = [${TASKWARRIOR_CALENDARS_TO_SYNC}]
+conflict_resolution = "b wins"
+
 [storage calendar_local]
 type = "filesystem"
 path = "~/.local/share/lappy-pim/calendar/"
