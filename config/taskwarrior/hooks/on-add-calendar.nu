@@ -9,7 +9,7 @@ def main [...args: string] {
   let task = ($in | from json)
 
   let scheduled_timestamp: string = $task | get --optional scheduled
-  if ($scheduled_timestamp | is-empty) {
+  if ($scheduled_timestamp | is-empty) or ($task | get --optional status) in [deleted completed] {
     # we won't be scheduling this on a calendar
     ($task | to json --raw | print)
     return
