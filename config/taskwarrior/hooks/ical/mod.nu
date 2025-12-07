@@ -22,6 +22,7 @@ export def render [
     scheduled: datetime
     modified: datetime
     duration: duration
+    sequence: string
   >
 ] {
 
@@ -71,6 +72,7 @@ DTSTART;TZID=($TIMEZONE.id):($scheduled_timestamp_local)
 DTEND;TZID=($TIMEZONE.id):($end_timestamp_local)
 DTSTAMP:($modified_timestamp_utc)
 UID:($spec.uuid)
+SEQUENCE:($spec.sequence)
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT10M

@@ -34,6 +34,7 @@ def main [...args: string] {
       scheduled: $scheduled_time_utc
       modified: $now_utc
       duration: $duration
+      sequence: $task.calendarseq
     }
     | save $ics_path
   )
