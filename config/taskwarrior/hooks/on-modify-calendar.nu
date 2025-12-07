@@ -7,45 +7,34 @@ use ical
 
 def main [...args: string] {
   let tasks = ($in | lines | each { from json })
-  let task = {
-    original: $tasks.0
-    modified: $tasks.1
-  }
+  let modified_task = $tasks | last
+  let calendar_uid: string = $modified_task | get --optional calendaruid
+  let scheduled_timestamp: string = $modified_task | get --optional scheduled
 
-  let calendar_uid = {
-    original: ($task.original | get --optional calendaruid)
-    modified: ($task.modified | get --optional calendaruid)
-  }
-
-  if ($calendar_uid.original | is-not-empty) {
-    rm --force (ical event-path $calendar_uid.original)
-  }
-
-  let scheduled_timestamp: string = $task.modified | get --optional scheduled
-  if ($scheduled_timestamp | is-empty) or ($task.modified | get --optional status) in [deleted completed] {
-    # no way to put this on the calendar.
-    if ($calendar_uid.modified | is-not-empty) {
-      rm --force (ical event-path $calendar_uid.modified)
+  # see if we need to remove this from the calendar
+  if ($scheduled_timestamp | is-empty) or ($modified_task | get --optional status) in [deleted completed] {
+    if ($calendar_uid | is-not-empty) {
+      rm --force (ical event-path $calendar_uid)
       "Removed from calendar" | print
     }
-    ($task.modified | to json --raw | print)
+    ($modified_task | to json --raw | print)
     return
   }
 
-  let output_task = if ($calendar_uid.modified | is-empty) {
-    $task.modified
+  let output_task = if ($calendar_uid | is-empty) {
+    $modified_task
     | upsert calendaruid (random uuid)
     | upsert calendarseq "0"
   } else {
-    let old_seq = $task.modified.calendarseq | default "0" | into int
+    let old_seq = $modified_task.calendarseq | default "0" | into int
     (
-      $task.modified
+      $modified_task
       | upsert calendarseq ($old_seq + 1 | into string)
     )
   }
 
-  let calendar_uid = $calendar_uid | insert output $output_task.calendaruid
-  let ics_path = ical event-path $calendar_uid.output
+  let temp_calendar_uid = $output_task.calendaruid
+  let ics_path = ical event-path $temp_calendar_uid
   let scheduled_time_utc = $scheduled_timestamp | into datetime | date to-timezone UTC
   let now_utc = date now | date to-timezone UTC
   let duration = $output_task | get --optional duration | default --empty "30min" | into duration
