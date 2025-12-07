@@ -1,3 +1,5 @@
+const PRODID = "PRODID:-//philcrockett.com//lappy-taskwarrior-ical-integraion 0.1//EN"
+
 const TIMEZONE = {
   # TODO: get this dynamically from local tzdata
   id: "Europe/Berlin"
@@ -26,29 +28,52 @@ export def render [
   >
 ] {
 
-  let scheduled_timestamp_local = (
-    $spec.scheduled
-    | date to-timezone local
-    | format date "%Y%m%dT%H%M%S"
-  )
-
-  let end_time = $spec.scheduled + $spec.duration
-  let end_timestamp_local = (
-    $end_time
-    | date to-timezone local
-    | format date "%Y%m%dT%H%M%S"
-  )
-
   let modified_timestamp_utc = (
     $spec.modified
     | date to-timezone UTC
     | format date "%Y%m%dT%H%M%SZ"
   )
 
-  $"BEGIN:VCALENDAR
+  let scheduled_local = $spec.scheduled | date to-timezone local
+
+  if ($scheduled_local | format date "%H:%M:%S") == "00:00:00" {
+    # assume "midnight" means "all day"
+    let scheduled_timestamp_local = (
+      $scheduled_local | format date "%Y%m%d"
+    )
+
+    let end_time_local = $scheduled_local + 1day + 4hr
+    let end_timestamp_local = (
+      $end_time_local | format date "%Y%m%d"
+    )
+
+    $"BEGIN:VCALENDAR
+VERSION:2.0
+($PRODID)
+BEGIN:VEVENT
+SUMMARY:($spec.description | escape-text)
+DTSTART;VALUE=DATE:($scheduled_timestamp_local)
+DTEND;VALUE=DATE:($end_timestamp_local)
+DTSTAMP:($modified_timestamp_utc)
+UID:($spec.uuid)
+SEQUENCE:($spec.sequence)
+END:VEVENT
+END:VCALENDAR
+"
+  } else {
+    let scheduled_timestamp_local = (
+      $scheduled_local | format date "%Y%m%dT%H%M%S"
+    )
+
+    let end_time_local = $scheduled_local + $spec.duration
+    let end_timestamp_local = (
+      $end_time_local | format date "%Y%m%dT%H%M%S"
+    )
+
+    $"BEGIN:VCALENDAR
 
 VERSION:2.0
-PRODID:-//philcrockett.com//lappy-taskwarrior-ical-integraion 0.1//EN
+($PRODID)
 
 BEGIN:VTIMEZONE
 TZID:($TIMEZONE.id)
@@ -82,6 +107,7 @@ END:VEVENT
 
 END:VCALENDAR
 "
+  }
 }
 
 export def event-path [calendar_uid: string]: nothing -> string {
