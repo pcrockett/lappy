@@ -21,6 +21,8 @@ hooks.location=~/.config/task/hooks
 include no-color.theme
 
 nag=
+journal.info=off
+
 urgency.user.tag.hobby.coefficient=-4
 urgency.user.tag.security.coefficient=1
 
@@ -61,6 +63,9 @@ uda.link.label=Link
 
 uda.kb.type=string
 uda.kb.label=Knowledgebase
+
+uda.notes.type=string
+uda.notes.label=Notes
 
 # make "next" report take `impact` into account
 report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.relative,due.relative,until.remaining,description,urgency,impact
