@@ -88,7 +88,7 @@ report.schedule.description=Impactful, yet not urgent tasks
 report.schedule.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
 report.schedule.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.schedule.sort=urgency-,impact+
-report.schedule.filter=(impact:4 or impact:5 or impact:6) and urgency < 4 and schedule: and status:pending -WAITING limit:page
+report.schedule.filter=((impact:4 or impact:5 or impact:6) or +BLOCKING) urgency < 4 schedule: status:pending -WAITING -BLOCKED limit:page
 
 report.forgettable.description=Low impact, low urgency tasks
 report.forgettable.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
