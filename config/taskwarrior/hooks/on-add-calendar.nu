@@ -39,6 +39,7 @@ def main [...args: string] {
     | save $ics_path
   )
   ($task | to json --raw | print)
+  "Added to calendar" | print
 
   if ($args | where { $in == "api:2" } | is-empty) {
     "WARNING: Add calendar hook has only been tested with hooks API v2" | print
