@@ -3,6 +3,7 @@
 targets=(
   libreoffice-installed
   nextcloud-installed
+  pdfarranger-installed
 )
 
 depends_on "${targets[@]}"
