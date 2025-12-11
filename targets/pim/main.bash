@@ -9,6 +9,8 @@ targets=(
   khal-initialized
   taskwarrior-installed
   taskwarrior-configured
+  todoman-installed # for interoperability with phone
+  todoman-configured
 )
 
 depends_on "${targets[@]}"
