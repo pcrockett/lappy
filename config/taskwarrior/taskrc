@@ -97,16 +97,18 @@ report.forgettable.sort=urgency-,impact+
 report.forgettable.filter=(impact:1 or impact:2 or impact:3) and urgency < 4 and schedule: and status:pending -WAITING limit:page
 
 report.scheduled.description=All scheduled tasks
-report.scheduled.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
+report.scheduled.columns=id,depends,urgency,impact,priority,tags,scheduled,due.relative,until.remaining,description,project,entry.age
 report.scheduled.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.scheduled.sort=scheduled+,due+,urgency-,impact+
 report.scheduled.filter=+SCHEDULED (status:pending or status:waiting) -PARENT limit:page
+report.scheduled.dateformat=Y-M-D
 
 report.agenda.description=Today's scheduled tasks
-report.agenda.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
+report.agenda.columns=id,depends,urgency,impact,priority,tags,scheduled,due.relative,until.remaining,description,project,entry.age
 report.agenda.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.agenda.sort=scheduled+,due+,urgency-,impact+
 report.agenda.filter=+SCHEDULED schedule:today (status:pending or status:waiting) -PARENT limit:page
+report.agenda.dateformat=H:N
 
 report.reschedule.description=Scheduled or due tasks that are overdue
 report.reschedule.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
