@@ -10,7 +10,8 @@ export PODCAST_FEEDS="$(cat <<EOF
 EOF
 )"
 export SIGNAL_PHONE_NUMBER="+XXXXXXXXXXX"
-export SCANNER_IP_ADDRESS="xxx.xxx.xxx.xxx"
+export PRINTER_IP_ADDRESS="xxx.xxx.xxx.xxx"
+export SCANNER_IP_ADDRESS="${PRINTER_IP_ADDRESS}"
 export KHAL_DEFAULT_CALENDAR="phil"
 
 PATH_add bin
