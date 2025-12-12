@@ -34,6 +34,7 @@ targets=(
   meshtastic/main
   dev/main
   scanner/main
+  printer/main
   pim/main
 )
 
