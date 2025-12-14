@@ -2,7 +2,8 @@ FROM docker.io/library/archlinux:base AS base
 RUN pacman -Syu --noconfirm --verbose git pre-commit gitleaks shellcheck actionlint shfmt ripgrep
 
 FROM base AS my-tools
-RUN curl -SsfL https://philcrockett.com/yolo/v1.sh \
+RUN --mount=type=secret,id=GITHUB_TOKEN,env=GITHUB_TOKEN \
+curl -SsfL https://philcrockett.com/yolo/v1.sh \
     | bash -s -- tagref yamlfmt
 
 FROM base

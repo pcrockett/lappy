@@ -28,5 +28,5 @@ run-target:
 .PHONY: run-target
 
 ci-image:
-	docker build --tag "$(CI_IMAGE)" .
+	GITHUB_TOKEN="$(GITHUB_TOKEN)" docker build --tag "$(CI_IMAGE)" --secret id=GITHUB_TOKEN .
 .PHONY: ci-image
