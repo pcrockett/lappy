@@ -25,6 +25,8 @@ journal.info=off
 
 urgency.user.tag.hobby.coefficient=-4
 urgency.user.tag.security.coefficient=1
+urgency.user.tag.stress.coefficient=1
+urgency.user.tag.annoy.coefficient=1
 
 # settings required for proper urgency inheritance, i.e. making
 # sure that blocking tasks inherit urgency from their dependents
