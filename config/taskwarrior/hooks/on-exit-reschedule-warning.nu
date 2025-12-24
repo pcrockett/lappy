@@ -1,9 +1,10 @@
 #!/usr/bin/env -S nu --stdin
 
 const COMMANDS_TO_WARN = [
+  command:agenda
   command:schedule
   command:scheduled
-  command:agenda
+  command:today
 ]
 
 def main [...args: string] {
@@ -26,7 +27,7 @@ def get-overdue-count [] {
   # each of these filters will be effectively joined by an `and`
   let filters = [
     '(status:pending or status:waiting)'
-    '((+SCHEDULED schedule.before:today) or +OVERDUE)'
+    '((+SCHEDULED schedule.before:today) or (due.before:today))'
     '-PARENT'
   ] | str join ' '
 

@@ -123,7 +123,7 @@ report.reschedule.description=Scheduled or due tasks that are overdue
 report.reschedule.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
 report.reschedule.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.reschedule.sort=due+,scheduled+,urgency-,impact+
-report.reschedule.filter=(status:pending or status:waiting) ((+SCHEDULED schedule.before:today) or +OVERDUE) -PARENT limit:page
+report.reschedule.filter=(status:pending or status:waiting) ((+SCHEDULED schedule.before:today) or due.before:today) -PARENT limit:page
 
 report.impact.description=Impactful tasks, regardless of urgency
 report.impact.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
