@@ -27,12 +27,14 @@ urgency.user.tag.hobby.coefficient=-4
 urgency.user.tag.security.coefficient=1
 urgency.user.tag.stress.coefficient=1
 urgency.user.tag.annoy.coefficient=1
+urgency.user.tag.hindrance.coefficient=4
 
 # settings required for proper urgency inheritance, i.e. making
 # sure that blocking tasks inherit urgency from their dependents
 urgency.inherit=1
 urgency.blocking.coefficient=2
 urgency.blocked.coefficient=0
+urgency.scheduled.coefficient=1
 
 # assigning a project to a task shouldn't affect its urgency
 urgency.project.coefficient=0
