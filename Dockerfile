@@ -1,5 +1,7 @@
 FROM docker.io/library/archlinux:base AS base
-RUN pacman -Syu --noconfirm --verbose git pre-commit gitleaks shellcheck actionlint shfmt ripgrep
+RUN \
+pacman -Syu --noconfirm --verbose \
+  git pre-commit gitleaks shellcheck actionlint shfmt ripgrep gcc
 
 FROM base AS my-tools
 RUN --mount=type=secret,id=GITHUB_TOKEN,env=GITHUB_TOKEN \
