@@ -36,6 +36,7 @@ targets=(
   scanner/main
   printer/main
   pim/main
+  virt/main
 )
 
 depends_on "${targets[@]}"
