@@ -1,0 +1,3 @@
+Host ${HOMELAB_VMHOST_HOSTNAME}
+    HostName ${HOMELAB_VMHOST_IP}
+    User ${USER}
