@@ -30,6 +30,7 @@ urgency.user.tag.annoy.coefficient=1       # eliminating minor annoyances
 urgency.user.tag.hindrance.coefficient=4   # eliminating things that slow me down, prevent me from doing something
 urgency.user.tag.health.coefficient=1      # anything regarding physical, mental, emotional, spiritual health
 urgency.user.tag.unknowns.coefficient=5    # anything that has "unknown unknowns"
+urgency.user.tag.regular.coefficient=4     # things that need to be done regularly, no matter how unimpactful
 
 # settings required for proper urgency inheritance, i.e. making
 # sure that blocking tasks inherit urgency from their dependents
