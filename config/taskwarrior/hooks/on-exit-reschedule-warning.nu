@@ -31,7 +31,7 @@ def get-overdue-count [] {
     '-PARENT'
   ] | str join ' '
 
-  ^task $filters count | complete | match $in {
+  ^task rc.recurrence=0 $filters count | complete | match $in {
     {exit_code: 0} => { $in.stdout | into int }
     _ => {
       error make {
