@@ -32,6 +32,7 @@ targets=(
   atuin-configured
   atuin-logged-in
   pueue-started
+  bkt-installed
 )
 
 depends_on "${targets[@]}"
