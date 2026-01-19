@@ -7,3 +7,5 @@ fi
 if [ "${PUBLIC_NAME:-}" == "" ]; then
   panic "Missing \$PUBLIC_NAME"
 fi
+
+export STATE_DIR="${HOME}/.local/state/lappy"
