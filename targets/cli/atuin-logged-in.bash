@@ -3,7 +3,7 @@
 depends_on atuin-installed core/jq-installed bitwarden/cli-installed
 
 satisfied_if() {
-  atuin status
+  test -f "${HOME}/.local/share/atuin/session"
 }
 
 apply() {
