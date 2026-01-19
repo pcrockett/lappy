@@ -14,5 +14,6 @@ export PRINTER_IP_ADDRESS="xxx.xxx.xxx.xxx"
 export SCANNER_IP_ADDRESS="${PRINTER_IP_ADDRESS}"
 export KHAL_DEFAULT_CALENDAR="phil"
 export HOMELAB_VMHOST_HOSTNAME="TODO"
+export PACMAN_REPOSITORY_REGION="Germany"  # use `reflector --list-countries` for comprehensive list
 
 PATH_add bin

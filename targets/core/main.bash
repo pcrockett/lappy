@@ -4,6 +4,7 @@ targets=(
   root-bash-configured
   environment-configured
   local-bin-dir-created
+  mirrorlist-sorted
   pacman-deps-installed
   bash-configured
   fish/main
