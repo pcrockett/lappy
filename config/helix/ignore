@@ -1,4 +1,5 @@
 *.sublime-workspace
+.blarg/
 .direnv/
 .mypy_cache/
 .pytest_cache/

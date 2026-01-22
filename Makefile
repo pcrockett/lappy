@@ -4,6 +4,10 @@ default:
 	@PATH="$(PWD)/bin:${PATH}" ./bin/blarg --verbose ./targets
 .PHONY: default
 
+pull:
+	git -C .blarg/modules/pcrockett/main pull
+.PHONY: pull
+
 ci: ci-image
 	docker run --rm "$(CI_IMAGE)" make lint
 .PHONY: ci

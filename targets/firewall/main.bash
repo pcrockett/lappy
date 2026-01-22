@@ -1,8 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
-  v4-service-enabled
-  v6-service-enabled
+  @pcrockett:archlinux/iptables-firewall/main
 )
 
 depends_on "${targets[@]}"
