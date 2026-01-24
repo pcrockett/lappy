@@ -111,8 +111,8 @@ report.scheduled.filter=+SCHEDULED (status:pending or status:waiting) -PARENT li
 report.scheduled.dateformat=Y-M-D
 
 report.agenda.description=Today's scheduled tasks
-report.agenda.columns=id,depends,urgency,impact,priority,tags,scheduled,due.relative,until.remaining,description,project,entry.age
-report.agenda.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
+report.agenda.columns=id,depends,urgency,impact,priority,tags,scheduled,due.relative,until.remaining,description,project,entry.age,duration
+report.agenda.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age,Dur
 report.agenda.sort=scheduled+,due+,urgency-,impact+
 report.agenda.filter=+SCHEDULED (schedule:today or due:today) (status:pending or status:waiting) -PARENT limit:page
 report.agenda.dateformat=H:N
