@@ -1,9 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
-  helix-installed
-  hx-symlink-created
-  helix-configured
+  @pcrockett:helix/main
   vscode-json-langserver-installed
   awk-language-server-installed
 )
