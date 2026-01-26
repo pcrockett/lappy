@@ -11,6 +11,7 @@ targets=(
   taskwarrior-configured
   todoman-installed # for interoperability with phone
   todoman-configured
+  tw-installed
 )
 
 depends_on "${targets[@]}"
