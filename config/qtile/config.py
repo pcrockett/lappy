@@ -100,6 +100,9 @@ for vt in range(1, 8):
 
 groups = [Group(i) for i in "123456789"]
 groups[0].spawn = terminal
+groups[8].matches = [
+  Match(wm_class="librewolf")
+]
 
 for i in groups:
     keys.extend(
