@@ -6,6 +6,7 @@ targets=(
   rofi-installed
   rofi-configured
   default-apps-configured
+  flameshot-installed
 )
 
 depends_on "${targets[@]}"
