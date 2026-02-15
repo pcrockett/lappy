@@ -7,6 +7,7 @@ targets=(
   copier-installed
   yamllint-installed
   just-installed
+  android-tools-installed
 )
 
 depends_on "${targets[@]}"
