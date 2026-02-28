@@ -58,8 +58,8 @@ uda.calendarseq.label=Calendar Seq
 uda.duration.type=string
 uda.duration.label=Duration
 
-uda.resched_count.type=numeric
-uda.resched_count.label=Rescheduled
+uda.postpone_count.type=string
+uda.postpone_count.label=Postponed
 
 uda.link.type=string
 uda.link.label=Link

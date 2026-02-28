@@ -4,6 +4,7 @@
 #
 
 use ical
+use log
 
 def main [...args: string] {
   let task = ($in | from json)
@@ -42,7 +43,7 @@ def main [...args: string] {
   "Added to calendar" | print
 
   if ($args | where { $in == "api:2" } | is-empty) {
-    "WARNING: Add calendar hook has only been tested with hooks API v2" | print
+    "Add calendar hook has only been tested with hooks API v2" | log warn
   }
 
   ignore

@@ -4,6 +4,7 @@
 #
 
 use ical
+use log
 
 # only update the calendar if any of these fields have changed
 const IMPORTANT_FIELDS = [
@@ -80,7 +81,7 @@ def main [...args: string] {
   "Updated calendar" | print
 
   if ($args | where { $in == "api:2" } | is-empty) {
-    "WARNING: Calendar modify hook has only been tested with hooks API v2" | print
+    "Calendar modify hook has only been tested with hooks API v2" | log warn
   }
 
   ignore

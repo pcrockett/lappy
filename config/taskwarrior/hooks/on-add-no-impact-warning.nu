@@ -1,5 +1,7 @@
 #!/usr/bin/env -S nu --stdin
 
+use log
+
 def main [...args: string] {
   let task = ($in | from json)
 
@@ -8,11 +10,11 @@ def main [...args: string] {
 
   # All other printed messages get output to the user
   if ($task | get --optional impact | is-empty) {
-    "WARNING: Missing `impact`" | print
+    "Missing `impact`" | log warn
   }
 
   if ($args | where { $in == "api:2" } | is-empty) {
-    "WARNING: Impact warning hook has only been tested with hooks API v2" | print
+    "Impact warning hook has only been tested with hooks API v2" | log warn
   }
 
   ignore

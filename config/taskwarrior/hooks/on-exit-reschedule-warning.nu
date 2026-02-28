@@ -1,5 +1,7 @@
 #!/usr/bin/env -S nu --stdin
 
+use log
+
 const COMMANDS_TO_WARN = [
   command:agenda
   command:schedule
@@ -12,12 +14,12 @@ def main [...args: string] {
   if ($args | any {|a| $a in $COMMANDS_TO_WARN }) {
     let overdue_count = get-overdue-count
     if ($overdue_count > 0) {
-      $"WARNING: ($overdue_count) tasks overdue. Run `task reschedule` for details." | print
+      $"($overdue_count) tasks overdue. Run `task reschedule` for details." | log warn
     }
   }
 
   if ($args | where { $in == "api:2" } | is-empty) {
-    "WARNING: Overdue hook has only been tested with hooks API v2" | print
+    "Overdue hook has only been tested with hooks API v2" | log warn
   }
 
   ignore
