@@ -7,7 +7,6 @@ targets=(
   newsboat-configured
   inkscape-installed
   cozy-installed
-  sound-juicer-installed
 )
 
 depends_on "${targets[@]}"
