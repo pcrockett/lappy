@@ -18,6 +18,12 @@ b = "calendar_local"
 collections = [${TASKWARRIOR_CALENDARS_TO_SYNC}]
 conflict_resolution = "b wins"
 
+[pair mobile_todo]
+a = "calendar_fastmail"
+b = "calendar_local"
+collections = [${MOBILE_TODO_CALENDARS_TO_SYNC}]
+conflict_resolution = "a wins"
+
 [storage calendar_local]
 type = "filesystem"
 path = "~/.local/share/lappy-pim/calendar/"
