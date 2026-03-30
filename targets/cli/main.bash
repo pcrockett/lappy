@@ -33,6 +33,7 @@ targets=(
   atuin-logged-in
   pueue-started
   bkt-installed
+  sq-installed
 )
 
 depends_on "${targets[@]}"
