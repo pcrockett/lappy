@@ -2,6 +2,7 @@
 
 targets=(
   configured
+  started
   copyparty-installed
 )
 
