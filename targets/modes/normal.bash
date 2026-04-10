@@ -2,7 +2,7 @@
 
 targets=(
   tailscale/tailscale-service-running
-  docker/docker-service-enabled
+  docker/started
   cli/pueue-started
   archive/started
 )

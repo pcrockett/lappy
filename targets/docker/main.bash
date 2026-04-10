@@ -1,8 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
-  docker-installed
-  docker-service-enabled
+  started
   added-to-docker-group
   distrobox-installed
 )
