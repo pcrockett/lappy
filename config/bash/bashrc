@@ -1,3 +1,0 @@
-# shellcheck shell=bash
-# [tag:lappy-bashrc]
-# i used to put environment variables here, but now i use [ref:lappy-profile] for that

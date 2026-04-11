@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on core/bash-configured core/fish/fish-configured
+depends_on core/environment-configured core/fish/fish-configured
 
 satisfied_if() {
   test -d "${RUSH_ROOT}" && test -f "${RUSH_CONFIG}"
