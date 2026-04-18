@@ -2,13 +2,13 @@
 
 depends_on \
   cups-socket-enabled \
-  cups-service-started \
   brother-driver-installed \
   network/hosts-configured
 
 PRINTER_NAME="Printer_DCP7055W"
 
 satisfied_if() {
+  satisfy cups-service-started
   lpstat -p | grep --fixed-strings --word-regexp "${PRINTER_NAME}"
 }
 
