@@ -34,6 +34,7 @@ targets=(
   pueue-started
   bkt-installed
   sq-installed
+  @pcrockett:archlinux/cli/moreutils-installed
 )
 
 depends_on "${targets[@]}"
