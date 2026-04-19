@@ -49,7 +49,7 @@ def main [...args: string] {
       | write-task-result
     )
     if ($postpone_count > $WARN_AFTER_POSTPONE_COUNT) {
-      $"Task has been postponed ($postpone_count) times. How's your calendar hygiene?" | log warn
+      $"Task has been postponed ($postpone_count) times. See task scheduling antipatterns note in KB." | log warn
     }
   } else {
     # scheduled date hasn't changed, do nothing
