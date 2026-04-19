@@ -70,6 +70,10 @@ uda.kb.label=Knowledgebase
 uda.notes.type=string
 uda.notes.label=Notes
 
+# should probably always be paired with `security` tag
+urgency.uda.risk.coefficient=1
+uda.risk.type=numeric
+
 # make "next" report take `impact` into account
 report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.relative,due.relative,until.remaining,description,urgency,impact
 report.next.labels=ID,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg,Imp
