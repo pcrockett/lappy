@@ -37,6 +37,7 @@ targets=(
   printer/main
   pim/main
   virt/main
+  diagnostics/main
 )
 
 depends_on "${targets[@]}"
