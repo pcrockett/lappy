@@ -7,6 +7,7 @@ targets=(
   dev/zeal-installed
   pre-commit-installed
   asdf/python-plugin-installed
+  uv-installed
 )
 
 depends_on "${targets[@]}"
