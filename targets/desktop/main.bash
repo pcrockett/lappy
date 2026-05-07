@@ -8,6 +8,7 @@ targets=(
   default-apps-configured
   flameshot-installed
   html-mime-type-configured
+  nautilus-installed
 )
 
 depends_on "${targets[@]}"
