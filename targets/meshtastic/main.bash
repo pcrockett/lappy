@@ -2,7 +2,7 @@
 
 targets=(
   added-to-uucp-group
-  cyme-installed
+  cyme-installed # USB tool
 )
 
 depends_on "${targets[@]}"
