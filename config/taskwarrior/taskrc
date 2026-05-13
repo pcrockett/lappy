@@ -45,7 +45,7 @@ report.focus.description=Urgent and impactful tasks
 report.focus.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
 report.focus.labels=ID,Deps,Urg,Imp,P,Tag,S,Due,Until,Description,Project,Age
 report.focus.sort=urgency-,impact+,project+
-report.focus.filter=(impact:4 or impact:5 or impact:6) and urgency >= 4 and status:pending -WAITING -BLOCKED limit:page
+report.focus.filter=(impact:4 or impact:5 or impact:6 or +BLOCKING) and urgency >= 4 and status:pending -WAITING -BLOCKED limit:page
 
 report.upkeep.description=Urgent, yet not impactful tasks
 report.upkeep.columns=id,depends,urgency,impact,priority,tags,scheduled.relative,due.relative,until.remaining,description,project,entry.age
