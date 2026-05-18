@@ -9,6 +9,7 @@ targets=(
   flameshot-installed
   html-mime-type-configured
   nautilus-installed
+  keyboard-locale-configured
 )
 
 depends_on "${targets[@]}"
