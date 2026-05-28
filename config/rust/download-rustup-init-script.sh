@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #
 # This script is just for documentation and easily updating the rustup-init script in
-# the same directory. See https://www.rust-lang.org/tools/install
+# the same directory. See <https://www.rust-lang.org/tools/install>
 #
 
-set -Eeuo pipefail
+set -euo pipefail
 
 curl_download() {
     # Copy / pasted from [ref:curl-download]
@@ -16,7 +16,11 @@ curl_download() {
         --location "${url}"
 }
 
-THIS_DIR="$(dirname "$(readlink -f "${0}")")"
-DEST_FILE="${THIS_DIR}/rustup-init"
-curl_download https://sh.rustup.rs >"${DEST_FILE}"
-chmod +x "${DEST_FILE}"
+main() {
+  THIS_DIR="$(dirname "$(readlink -f "${0}")")"
+  DEST_FILE="${THIS_DIR}/rustup-init"
+  curl_download https://sh.rustup.rs >"${DEST_FILE}"
+  chmod +x "${DEST_FILE}"
+}
+
+main
