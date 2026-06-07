@@ -2,6 +2,7 @@
 
 targets=(
   cpupower-installed
+  tlp-started
 )
 
 depends_on "${targets[@]}"
