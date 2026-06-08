@@ -22,6 +22,7 @@ include no-color.theme
 
 nag=
 journal.info=off
+search.case.sensitive=off
 
 include tags.conf
 include uda.conf
