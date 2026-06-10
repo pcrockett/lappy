@@ -24,6 +24,10 @@ nag=
 journal.info=off
 search.case.sensitive=off
 
+# default verbosity, minus `override`
+# to see default verbosity and compare to current settings, run `task show verbose`
+verbose=affected,blank,context,edit,header,footnote,label,new-id,news,project,special,sync,recur
+
 include tags.conf
 include uda.conf
 
