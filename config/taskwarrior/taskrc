@@ -30,6 +30,7 @@ verbose=affected,blank,context,edit,header,footnote,label,new-id,news,project,sp
 
 include tags.conf
 include uda.conf
+include decay.conf
 
 # settings required for proper urgency inheritance, i.e. making
 # sure that blocking tasks inherit urgency from their dependents
