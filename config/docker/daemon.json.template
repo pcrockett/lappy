@@ -1,5 +1,44 @@
 {
   "dns": [
     "${DOCKER_DNS_SERVER}"
-  ]
+  ],
+  "builder": {
+    "gc": {
+      "enabled": true,
+      "defaultKeepStorage": "5GB",
+      "policy": [
+        {
+          "all": false,
+          "filter": [
+            "type=source.local"
+          ],
+          "maxUsedSpace": "2GB"
+        },
+        {
+          "all": false,
+          "filter": [
+            "type=exec.cachemount"
+          ],
+          "maxUsedSpace": "2GB"
+        },
+        {
+          "all": false,
+          "filter": [
+            "type=source.git.checkout"
+          ],
+          "maxUsedSpace": "2GB"
+        },
+        {
+          "all": false,
+          "maxUsedSpace": "15GB",
+          "minFreeSpace": "40GB"
+        },
+        {
+          "all": true,
+          "maxUsedSpace": "20GB",
+          "minFreeSpace": "40GB"
+        }
+      ]
+    }
+  }
 }

@@ -1,3 +1,10 @@
 #!/usr/bin/env blarg
 
-depends_on installed daemon-config-placed @pcrockett:archlinux/docker/started
+DEPENDENCIES=(
+  installed
+  daemon-config-placed
+  buildkit-config-placed
+  @pcrockett:archlinux/docker/started
+)
+
+depends_on "${DEPENDENCIES[@]}"
