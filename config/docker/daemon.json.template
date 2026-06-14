@@ -2,6 +2,10 @@
   "dns": [
     "${DOCKER_DNS_SERVER}"
   ],
+  "log-driver": "local",
+  "log-opts": {
+    "max-size": "10m"
+  },
   "builder": {
     "gc": {
       "enabled": true,
