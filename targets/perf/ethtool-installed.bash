@@ -1,10 +1,9 @@
 #!/usr/bin/env blarg
 # shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
 
-depends_on tp-smapi-installed ethtool-installed
-
+# allows tlp to disable wake-on-lan
 PACKAGES=(
-  tlp
+  ethtool
 )
 
 snippet "packages-installed"
