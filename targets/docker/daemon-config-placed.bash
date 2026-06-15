@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on core/with-umask-installed
+depends_on core/with-umask-installed @pcrockett:archlinux/docker/installed
 
 REPO_CONFIG_DIR="${BLARG_CWD}/config/docker"
 SYSTEM_CONFIG_DIR="/etc/docker"
