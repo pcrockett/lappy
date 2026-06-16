@@ -8,8 +8,7 @@ depends_on \
 PRINTER_NAME="Printer_DCP7055W"
 
 satisfied_if() {
-  satisfy cups-service-started
-  lpstat -p | grep --fixed-strings --word-regexp "${PRINTER_NAME}"
+  test -f "/etc/cups/ppd/${PRINTER_NAME}.ppd"
 }
 
 apply() {
