@@ -33,6 +33,16 @@ format = '[ $env_value](fg:purple)'
 [env_var.BW_SESSION]
 format = '[󱦃 BITWARDEN](fg:red)'
 
+[sudo]
+disabled = false
+
+[custom.badger]
+when = 'badger pending'
+symbol = '󱅫'
+style = 'fg:226 bg:124'  # ansi colors: red background, yellow foreground
+format = '[ $symbol ]($style) '
+shell = ['nu']
+
 # [username]
 # # https://starship.rs/config/#username
 # show_always = true
