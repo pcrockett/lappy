@@ -20,7 +20,8 @@ const TIMEZONE = {
 export def render [
   spec: record<
     uuid: string
-    description: string
+    summary: string
+    notes: string
     scheduled: datetime
     modified: datetime
     duration: duration
@@ -51,7 +52,8 @@ export def render [
 VERSION:2.0
 ($PRODID)
 BEGIN:VEVENT
-SUMMARY:($spec.description | escape-text)
+SUMMARY:($spec.summary | escape-text)
+DESCRIPTION:($spec.notes | escape-text)
 DTSTART;VALUE=DATE:($scheduled_timestamp_local)
 DTEND;VALUE=DATE:($end_timestamp_local)
 DTSTAMP:($modified_timestamp_utc)
@@ -92,7 +94,8 @@ END:DAYLIGHT
 END:VTIMEZONE
 
 BEGIN:VEVENT
-SUMMARY:($spec.description | escape-text)
+SUMMARY:($spec.summary | escape-text)
+DESCRIPTION:($spec.notes | escape-text)
 DTSTART;TZID=($TIMEZONE.id):($scheduled_timestamp_local)
 DTEND;TZID=($TIMEZONE.id):($end_timestamp_local)
 DTSTAMP:($modified_timestamp_utc)
@@ -101,7 +104,6 @@ SEQUENCE:($spec.sequence)
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT10M
-DESCRIPTION:($spec.description | escape-text)
 END:VALARM
 END:VEVENT
 

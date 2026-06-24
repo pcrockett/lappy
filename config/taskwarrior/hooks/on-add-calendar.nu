@@ -31,7 +31,8 @@ def main [...args: string] {
   (
     ical render {
       uuid: $calendar_uid
-      description: $task.description
+      summary: $task.description
+      notes: $task.notes?
       scheduled: $scheduled_time_utc
       modified: $now_utc
       duration: $duration

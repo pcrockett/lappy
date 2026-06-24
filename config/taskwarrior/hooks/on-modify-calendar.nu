@@ -25,7 +25,7 @@ def main [...args: string] {
   if ($scheduled_timestamp | is-empty) or ($modified_task | get --optional status) in [deleted completed] {
     if ($calendar_uid | is-not-empty) {
       rm --force (ical event-path $calendar_uid)
-      $"Removed from calendar." | print
+      $"Removed ($modified_task.uuid) from calendar." | print
     }
     ($modified_task | to json --raw | print)
     return
@@ -69,7 +69,8 @@ def main [...args: string] {
   (
     ical render {
       uuid: $output_task.calendaruid
-      description: $output_task.description
+      summary: $output_task.description
+      notes: $output_task.notes?
       scheduled: $scheduled_time_utc
       modified: $now_utc
       duration: $duration
