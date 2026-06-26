@@ -113,6 +113,9 @@ END:VCALENDAR
 }
 
 export def event-path [calendar_uid: string]: nothing -> string {
+  if ($calendar_uid | is-empty) {
+    return null
+  }
   calendar-dir | path join $"($calendar_uid).ics"
 }
 

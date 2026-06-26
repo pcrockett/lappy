@@ -18,13 +18,20 @@ def main [...args: string] {
   let tasks = ($in | lines | each { from json })
   let original_task = $tasks.0
   let modified_task = $tasks.1
-  let calendar_uid: string = $modified_task | get --optional calendaruid
-  let scheduled_timestamp: string = $modified_task | get --optional scheduled
+  let calendar_uid: string = $modified_task.calendaruid?
+  let scheduled_timestamp: string = $modified_task.scheduled?
 
-  # see if we need to remove this from the calendar
-  if ($scheduled_timestamp | is-empty) or ($modified_task | get --optional status) in [deleted completed] {
-    if ($calendar_uid | is-not-empty) {
-      rm --force (ical event-path $calendar_uid)
+  let has_place_on_calendar = (
+    [
+      ($scheduled_timestamp | is-not-empty)
+      (not ($modified_task.status? in [deleted completed]))
+    ]
+    | all {}
+  )
+  if not $has_place_on_calendar {
+    let calendar_path = ical event-path $calendar_uid
+    if ($calendar_path | is-not-empty) and ($calendar_path | path exists) {
+      rm --force $calendar_path
       $"Removed ($modified_task.uuid) from calendar." | print
     }
     ($modified_task | to json --raw | print)
