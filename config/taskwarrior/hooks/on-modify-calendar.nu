@@ -77,7 +77,7 @@ def main [...args: string] {
     ical render {
       uuid: $output_task.calendaruid
       summary: $output_task.description
-      notes: $output_task.notes?
+      notes: ($output_task.notes? | default "")
       scheduled: $scheduled_time_utc
       modified: $now_utc
       duration: $duration
