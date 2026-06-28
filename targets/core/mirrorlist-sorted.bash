@@ -42,7 +42,9 @@ apply() {
 }
 
 needs_tailscale_down() {
-  command -v tailscale &>/dev/null \
-    && tailscale status &>/dev/null \
-    && echo "true"
+  {
+    command -v tailscale &>/dev/null \
+      && tailscale status &>/dev/null \
+      && echo "true"
+  } || echo "false"
 }
