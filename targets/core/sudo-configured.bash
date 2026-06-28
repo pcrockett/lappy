@@ -1,7 +1,5 @@
 #!/usr/bin/env blarg
 
-depends_on with-umask-installed
-
 SOURCE_CONFIG="${BLARG_CWD}/config/sudo/50_custom"
 DEST_CONFIG="/etc/sudoers.d/50_custom"
 
@@ -14,7 +12,7 @@ satisfied_if() {
 
 apply() {
   visudo --check --strict --file "${SOURCE_CONFIG}"
-  as_root with-umask u=r,g=r,o= cp "${SOURCE_CONFIG}" "${DEST_CONFIG}"
+  as_root install --mode u=r,g=r,o= "${SOURCE_CONFIG}" "${DEST_CONFIG}"
   as_root visudo --check --strict
   checkpoint_success
 }

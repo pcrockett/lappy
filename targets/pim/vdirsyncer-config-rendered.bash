@@ -23,5 +23,5 @@ apply() {
   MOBILE_TODO_CALENDARS_TO_SYNC="$(bw_value mobile_todo)" \
     template_render "${REPO_CONFIG_DIR}/${FILE_NAME}.template"
   with-umask u=rwx,g=,o= mkdir --parent "${SYSTEM_CONFIG_DIR}" "${HOME}/.local/share/lappy-pim/calendar"
-  with-umask u=rw,g=,o= cp "${REPO_CONFIG_DIR}/${FILE_NAME}" "${SYSTEM_CONFIG_DIR}"
+  install --mode u=rw,g=,o= "${REPO_CONFIG_DIR}/${FILE_NAME}" "${SYSTEM_CONFIG_DIR}/${FILE_NAME}"
 }

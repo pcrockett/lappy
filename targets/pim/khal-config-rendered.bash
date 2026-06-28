@@ -15,5 +15,5 @@ apply() {
   DEFAULT_CALENDAR="${KHAL_DEFAULT_CALENDAR}" \
     template_render "${REPO_CONFIG_DIR}/${FILE_NAME}.template"
   with-umask u=rwx,g=,o= mkdir --parent "${SYSTEM_CONFIG_DIR}"
-  with-umask u=rw,g=,o= cp "${REPO_CONFIG_DIR}/${FILE_NAME}" "${SYSTEM_CONFIG_DIR}"
+  install --mode u=rw,g=,o= "${REPO_CONFIG_DIR}/${FILE_NAME}" "${SYSTEM_CONFIG_DIR}/${FILE_NAME}"
 }

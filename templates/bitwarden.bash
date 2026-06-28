@@ -17,5 +17,5 @@ apply() {
 
   SECRET_VALUE="$(bw_value secret-attribute)" \
     template_render "${REPO_CONFIG_DIR}/${FILE_NAME}.template"
-  with-umask u=rw,g=,o= cp "${REPO_CONFIG_DIR}/${FILE_NAME}" "${SYSTEM_CONFIG_DIR}"
+  install --mode u=rw,g=,o= "${REPO_CONFIG_DIR}/${FILE_NAME}" "${SYSTEM_CONFIG_DIR}/${FILE_NAME}"
 }

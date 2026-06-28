@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on network/main with-umask-installed reflector-installed
+depends_on network/main reflector-installed
 
 satisfied_if() {
   checkpoint_is_current
@@ -36,7 +36,7 @@ apply() {
     >"${temp_dir}/mirrorlist"
 
   as_root cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.old
-  as_root with-umask u=rw,g=r,o=r cp "${temp_dir}/mirrorlist" /etc/pacman.d/mirrorlist
+  as_root install --mode u=rw,g=r,o=r "${temp_dir}/mirrorlist" /etc/pacman.d/mirrorlist
 
   checkpoint_success
 }
