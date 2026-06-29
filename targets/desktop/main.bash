@@ -10,6 +10,7 @@ targets=(
   html-mime-type-configured
   nautilus-installed
   keyboard-locale-configured
+  keyd-started
 )
 
 depends_on "${targets[@]}"
