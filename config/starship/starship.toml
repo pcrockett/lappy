@@ -41,7 +41,7 @@ when = 'badger pending'
 symbol = '󱅫'
 style = 'fg:226 bg:124'  # ansi colors: red background, yellow foreground
 format = '[ $symbol ]($style) '
-shell = ['nu']
+shell = ['sh']
 
 # [username]
 # # https://starship.rs/config/#username
