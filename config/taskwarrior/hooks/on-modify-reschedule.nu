@@ -63,7 +63,7 @@ def main [...args: string] {
   ignore
 }
 
-def scheduled-year-month-day []: record -> string {
+def scheduled-year-month-day []: record -> oneof<string, nothing> {
   let timestamp = $in | get --optional scheduled
   if ($timestamp | is-empty) {
     null

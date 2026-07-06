@@ -18,8 +18,8 @@ def main [...args: string] {
   let tasks = ($in | lines | each { from json })
   let original_task = $tasks.0
   let modified_task = $tasks.1
-  let calendar_uid: string = $modified_task.calendaruid?
-  let scheduled_timestamp: string = $modified_task.scheduled?
+  let calendar_uid: oneof<string, nothing> = $modified_task.calendaruid?
+  let scheduled_timestamp: oneof<string, nothing> = $modified_task.scheduled?
 
   let has_place_on_calendar = (
     [
