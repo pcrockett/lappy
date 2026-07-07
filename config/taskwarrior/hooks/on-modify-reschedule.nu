@@ -28,7 +28,7 @@ def main [...args: string] {
     return
   }
 
-  let modified_date: string = $modified_task | scheduled-year-month-day
+  let modified_date: oneof<string, nothing> = $modified_task | scheduled-year-month-day
   if ($modified_date | is-empty) {
     # a task has not only been rescheduled... it has been UNscheduled.
     # i'm not sure if we should increment the postpone_count or reset it...
