@@ -8,6 +8,7 @@ targets=(
   yamllint-installed
   just-installed
   android-tools-installed
+  mise-installed
 )
 
 depends_on "${targets[@]}"
