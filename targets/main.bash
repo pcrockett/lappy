@@ -15,7 +15,6 @@ targets=(
   docker/main
   fonts/main
   tailscale/main
-  asdf/main
   firewall/main
   github/main
   yubikey/main

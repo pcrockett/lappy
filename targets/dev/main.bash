@@ -9,6 +9,8 @@ targets=(
   just-installed
   android-tools-installed
   mise-installed
+  yamlfmt-installed
+  deno-installed
 )
 
 depends_on "${targets[@]}"

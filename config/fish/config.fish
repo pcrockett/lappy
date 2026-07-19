@@ -6,4 +6,7 @@ if status is-interactive
     if command -v atuin &>/dev/null
         atuin init fish --disable-up-arrow | source
     end
+    if command -v mise &>/dev/null
+        mise activate fish | source
+    end
 end

@@ -2,6 +2,7 @@
 
 targets=(
   shellcheck-installed
+  shfmt-installed
   bash-language-server-installed
 )
 
