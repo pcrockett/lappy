@@ -3,10 +3,14 @@ function tmpshell
     cd $temp_dir
 
     echo 'FROM docker.io/library/debian:trixie-slim
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN \
 apt-get update && \
-apt-get install --yes --no-install-recommends curl git ca-certificates && \
+apt-get install --yes --no-install-recommends curl git ca-certificates extrepo && \
+extrepo enable mise && \
+apt-get update && \
+apt-get install --yes --no-install-recommends mise && \
 useradd --create-home user
 
 USER user
@@ -20,9 +24,12 @@ curl --proto \'=https\' --tlsv1.3 \
   --silent \
   --show-error \
   --fail \
-  --location https://github.com/DannyBen/rush/releases/download/v1.0.0/rush \
+  --location https://github.com/DannyBen/rush/releases/download/v1.0.1/rush \
   >"${INSTALL_DIR}/rush" && \
-chmod +x "${INSTALL_DIR}/rush"' >Dockerfile
+echo "f1790619b2cfbf2ee73c36b61ee36c6af1d2f8ab985f7d07a4b7d7fd26456a95  ${INSTALL_DIR}/rush" \
+  | sha256sum --check - && \
+chmod +x "${INSTALL_DIR}/rush"
+' >Dockerfile
 
     echo '[private]
 _default:
