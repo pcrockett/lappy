@@ -1,8 +1,2 @@
 #!/usr/bin/env blarg
-# shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
-
-PACKAGES=(
-  mise
-)
-
-snippet "packages-installed"
+depends_on @pcrockett:mise/installed
