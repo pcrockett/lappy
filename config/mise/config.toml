@@ -1,0 +1,6 @@
+[settings]
+lockfile = true
+minimum_release_age = "1wk"
+
+[settings.oci]
+default_from = "debian:trixie-slim"
