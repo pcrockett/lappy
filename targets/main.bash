@@ -30,7 +30,7 @@ targets=(
   archiving/main
   media/main
   rust/main
-  meshtastic/main
+  serial/main
   dev/main
   scanner/main
   printer/main
