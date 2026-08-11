@@ -35,6 +35,7 @@ targets=(
   bkt-installed
   sq-installed
   @pcrockett:archlinux/cli/moreutils-installed
+  dosfstools-installed
 )
 
 depends_on "${targets[@]}"
