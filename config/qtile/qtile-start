@@ -1,8 +1,9 @@
 #!/usr/bin/bash
 #
-# in qtile 0.37.0 a regression was shipped that requires this fix. github issue:
+# in qtile 0.37.0 a regression was shipped that requires this fix. github issues:
 #
-#     <https://github.com/qtile/qtile/issues/6023>
+# - <https://github.com/qtile/qtile/issues/6023>
+# - <https://github.com/qtile/qtile/issues/6028>
 #
 # eventually when this is fixed, released, and packaged, this script will no longer
 # be necessary.
