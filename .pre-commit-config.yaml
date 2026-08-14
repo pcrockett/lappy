@@ -12,42 +12,54 @@ repos:
       - id: check-yaml
       - id: end-of-file-fixer
       - id: trailing-whitespace
-  - repo: https://github.com/rhysd/actionlint
-    rev: e7d448ef7507c20fc4c88a95d0c448b848cd6127  # frozen: v1.7.8
-    hooks:
-      - id: actionlint-system
-  - repo: https://github.com/pcrockett/gitleaks
-    rev: 0cec2598f76713675989870f0c8343cb4d49614d
-    hooks:
-      - id: gitleaks-system
-  - repo: https://github.com/adrienverge/yamllint
-    rev: 79a6b2b1392eaf49cdd32ac4f14be1a809bbd8f7  # v1.37.1
-    hooks:
-      - id: yamllint
+
+  # local tools assumed to be installed with mise, see mise.toml
   - repo: local
     hooks:
-      - name: shellcheck
-        id: shellcheck
+      - id: actionlint
+        name: lint github actions files
         language: system
+        entry: actionlint
+        types:
+          - yaml
+        files: ^\.github/workflows/
+      - id: shellcheck
+        name: lint shell scripts
         entry: shellcheck
-        types: [shell]
-      - name: shfmt
-        id: shfmt
         language: system
+        types_or:
+          - shell
+          - bash
+      - id: shfmt
+        name: autoformat shell scripts
         entry: shfmt
-        args: ["--write"]
-        types: [shell]
-        exclude_types: [csh, tcsh, zsh]
-        exclude: rustup-init
-      - name: tagref
-        id: tagref
+        args:
+          - --write
         language: system
-        entry: tagref
-        args: [check]
-        pass_filenames: false
+        types:
+          - shell
+        exclude: '^config/rust/rustup-init$'
+      - id: yamllint
+        name: lint yaml files
+        entry: yamllint
+        language: system
+        types:
+          - yaml
       - id: yamlfmt
-        name: yamlfmt
+        name: autoformat yaml files
         entry: yamlfmt
         language: system
         types:
           - yaml
+      - id: hadolint
+        name: lint dockerfiles
+        entry: hadolint
+        language: system
+        types:
+          - dockerfile
+      - id: tagref
+        name: check tags and refs
+        entry: tagref
+        args: [check]
+        language: system
+        pass_filenames: false

@@ -7,13 +7,13 @@
 set -euo pipefail
 
 curl_download() {
-    # Copy / pasted from [ref:curl-download]
-    local url="${1}"
-    curl --proto '=https' --tlsv1.3 \
-        --silent \
-        --show-error \
-        --fail \
-        --location "${url}"
+  # Copy / pasted from [ref:curl-download]
+  local url="${1}"
+  curl --proto '=https' --tlsv1.3 \
+    --silent \
+    --show-error \
+    --fail \
+    --location "${url}"
 }
 
 main() {
