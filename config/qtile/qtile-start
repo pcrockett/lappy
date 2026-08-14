@@ -7,5 +7,4 @@
 #
 # eventually when this is fixed, released, and packaged, this script will no longer
 # be necessary.
-systemctl --user import-environment
-exec systemctl --user start --wait qtile.service
+exec /usr/bin/qtile start
