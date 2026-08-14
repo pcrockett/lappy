@@ -11,6 +11,7 @@ targets=(
   nautilus-installed
   keyboard-locale-configured
   keyd-started
+  qtile-launch-fixed
 )
 
 depends_on "${targets[@]}"
