@@ -4,7 +4,7 @@
 PACKAGES=(
   dict-freedict-eng-deu-bin
   dict-freedict-deu-eng-bin
-  dict-wn
+  wordnet-dictd
 )
 
 snippet aur
