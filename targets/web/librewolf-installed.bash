@@ -1,8 +1,8 @@
 #!/usr/bin/env blarg
+# shellcheck disable=SC2034  # variables appear unused, but are used inside snippet
 
-# shellcheck disable=SC2034  # PACKAGES used in aur snippet
 PACKAGES=(
-  librewolf-bin
+  librewolf
 )
 
-snippet aur
+snippet "packages-installed"
