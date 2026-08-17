@@ -17,7 +17,7 @@ lint:
 .PHONY: lint
 
 update-blarg:
-	@curl --proto '=https' --tlsv1.2 \
+	@curl --proto '=https' --tlsv1.3 \
 		--silent \
 		--show-error \
 		--fail \
@@ -32,5 +32,5 @@ run-target:
 .PHONY: run-target
 
 ci-image:
-	GITHUB_TOKEN="$(GITHUB_TOKEN)" docker build --tag "$(CI_IMAGE)" --secret id=GITHUB_TOKEN .
+	docker build --tag "$(CI_IMAGE)" .
 .PHONY: ci-image

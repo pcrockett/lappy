@@ -1,7 +1,7 @@
 FROM docker.io/library/archlinux:base AS base
 RUN \
 pacman -Syu --noconfirm --verbose \
-  git ripgrep mise uv make
+  git make mise python3 ripgrep uv
 
 RUN useradd --create-home user && \
 mkdir /repo && \
