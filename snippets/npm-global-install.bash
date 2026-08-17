@@ -13,5 +13,6 @@ satisfied_if() {
 }
 
 apply() {
+  test "${PNPM_HOME:-}" != "" || panic "PNPM_HOME not set yet. Do you need to log out and back in?"
   pnpm install --global "${PACKAGES[@]}"
 }

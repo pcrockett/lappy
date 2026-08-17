@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on rush/main core/environment-configured age-installed
+depends_on rush/main age-installed
 
 PACKAGE_NAME="gramps"
 
