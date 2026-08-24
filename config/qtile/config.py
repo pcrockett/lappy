@@ -25,7 +25,7 @@
 # SOFTWARE.
 
 from libqtile import bar, layout, qtile, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Output, Screen
+from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
@@ -156,53 +156,46 @@ def divider():
     return widget.TextBox("󰇝")
 
 
-def make_screen(_: Output) -> Screen:
-    bottom_bar = bar.Bar(
-        [
-            widget.CurrentLayout(),
-            widget.GroupBox(),
-            widget.TaskList(),
-            widget.Chord(
-                chords_colors={
-                    "launch": ("#ff0000", "#ffffff"),
-                },
-                name_transform=lambda name: name.upper(),
-            ),
-            # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-            # widget.StatusNotifier(),
-            widget.Systray(),
-            divider(),
-            widget.Clock(format="%Y-%m-%d %a %H:%M"),
-            divider(),
-            widget.TextBox("󰁹"),
-            widget.Battery(
-                charge_char="",
-                discharge_char="",
-                empty_char="",
-                full_char=""
-            ),
-            divider(),
-            widget.QuickExit(default_text="󰩈", countdown_format="{}"),
-            divider(),
-        ],
-        24,
-        # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-        # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
-    )
-    return Screen(
-        bottom=bottom_bar,
-        # You can uncomment this variable if you see that on X11 floating resize/moving
-        # is laggy. By default we handle these events delayed to already improve
-        # performance, however your system might still be struggling. This variable is
-        # set to None (no cap) by default, but you can set it to 60 to indicate that you
-        # limit it to 60 events per second
+screens = [
+    Screen(
+        bottom=bar.Bar(
+            [
+                widget.CurrentLayout(),
+                widget.GroupBox(),
+                widget.TaskList(),
+                widget.Chord(
+                    chords_colors={
+                        "launch": ("#ff0000", "#ffffff"),
+                    },
+                    name_transform=lambda name: name.upper(),
+                ),
+                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
+                # widget.StatusNotifier(),
+                widget.Systray(),
+                divider(),
+                widget.Clock(format="%Y-%m-%d %a %H:%M"),
+                divider(),
+                widget.TextBox("󰁹"),
+                widget.Battery(
+                    charge_char="",
+                    discharge_char="",
+                    empty_char="",
+                    full_char=""
+                ),
+                divider(),
+                widget.QuickExit(default_text="󰩈", countdown_format="{}"),
+                divider(),
+            ],
+            24,
+            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+        ),
+        # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
+        # By default we handle these events delayed to already improve performance, however your system might still be struggling
+        # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
         # x11_drag_polling_rate = 60,
-    )
-
-
-def generate_screens(outputs: list[Output]) -> list[Screen]:
-    return [ make_screen(o) for o in outputs ]
-
+    ),
+]
 
 # Drag floating layouts.
 mouse = [
