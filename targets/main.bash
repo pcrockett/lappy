@@ -37,6 +37,7 @@ targets=(
   pim/main
   virt/main
   diagnostics/main
+  hister/main
 )
 
 depends_on "${targets[@]}"
