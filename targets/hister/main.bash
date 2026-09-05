@@ -1,8 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
-  installed
-  configured
+  service-started
 )
 
 depends_on "${targets[@]}"

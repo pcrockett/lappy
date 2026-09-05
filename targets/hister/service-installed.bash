@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
-REPO_PATH="${BLARG_CWD}/config/pueue/pueued.service"
-SYSTEM_PATH=~/.config/systemd/user/pueued.service
+REPO_PATH="${BLARG_MODULE_DIR}/config/hister/hister.service"
+SYSTEM_PATH=~/.config/systemd/user/hister.service
 
 satisfied_if() {
   test_symlink "${REPO_PATH}" "${SYSTEM_PATH}"

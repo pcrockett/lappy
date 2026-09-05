@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-pkill --full -SIGTERM "hister listen"
+systemctl --user stop hister.service

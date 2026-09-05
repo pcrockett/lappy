@@ -1,0 +1,12 @@
+[Unit]
+Description=Hister personal search engine service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mise exec -- hister listen
+Restart=on-failure
+NoNewPrivileges=true
+UMask=0077
+
+[Install]
+WantedBy=default.target
