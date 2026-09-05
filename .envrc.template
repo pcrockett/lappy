@@ -18,4 +18,21 @@ export KHAL_DEFAULT_CALENDAR="phil"
 export HOMELAB_VMHOST_HOSTNAME="TODO"
 export PACMAN_REPOSITORY_REGION="Germany"  # use `reflector --list-countries` for comprehensive list
 
+export HISTER_ACCESS_TOKEN="" # populate with `python -c "import secrets; print(secrets.token_urlsafe(32))"`
+export HISTER_INDEXER_SETTINGS="
+indexer:
+  detect_languages: true
+  keep_stopwords: false
+  directories:
+  - path: '~/some/path'
+    filetypes: ['md']
+    # patterns: ['doc_*']
+    label: 'kb'
+    delete_on_remove: true
+  - path: '~/some/other/path'
+    filetypes: ['md']
+    delete_on_remove: true
+  max_file_size_mb: 1
+"
+
 PATH_add bin

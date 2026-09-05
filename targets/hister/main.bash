@@ -2,6 +2,7 @@
 
 targets=(
   installed
+  configured
 )
 
 depends_on "${targets[@]}"

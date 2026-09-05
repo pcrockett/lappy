@@ -1,0 +1,21 @@
+color_scheme: auto
+dark_theme: gruvbox
+hotkeys:
+  alt+1: tab_search
+  alt+2: tab_history
+  alt+3: tab_rules
+  alt+4: tab_add
+  ctrl+c: quit
+  ctrl+d: delete_result
+  ctrl+o: toggle_sort
+  ctrl+s: toggle_settings
+  ctrl+t: toggle_theme
+  down: scroll_down
+  enter: open_result
+  esc: toggle_focus
+  f1: toggle_help
+  j: scroll_down
+  k: scroll_up
+  tab: toggle_focus
+  up: scroll_up
+light_theme: catppuccin-latte

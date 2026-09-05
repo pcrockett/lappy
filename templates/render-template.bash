@@ -13,6 +13,6 @@ satisfied_if() {
 
 apply() {
   template_render "${REPO_CONFIG_DIR}/${FILE_NAME}.template"
-  as_root with-umask u=rwx,g=rx,o=rx mkdir --parent "${SYSTEM_CONFIG_DIR}"
+  as_root mkdir --mode u=rwx,g=rx,o=rx --parent "${SYSTEM_CONFIG_DIR}"
   as_root install --mode u=rw,g=r,o=r "${REPO_CONFIG_DIR}/${FILE_NAME}" "${SYSTEM_CONFIG_DIR}/${FILE_NAME}"
 }
