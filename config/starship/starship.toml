@@ -27,8 +27,8 @@ disabled = true
 [git_status]
 stashed = ''
 
-[env_var.HEROKU_APP]
-format = '[ $env_value](fg:purple)'
+[git_branch]
+symbol = ' '
 
 [env_var.BW_SESSION]
 format = '[󱦃 BITWARDEN](fg:red)'
