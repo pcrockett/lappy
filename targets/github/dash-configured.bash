@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
-REPO_PATH="${CONFIG_DIR}/TODO"
-SYSTEM_PATH=~/.config/TODO
+REPO_PATH="${CONFIG_DIR}/gh-dash"
+SYSTEM_PATH=~/.config/gh-dash
 
 satisfied_if() {
   test_symlink "${REPO_PATH}" "${SYSTEM_PATH}"

@@ -4,6 +4,8 @@ targets=(
   github-cli-installed
   actionlint-installed
   poi-installed
+  dash-installed
+  dash-configured
   git-pr-installed
 )
 

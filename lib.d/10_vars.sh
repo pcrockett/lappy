@@ -9,3 +9,5 @@ if [ "${PUBLIC_NAME:-}" == "" ]; then
 fi
 
 export STATE_DIR="${HOME}/.local/state/lappy"
+export REPO_DIR="${BLARG_MODULE_DIR}"
+export CONFIG_DIR="${REPO_DIR}/config"
