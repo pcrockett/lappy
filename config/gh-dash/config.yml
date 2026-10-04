@@ -4,7 +4,7 @@ prSections:
   - title: Dependabot
     filters: owner:@me is:open author:app/dependabot
   - title: My Repos
-    filters: owner:@me is:open
+    filters: owner:@me is:open -author:app/dependabot
   - title: Needs My Review
     filters: is:open review-requested:@me
   - title: Involved
