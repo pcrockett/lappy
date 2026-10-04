@@ -32,6 +32,7 @@ targets=(
   rust/main
   serial/main
   dev/main
+  mise/main
   scanner/main
   printer/main
   pim/main

@@ -8,8 +8,6 @@ targets=(
   yamllint-installed
   just-installed
   android-tools-installed
-  mise-installed
-  mise-configured
   yamlfmt-installed
   deno-installed
 )

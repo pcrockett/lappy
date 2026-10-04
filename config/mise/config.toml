@@ -8,3 +8,4 @@ default_from = "debian:trixie-slim"
 [tools]
 "github:asciimoo/hister" = "latest"
 "github:pcrockett/blarg" = "latest"
+bitwarden = "latest"
