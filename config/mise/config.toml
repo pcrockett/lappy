@@ -7,5 +7,6 @@ default_from = "debian:trixie-slim"
 
 [tools]
 "github:asciimoo/hister" = "latest"
+"github:pasadoorian/fettle" = "latest"
 "github:pcrockett/blarg" = "latest"
 bitwarden = "latest"

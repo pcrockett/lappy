@@ -39,6 +39,7 @@ targets=(
   virt/main
   diagnostics/main
   hister/main
+  maint/main
 )
 
 depends_on "${targets[@]}"
