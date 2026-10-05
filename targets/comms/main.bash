@@ -2,8 +2,7 @@
 
 targets=(
   email/main
-  gurk-installed
-  gurk-configured
+  siggy-installed
   simplex-tui-installed
   profanity-installed
 )

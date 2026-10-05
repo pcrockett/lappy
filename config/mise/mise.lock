@@ -82,6 +82,36 @@ checksum = "sha256:be3388b2b628fb946aa4d656f29fd4917bf6f146d542d0e90168ace456d89
 url = "https://github.com/asciimoo/hister/releases/download/v0.20.0/hister_0.20.0_windows_amd64.exe"
 url_api = "https://api.github.com/repos/asciimoo/hister/releases/assets/585632387"
 
+[[tools."github:johnsideserf/siggy"]]
+version = "1.15.0"
+backend = "github:johnsideserf/siggy"
+specifiers = ["latest"]
+
+[tools."github:johnsideserf/siggy"."platforms.linux-x64"]
+checksum = "sha256:586d35c7bdb4e71bea54927dc5a7e05a7793093c474bdc9036e86b0b9413fc7e"
+url = "https://github.com/johnsideserf/siggy/releases/download/v1.15.0/siggy-v1.15.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/johnsideserf/siggy/releases/assets/541770181"
+
+[tools."github:johnsideserf/siggy"."platforms.linux-x64-musl"]
+checksum = "sha256:586d35c7bdb4e71bea54927dc5a7e05a7793093c474bdc9036e86b0b9413fc7e"
+url = "https://github.com/johnsideserf/siggy/releases/download/v1.15.0/siggy-v1.15.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/johnsideserf/siggy/releases/assets/541770181"
+
+[tools."github:johnsideserf/siggy"."platforms.macos-arm64"]
+checksum = "sha256:1fa29e7c93f27d7cb8e30842d16fb32066a5dcc89179a54de18244c90df5073c"
+url = "https://github.com/johnsideserf/siggy/releases/download/v1.15.0/siggy-v1.15.0-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/johnsideserf/siggy/releases/assets/541770184"
+
+[tools."github:johnsideserf/siggy"."platforms.macos-x64"]
+checksum = "sha256:ad29f09681f32a80dca034a0c9b41ce4ba956df76c6dbc913858b6f351f49e7c"
+url = "https://github.com/johnsideserf/siggy/releases/download/v1.15.0/siggy-v1.15.0-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/johnsideserf/siggy/releases/assets/541770182"
+
+[tools."github:johnsideserf/siggy"."platforms.windows-x64"]
+checksum = "sha256:16b15e2b92049a30f27dc9d151e7a91477100be877b74998feafce2949821ad5"
+url = "https://github.com/johnsideserf/siggy/releases/download/v1.15.0/siggy-v1.15.0-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/johnsideserf/siggy/releases/assets/541770183"
+
 [[tools."github:pasadoorian/fettle"]]
 version = "1.19.0"
 backend = "github:pasadoorian/fettle"

@@ -1,8 +1,8 @@
 #!/usr/bin/env blarg
 
-depends_on rush/main
+depends_on rush/main core/java-installed
 
-PACKAGE_NAME="gurk"
+PACKAGE_NAME="signal-cli"
 
 satisfied_if() {
   command -v "${PACKAGE_NAME}"
