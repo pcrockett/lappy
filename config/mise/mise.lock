@@ -3,44 +3,44 @@
 lockfile_version = 3
 
 [[tools.bitwarden]]
-version = "2026.9.0"
+version = "2026.9.1"
 backend = "aqua:bitwarden/clients"
 specifiers = ["latest"]
 
 [tools.bitwarden."platforms.linux-arm64"]
-checksum = "sha256:3f474cc34b701a1cebdd486009870038b034343afb83095607422cdad4c3653a"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.0/bw-linux-arm64-2026.9.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/570320369"
+checksum = "sha256:c451c773378a6f1f041ea26568a897b285a8656bee16a16e4914ce9e40fb7c79"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-linux-arm64-2026.9.1.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936524"
 
 [tools.bitwarden."platforms.linux-arm64-musl"]
-checksum = "sha256:3f474cc34b701a1cebdd486009870038b034343afb83095607422cdad4c3653a"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.0/bw-linux-arm64-2026.9.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/570320369"
+checksum = "sha256:c451c773378a6f1f041ea26568a897b285a8656bee16a16e4914ce9e40fb7c79"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-linux-arm64-2026.9.1.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936524"
 
 [tools.bitwarden."platforms.linux-x64"]
-checksum = "sha256:580c1deec8345b19dbac7f8b02babb6cc4fe250c69c567e29061f727f1e40768"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.0/bw-linux-2026.9.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/570320307"
+checksum = "sha256:84289eaf59d691f04242605112f21b00e8dba65acdedbc60dde001a2860f2097"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-linux-2026.9.1.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936444"
 
 [tools.bitwarden."platforms.linux-x64-musl"]
-checksum = "sha256:580c1deec8345b19dbac7f8b02babb6cc4fe250c69c567e29061f727f1e40768"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.0/bw-linux-2026.9.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/570320307"
+checksum = "sha256:84289eaf59d691f04242605112f21b00e8dba65acdedbc60dde001a2860f2097"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-linux-2026.9.1.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936444"
 
 [tools.bitwarden."platforms.macos-arm64"]
-checksum = "sha256:014bc4c093e586197013fac79b9d0f1df1da6004003293c8930406bf1ffde45b"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.0/bw-macos-arm64-2026.9.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/570320204"
+checksum = "sha256:9f52edf5fb855e277315c1106f1bae326a87c41b425a4c0e00fd1440e77fa0a6"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-macos-arm64-2026.9.1.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936238"
 
 [tools.bitwarden."platforms.macos-x64"]
-checksum = "sha256:d2a1865c2c1f49c34e6f1b38a42c5b95dcf22e34f81121c4962ebda32f708a3e"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.0/bw-macos-2026.9.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/570320154"
+checksum = "sha256:7996558e562a7e5d1ef167f625e4dfde0230fe87246e01caf647aff5501ca658"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-macos-2026.9.1.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936184"
 
 [tools.bitwarden."platforms.windows-x64"]
-checksum = "sha256:09f58bdfc9d3b7ba04277042db4804dd932e581c972f740f37b9d12106096424"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.0/bw-windows-2026.9.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/570319949"
+checksum = "sha256:51712d5e21903cdd719847bd082041e0fafadd665e9bbf5d8cbfbbdcc8e36900"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-windows-2026.9.1.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936008"
 
 [[tools."github:asciimoo/hister"]]
 version = "0.20.0"
@@ -113,44 +113,44 @@ url = "https://github.com/johnsideserf/siggy/releases/download/v1.15.0/siggy-v1.
 url_api = "https://api.github.com/repos/johnsideserf/siggy/releases/assets/541770183"
 
 [[tools."github:pasadoorian/fettle"]]
-version = "1.19.0"
+version = "1.21.0"
 backend = "github:pasadoorian/fettle"
 specifiers = ["latest"]
 
 [tools."github:pasadoorian/fettle"."platforms.linux-arm64"]
-checksum = "sha256:6e46a61de11feab9f973e83102f0643504d10e4f1abae4dca78d3137da231a03"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.19.0/fettle.pyz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/532697155"
+checksum = "sha256:9914138f05326a20055b0da54077ec14bb80c18602a22d4e268478c2381ddaf3"
+url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle.pyz"
+url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086348"
 
 [tools."github:pasadoorian/fettle"."platforms.linux-arm64-musl"]
-checksum = "sha256:6e46a61de11feab9f973e83102f0643504d10e4f1abae4dca78d3137da231a03"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.19.0/fettle.pyz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/532697155"
+checksum = "sha256:9914138f05326a20055b0da54077ec14bb80c18602a22d4e268478c2381ddaf3"
+url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle.pyz"
+url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086348"
 
 [tools."github:pasadoorian/fettle"."platforms.linux-x64"]
-checksum = "sha256:02b6d66a6c0561ceb0e9c7a2ef6fda8a5040777f490bc30bba96f0f30b3638e4"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.19.0/fettle-1.19.0-linux-x86_64.tar.gz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/532697063"
+checksum = "sha256:d7c3f943aa56a8b7c4a5489e788e6f3b30922b2ec4157d71e6138b52de9aae7e"
+url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle-1.21.0-linux-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086104"
 
 [tools."github:pasadoorian/fettle"."platforms.linux-x64-musl"]
-checksum = "sha256:02b6d66a6c0561ceb0e9c7a2ef6fda8a5040777f490bc30bba96f0f30b3638e4"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.19.0/fettle-1.19.0-linux-x86_64.tar.gz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/532697063"
+checksum = "sha256:d7c3f943aa56a8b7c4a5489e788e6f3b30922b2ec4157d71e6138b52de9aae7e"
+url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle-1.21.0-linux-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086104"
 
 [tools."github:pasadoorian/fettle"."platforms.macos-arm64"]
-checksum = "sha256:6e46a61de11feab9f973e83102f0643504d10e4f1abae4dca78d3137da231a03"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.19.0/fettle.pyz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/532697155"
+checksum = "sha256:9914138f05326a20055b0da54077ec14bb80c18602a22d4e268478c2381ddaf3"
+url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle.pyz"
+url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086348"
 
 [tools."github:pasadoorian/fettle"."platforms.macos-x64"]
-checksum = "sha256:6e46a61de11feab9f973e83102f0643504d10e4f1abae4dca78d3137da231a03"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.19.0/fettle.pyz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/532697155"
+checksum = "sha256:9914138f05326a20055b0da54077ec14bb80c18602a22d4e268478c2381ddaf3"
+url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle.pyz"
+url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086348"
 
 [tools."github:pasadoorian/fettle"."platforms.windows-x64"]
-checksum = "sha256:6e46a61de11feab9f973e83102f0643504d10e4f1abae4dca78d3137da231a03"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.19.0/fettle.pyz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/532697155"
+checksum = "sha256:9914138f05326a20055b0da54077ec14bb80c18602a22d4e268478c2381ddaf3"
+url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle.pyz"
+url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086348"
 
 [[tools."github:pcrockett/blarg"]]
 version = "0.7.0"
