@@ -3,44 +3,44 @@
 lockfile_version = 3
 
 [[tools.bitwarden]]
-version = "2026.9.1"
+version = "2026.10.0"
 backend = "aqua:bitwarden/clients"
 specifiers = ["latest"]
 
 [tools.bitwarden."platforms.linux-arm64"]
-checksum = "sha256:c451c773378a6f1f041ea26568a897b285a8656bee16a16e4914ce9e40fb7c79"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-linux-arm64-2026.9.1.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936524"
+checksum = "sha256:2fe9d8a18dc4c35ea2f9e3e42a4021f14f129ef47e80b6cea1e3b34176f1583a"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-linux-arm64-2026.10.0.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644458240"
 
 [tools.bitwarden."platforms.linux-arm64-musl"]
-checksum = "sha256:c451c773378a6f1f041ea26568a897b285a8656bee16a16e4914ce9e40fb7c79"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-linux-arm64-2026.9.1.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936524"
+checksum = "sha256:2fe9d8a18dc4c35ea2f9e3e42a4021f14f129ef47e80b6cea1e3b34176f1583a"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-linux-arm64-2026.10.0.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644458240"
 
 [tools.bitwarden."platforms.linux-x64"]
-checksum = "sha256:84289eaf59d691f04242605112f21b00e8dba65acdedbc60dde001a2860f2097"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-linux-2026.9.1.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936444"
+checksum = "sha256:269b67559caab860d1737f7554b32bdb8be9285d5689fee55193c137a0df9973"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-linux-2026.10.0.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644458067"
 
 [tools.bitwarden."platforms.linux-x64-musl"]
-checksum = "sha256:84289eaf59d691f04242605112f21b00e8dba65acdedbc60dde001a2860f2097"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-linux-2026.9.1.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936444"
+checksum = "sha256:269b67559caab860d1737f7554b32bdb8be9285d5689fee55193c137a0df9973"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-linux-2026.10.0.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644458067"
 
 [tools.bitwarden."platforms.macos-arm64"]
-checksum = "sha256:9f52edf5fb855e277315c1106f1bae326a87c41b425a4c0e00fd1440e77fa0a6"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-macos-arm64-2026.9.1.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936238"
+checksum = "sha256:062c880508678b8d936ab2522a3a1e92d60f52b5c534e71406e9b47329e95207"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-macos-arm64-2026.10.0.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644457665"
 
 [tools.bitwarden."platforms.macos-x64"]
-checksum = "sha256:7996558e562a7e5d1ef167f625e4dfde0230fe87246e01caf647aff5501ca658"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-macos-2026.9.1.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936184"
+checksum = "sha256:39602a597ca63127c22ee3844546f3fe06079e4f67be7b9a7ea4e30ede8721d0"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-macos-2026.10.0.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644457548"
 
 [tools.bitwarden."platforms.windows-x64"]
-checksum = "sha256:51712d5e21903cdd719847bd082041e0fafadd665e9bbf5d8cbfbbdcc8e36900"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.9.1/bw-windows-2026.9.1.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/603936008"
+checksum = "sha256:7b4528962fa1dccc6fdb9ddbec57981004bb6146dedbb5c4c2637756376818e7"
+url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-windows-2026.10.0.zip"
+url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644457178"
 
 [[tools."github:asciimoo/hister"]]
 version = "0.20.0"
@@ -191,3 +191,50 @@ url_api = "https://api.github.com/repos/pcrockett/blarg/releases/assets/57489654
 checksum = "sha256:e2cfbd99a129d76513e4f78cc5bf7c694cd81eecc15840cffc6cc2f49a563a23"
 url = "https://github.com/pcrockett/blarg/releases/download/v0.7.0/blarg"
 url_api = "https://api.github.com/repos/pcrockett/blarg/releases/assets/574896548"
+
+[[tools.ruff]]
+version = "0.16.7"
+backend = "aqua:astral-sh/ruff"
+specifiers = ["latest"]
+
+[tools.ruff."platforms.linux-arm64"]
+checksum = "sha256:1e06b11127c28387c8066da4ce6a617a84a359591be09dbf581fbb0c3e006239"
+url = "https://github.com/astral-sh/ruff/releases/download/0.16.7/ruff-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/555530686"
+provenance = "github-attestations"
+
+[tools.ruff."platforms.linux-arm64-musl"]
+checksum = "sha256:dd669efe4ac74ffd5842b26147c36cdd6c93b9cf0d10d5e53c12ec5b44f540bd"
+url = "https://github.com/astral-sh/ruff/releases/download/0.16.7/ruff-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/555530691"
+provenance = "github-attestations"
+
+[tools.ruff."platforms.linux-x64"]
+checksum = "sha256:73894c7b7c9a53fd66ed715eb3a1ec65077f316328e377057a98bdb7fcba0326"
+url = "https://github.com/astral-sh/ruff/releases/download/0.16.7/ruff-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/555530800"
+provenance = "github-attestations"
+
+[tools.ruff."platforms.linux-x64-musl"]
+checksum = "sha256:8d28939cf5cabe54a2f8f7cbfab52c643436d1bc70474198181db9e48f504411"
+url = "https://github.com/astral-sh/ruff/releases/download/0.16.7/ruff-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/555530803"
+provenance = "github-attestations"
+
+[tools.ruff."platforms.macos-arm64"]
+checksum = "sha256:80221a5e0b1ae29262a74496f2ad1380c1ab52b3edd8cee13ec76d8acff406ca"
+url = "https://github.com/astral-sh/ruff/releases/download/0.16.7/ruff-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/555530669"
+provenance = "github-attestations"
+
+[tools.ruff."platforms.macos-x64"]
+checksum = "sha256:6f3b98ec349f470b7efde5294d44e5171613ddaac3c251a918a7946b303d3ec2"
+url = "https://github.com/astral-sh/ruff/releases/download/0.16.7/ruff-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/555530779"
+provenance = "github-attestations"
+
+[tools.ruff."platforms.windows-x64"]
+checksum = "sha256:a099e761fb841fc33d44031aa37e16a3d154922fd3da284396e58ae687973e45"
+url = "https://github.com/astral-sh/ruff/releases/download/0.16.7/ruff-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/555530794"
+provenance = "github-attestations"
