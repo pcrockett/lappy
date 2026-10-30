@@ -7,80 +7,20 @@ version = "2026.10.0"
 backend = "aqua:bitwarden/clients"
 specifiers = ["latest"]
 
-[tools.bitwarden."platforms.linux-arm64"]
-checksum = "sha256:2fe9d8a18dc4c35ea2f9e3e42a4021f14f129ef47e80b6cea1e3b34176f1583a"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-linux-arm64-2026.10.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644458240"
-
-[tools.bitwarden."platforms.linux-arm64-musl"]
-checksum = "sha256:2fe9d8a18dc4c35ea2f9e3e42a4021f14f129ef47e80b6cea1e3b34176f1583a"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-linux-arm64-2026.10.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644458240"
-
 [tools.bitwarden."platforms.linux-x64"]
 checksum = "sha256:269b67559caab860d1737f7554b32bdb8be9285d5689fee55193c137a0df9973"
 url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-linux-2026.10.0.zip"
 url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644458067"
-
-[tools.bitwarden."platforms.linux-x64-musl"]
-checksum = "sha256:269b67559caab860d1737f7554b32bdb8be9285d5689fee55193c137a0df9973"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-linux-2026.10.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644458067"
-
-[tools.bitwarden."platforms.macos-arm64"]
-checksum = "sha256:062c880508678b8d936ab2522a3a1e92d60f52b5c534e71406e9b47329e95207"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-macos-arm64-2026.10.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644457665"
-
-[tools.bitwarden."platforms.macos-x64"]
-checksum = "sha256:39602a597ca63127c22ee3844546f3fe06079e4f67be7b9a7ea4e30ede8721d0"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-macos-2026.10.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644457548"
-
-[tools.bitwarden."platforms.windows-x64"]
-checksum = "sha256:7b4528962fa1dccc6fdb9ddbec57981004bb6146dedbb5c4c2637756376818e7"
-url = "https://github.com/bitwarden/clients/releases/download/cli-v2026.10.0/bw-windows-2026.10.0.zip"
-url_api = "https://api.github.com/repos/bitwarden/clients/releases/assets/644457178"
 
 [[tools."github:asciimoo/hister"]]
 version = "0.20.0"
 backend = "github:asciimoo/hister"
 specifiers = ["latest"]
 
-[tools."github:asciimoo/hister"."platforms.linux-arm64"]
-checksum = "sha256:606a8f3e4364b37b3861581a111d8acda58f38357afad0ae0ceba67978a8899a"
-url = "https://github.com/asciimoo/hister/releases/download/v0.20.0/hister_0.20.0_linux_arm64"
-url_api = "https://api.github.com/repos/asciimoo/hister/releases/assets/585632627"
-
-[tools."github:asciimoo/hister"."platforms.linux-arm64-musl"]
-checksum = "sha256:606a8f3e4364b37b3861581a111d8acda58f38357afad0ae0ceba67978a8899a"
-url = "https://github.com/asciimoo/hister/releases/download/v0.20.0/hister_0.20.0_linux_arm64"
-url_api = "https://api.github.com/repos/asciimoo/hister/releases/assets/585632627"
-
 [tools."github:asciimoo/hister"."platforms.linux-x64"]
 checksum = "sha256:28c453cd3fe383dac936f91450c0bd6d3be4944079670aa607f38e01215844fe"
 url = "https://github.com/asciimoo/hister/releases/download/v0.20.0/hister_0.20.0_linux_amd64"
 url_api = "https://api.github.com/repos/asciimoo/hister/releases/assets/585632385"
-
-[tools."github:asciimoo/hister"."platforms.linux-x64-musl"]
-checksum = "sha256:28c453cd3fe383dac936f91450c0bd6d3be4944079670aa607f38e01215844fe"
-url = "https://github.com/asciimoo/hister/releases/download/v0.20.0/hister_0.20.0_linux_amd64"
-url_api = "https://api.github.com/repos/asciimoo/hister/releases/assets/585632385"
-
-[tools."github:asciimoo/hister"."platforms.macos-arm64"]
-checksum = "sha256:d13442f086dbc23c316cb19f1b42abb09e7dba4b38e0d7aeb6a2e42131f0a43c"
-url = "https://github.com/asciimoo/hister/releases/download/v0.20.0/hister_0.20.0_darwin_arm64"
-url_api = "https://api.github.com/repos/asciimoo/hister/releases/assets/585632384"
-
-[tools."github:asciimoo/hister"."platforms.macos-x64"]
-checksum = "sha256:ccc2edd2f1c244f1ac520e3a5b883da0c4b2d46ce14784980d2dc67e453e3cd3"
-url = "https://github.com/asciimoo/hister/releases/download/v0.20.0/hister_0.20.0_darwin_amd64"
-url_api = "https://api.github.com/repos/asciimoo/hister/releases/assets/585632383"
-
-[tools."github:asciimoo/hister"."platforms.windows-x64"]
-checksum = "sha256:be3388b2b628fb946aa4d656f29fd4917bf6f146d542d0e90168ace456d89098"
-url = "https://github.com/asciimoo/hister/releases/download/v0.20.0/hister_0.20.0_windows_amd64.exe"
-url_api = "https://api.github.com/repos/asciimoo/hister/releases/assets/585632387"
 
 [[tools."github:johnsideserf/siggy"]]
 version = "1.15.0"
@@ -92,149 +32,33 @@ checksum = "sha256:586d35c7bdb4e71bea54927dc5a7e05a7793093c474bdc9036e86b0b9413f
 url = "https://github.com/johnsideserf/siggy/releases/download/v1.15.0/siggy-v1.15.0-x86_64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/johnsideserf/siggy/releases/assets/541770181"
 
-[tools."github:johnsideserf/siggy"."platforms.linux-x64-musl"]
-checksum = "sha256:586d35c7bdb4e71bea54927dc5a7e05a7793093c474bdc9036e86b0b9413fc7e"
-url = "https://github.com/johnsideserf/siggy/releases/download/v1.15.0/siggy-v1.15.0-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/johnsideserf/siggy/releases/assets/541770181"
-
-[tools."github:johnsideserf/siggy"."platforms.macos-arm64"]
-checksum = "sha256:1fa29e7c93f27d7cb8e30842d16fb32066a5dcc89179a54de18244c90df5073c"
-url = "https://github.com/johnsideserf/siggy/releases/download/v1.15.0/siggy-v1.15.0-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/johnsideserf/siggy/releases/assets/541770184"
-
-[tools."github:johnsideserf/siggy"."platforms.macos-x64"]
-checksum = "sha256:ad29f09681f32a80dca034a0c9b41ce4ba956df76c6dbc913858b6f351f49e7c"
-url = "https://github.com/johnsideserf/siggy/releases/download/v1.15.0/siggy-v1.15.0-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/johnsideserf/siggy/releases/assets/541770182"
-
-[tools."github:johnsideserf/siggy"."platforms.windows-x64"]
-checksum = "sha256:16b15e2b92049a30f27dc9d151e7a91477100be877b74998feafce2949821ad5"
-url = "https://github.com/johnsideserf/siggy/releases/download/v1.15.0/siggy-v1.15.0-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/johnsideserf/siggy/releases/assets/541770183"
-
 [[tools."github:pasadoorian/fettle"]]
 version = "1.21.0"
 backend = "github:pasadoorian/fettle"
 specifiers = ["latest"]
-
-[tools."github:pasadoorian/fettle"."platforms.linux-arm64"]
-checksum = "sha256:9914138f05326a20055b0da54077ec14bb80c18602a22d4e268478c2381ddaf3"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle.pyz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086348"
-
-[tools."github:pasadoorian/fettle"."platforms.linux-arm64-musl"]
-checksum = "sha256:9914138f05326a20055b0da54077ec14bb80c18602a22d4e268478c2381ddaf3"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle.pyz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086348"
 
 [tools."github:pasadoorian/fettle"."platforms.linux-x64"]
 checksum = "sha256:d7c3f943aa56a8b7c4a5489e788e6f3b30922b2ec4157d71e6138b52de9aae7e"
 url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle-1.21.0-linux-x86_64.tar.gz"
 url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086104"
 
-[tools."github:pasadoorian/fettle"."platforms.linux-x64-musl"]
-checksum = "sha256:d7c3f943aa56a8b7c4a5489e788e6f3b30922b2ec4157d71e6138b52de9aae7e"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle-1.21.0-linux-x86_64.tar.gz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086104"
-
-[tools."github:pasadoorian/fettle"."platforms.macos-arm64"]
-checksum = "sha256:9914138f05326a20055b0da54077ec14bb80c18602a22d4e268478c2381ddaf3"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle.pyz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086348"
-
-[tools."github:pasadoorian/fettle"."platforms.macos-x64"]
-checksum = "sha256:9914138f05326a20055b0da54077ec14bb80c18602a22d4e268478c2381ddaf3"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle.pyz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086348"
-
-[tools."github:pasadoorian/fettle"."platforms.windows-x64"]
-checksum = "sha256:9914138f05326a20055b0da54077ec14bb80c18602a22d4e268478c2381ddaf3"
-url = "https://github.com/pasadoorian/fettle/releases/download/v1.21.0/fettle.pyz"
-url_api = "https://api.github.com/repos/pasadoorian/fettle/releases/assets/606086348"
-
 [[tools."github:pcrockett/blarg"]]
 version = "0.7.0"
 backend = "github:pcrockett/blarg"
 specifiers = ["latest"]
-
-[tools."github:pcrockett/blarg"."platforms.linux-arm64"]
-checksum = "sha256:e2cfbd99a129d76513e4f78cc5bf7c694cd81eecc15840cffc6cc2f49a563a23"
-url = "https://github.com/pcrockett/blarg/releases/download/v0.7.0/blarg"
-url_api = "https://api.github.com/repos/pcrockett/blarg/releases/assets/574896548"
-
-[tools."github:pcrockett/blarg"."platforms.linux-arm64-musl"]
-checksum = "sha256:e2cfbd99a129d76513e4f78cc5bf7c694cd81eecc15840cffc6cc2f49a563a23"
-url = "https://github.com/pcrockett/blarg/releases/download/v0.7.0/blarg"
-url_api = "https://api.github.com/repos/pcrockett/blarg/releases/assets/574896548"
 
 [tools."github:pcrockett/blarg"."platforms.linux-x64"]
 checksum = "sha256:e2cfbd99a129d76513e4f78cc5bf7c694cd81eecc15840cffc6cc2f49a563a23"
 url = "https://github.com/pcrockett/blarg/releases/download/v0.7.0/blarg"
 url_api = "https://api.github.com/repos/pcrockett/blarg/releases/assets/574896548"
 
-[tools."github:pcrockett/blarg"."platforms.linux-x64-musl"]
-checksum = "sha256:e2cfbd99a129d76513e4f78cc5bf7c694cd81eecc15840cffc6cc2f49a563a23"
-url = "https://github.com/pcrockett/blarg/releases/download/v0.7.0/blarg"
-url_api = "https://api.github.com/repos/pcrockett/blarg/releases/assets/574896548"
-
-[tools."github:pcrockett/blarg"."platforms.macos-arm64"]
-checksum = "sha256:e2cfbd99a129d76513e4f78cc5bf7c694cd81eecc15840cffc6cc2f49a563a23"
-url = "https://github.com/pcrockett/blarg/releases/download/v0.7.0/blarg"
-url_api = "https://api.github.com/repos/pcrockett/blarg/releases/assets/574896548"
-
-[tools."github:pcrockett/blarg"."platforms.macos-x64"]
-checksum = "sha256:e2cfbd99a129d76513e4f78cc5bf7c694cd81eecc15840cffc6cc2f49a563a23"
-url = "https://github.com/pcrockett/blarg/releases/download/v0.7.0/blarg"
-url_api = "https://api.github.com/repos/pcrockett/blarg/releases/assets/574896548"
-
-[tools."github:pcrockett/blarg"."platforms.windows-x64"]
-checksum = "sha256:e2cfbd99a129d76513e4f78cc5bf7c694cd81eecc15840cffc6cc2f49a563a23"
-url = "https://github.com/pcrockett/blarg/releases/download/v0.7.0/blarg"
-url_api = "https://api.github.com/repos/pcrockett/blarg/releases/assets/574896548"
-
 [[tools.ruff]]
-version = "0.17.1"
+version = "0.17.2"
 backend = "aqua:astral-sh/ruff"
 specifiers = ["latest"]
 
-[tools.ruff."platforms.linux-arm64"]
-checksum = "sha256:d3ead1f0ed779e777a034ccd9286be6bd9bd3cdaba732ff9797f8288a283e9e2"
-url = "https://github.com/astral-sh/ruff/releases/download/0.17.1/ruff-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/644283344"
-provenance = "github-attestations"
-
-[tools.ruff."platforms.linux-arm64-musl"]
-checksum = "sha256:255404ccf2f7950ff6aad8858321a6f416fe2a840ae4e37dfb4c21cb8774f325"
-url = "https://github.com/astral-sh/ruff/releases/download/0.17.1/ruff-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/644283356"
-provenance = "github-attestations"
-
 [tools.ruff."platforms.linux-x64"]
-checksum = "sha256:a293ac937715ae6fb6b64da86761598379e6149f40fbc00fde9ba8a2a562ac65"
-url = "https://github.com/astral-sh/ruff/releases/download/0.17.1/ruff-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/644283613"
-provenance = "github-attestations"
-
-[tools.ruff."platforms.linux-x64-musl"]
-checksum = "sha256:2d9878b5e6a3d0dedadbfc01a64bfe54e72f560adbfd235937cd29e1fc9238e3"
-url = "https://github.com/astral-sh/ruff/releases/download/0.17.1/ruff-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/644283622"
-provenance = "github-attestations"
-
-[tools.ruff."platforms.macos-arm64"]
-checksum = "sha256:1c8e6e36538eaa0b996378a20c226403c4ca6369ac24884751b024d3a9530b86"
-url = "https://github.com/astral-sh/ruff/releases/download/0.17.1/ruff-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/644283324"
-provenance = "github-attestations"
-
-[tools.ruff."platforms.macos-x64"]
-checksum = "sha256:88ee16f88dba9d440e06375f46898ec85baf578042ad086764d5a33558bb6e17"
-url = "https://github.com/astral-sh/ruff/releases/download/0.17.1/ruff-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/644283566"
-provenance = "github-attestations"
-
-[tools.ruff."platforms.windows-x64"]
-checksum = "sha256:a841fb7e59680508b9394bfea32e369b3907cc6620a491c65d8d1f479498db82"
-url = "https://github.com/astral-sh/ruff/releases/download/0.17.1/ruff-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/644283579"
+checksum = "sha256:7b2e6a6e132ecf7b5fe726163b186d5d209befe93bb25f83767b2d97fbdf14e5"
+url = "https://github.com/astral-sh/ruff/releases/download/0.17.2/ruff-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/ruff/releases/assets/666735382"
 provenance = "github-attestations"
