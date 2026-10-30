@@ -8,6 +8,7 @@ shellcheck = "latest"
 shfmt = "latest"
 yamlfmt = "latest"
 yamllint = "latest"
+uv = "latest"
 
 [settings]
 lockfile_platforms = ["linux-x64"]
