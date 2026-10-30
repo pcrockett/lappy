@@ -8,12 +8,8 @@ pull:
 	git -C .blarg/modules/pcrockett/main pull
 .PHONY: pull
 
-ci: ci-image
-	docker run --rm "$(CI_IMAGE)" make lint
-.PHONY: ci
-
 lint:
-	@./bin/lint.sh
+	@pre-commit run --all --show-diff-on-failure --color=always
 .PHONY: lint
 
 update-blarg:

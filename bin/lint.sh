@@ -52,7 +52,6 @@ rule:no_core_main() {
 main() {
   rule:no_raw_sudo || report_lint "don't use raw \`sudo\` -- use \`as_root\` instead."
   rule:no_core_main || report_lint "don't depend on core/main."
-  pre-commit run --all --show-diff-on-failure --color=always || report_lint "pre-commit failed"
 
   if [ "${EXIT_STATUS}" -eq 0 ]; then
     echo "no lint found"

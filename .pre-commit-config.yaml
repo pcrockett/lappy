@@ -51,15 +51,14 @@ repos:
         language: system
         types:
           - yaml
-      - id: hadolint
-        name: lint dockerfiles
-        entry: hadolint
-        language: system
-        types:
-          - dockerfile
       - id: tagref
         name: check tags and refs
         entry: tagref
         args: [check]
+        language: system
+        pass_filenames: false
+      - id: lint-script
+        name: custom lint rules
+        entry: ./bin/lint.sh
         language: system
         pass_filenames: false
