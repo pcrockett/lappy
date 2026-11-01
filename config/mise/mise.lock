@@ -22,6 +22,16 @@ checksum = "sha256:28c453cd3fe383dac936f91450c0bd6d3be4944079670aa607f38e0121584
 url = "https://github.com/asciimoo/hister/releases/download/v0.20.0/hister_0.20.0_linux_amd64"
 url_api = "https://api.github.com/repos/asciimoo/hister/releases/assets/585632385"
 
+[[tools."github:dimo414/bkt"]]
+version = "0.8.2"
+backend = "github:dimo414/bkt"
+specifiers = ["latest"]
+
+[tools."github:dimo414/bkt"."platforms.linux-x64"]
+checksum = "sha256:b43af0d07c612614ed51657ba7789c9bd2af306e9ad56760eac7fb15535578a6"
+url = "https://github.com/dimo414/bkt/releases/download/0.8.2/bkt.v0.8.2.x86_64-unknown-linux-gnu.zip"
+url_api = "https://api.github.com/repos/dimo414/bkt/releases/assets/202942626"
+
 [[tools."github:johnsideserf/siggy"]]
 version = "1.15.0"
 backend = "github:johnsideserf/siggy"
