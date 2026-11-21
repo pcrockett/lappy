@@ -9,8 +9,10 @@ This is developed and tested on a Lenovo Thinkpad X200.
 This repo configures a Linux system after a fresh install of Arch (btw).
 
 Before installing Arch, clone this repository to a flash drive (separate from the drive
-with the ISO install media). When [running the Arch installer](https://wiki.archlinux.org/title/Archinstall#Running_the_installer),
-you can give it the [config file that comes with this repository](config/archinstall/user_configuration.json).
+with the ISO install media). When
+[running the Arch installer](https://wiki.archlinux.org/title/Archinstall#Running_the_installer),
+you can give it the
+[config file that comes with this repository](config/archinstall/user_configuration.json).
 
 This config file installs the Desktop / [Qtile](https://qtile.org/) profile. For network
 management it uses `systemd-networkd` and `systemd-resolved`.
@@ -29,13 +31,13 @@ you like.
 ## How this works
 
 I'm using my own target-based Bash configuration management tool
-[blarg](https://github.com/pcrockett/blarg) to automate everything.
-All targets are in the `targets` directory, with the entrypoint being
+[blarg](https://github.com/pcrockett/blarg) to automate everything. All targets are in
+the `targets` directory, with the entrypoint being
 [`targets/main.bash`](./targets/main.bash). The `blarg` tool itself is
 [included in this repository](./bin/blarg) so there's no need to install anything
 beforehand.
 
-Targets are organized in a dependency tree, making sure the right steps are taken in
-the right order, and they are never re-run unless absolutely necessary. This means you
-can execute all these targets however often you want, and only the necessary ones will
+Targets are organized in a dependency tree, making sure the right steps are taken in the
+right order, and they are never re-run unless absolutely necessary. This means you can
+execute all these targets however often you want, and only the necessary ones will
 actually be applied.

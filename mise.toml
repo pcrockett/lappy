@@ -1,6 +1,7 @@
 [tools]
 "github:stepchowfun/tagref" = "latest"
 actionlint = "latest"
+dprint = "latest"
 hadolint = "latest"
 just = "latest"
 pre-commit = "latest"

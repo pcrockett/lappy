@@ -51,6 +51,12 @@ repos:
         language: system
         types:
           - yaml
+      - id: dprint
+        name: autoformat markdown files
+        entry: dprint fmt
+        language: system
+        types:
+          - markdown
       - id: tagref
         name: check tags and refs
         entry: tagref
