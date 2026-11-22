@@ -8,9 +8,10 @@ default_from = "debian:trixie-slim"
 
 [tools]
 "github:asciimoo/hister" = "latest"
+"github:dimo414/bkt" = "latest"
 "github:johnsideserf/siggy" = "latest"
 "github:pasadoorian/fettle" = "latest"
 "github:pcrockett/blarg" = "latest"
 bitwarden = "latest"
+dprint = "latest"
 ruff = "latest"
-"github:dimo414/bkt" = "latest"

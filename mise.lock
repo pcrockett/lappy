@@ -25,14 +25,15 @@ url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/667629165"
 provenance = "github-attestations"
 
 [[tools."github:stepchowfun/tagref"]]
-version = "1.13.0"
+version = "1.14.0"
 backend = "github:stepchowfun/tagref"
 specifiers = ["latest"]
 
 [tools."github:stepchowfun/tagref"."platforms.linux-x64"]
-checksum = "sha256:917cb9ea80ee51ca686b876c536a4ec45ad02f08f5379e32cb22bf29632d3155"
-url = "https://github.com/stepchowfun/tagref/releases/download/v1.13.0/tagref-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/stepchowfun/tagref/releases/assets/451691890"
+checksum = "sha256:2e325a785f07b99df90a848221ac40229b4444155c0418cebb2da7b1019971f2"
+checksum_source = "mise-versions"
+url = "https://github.com/stepchowfun/tagref/releases/download/v1.14.0/tagref-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/stepchowfun/tagref/releases/assets/581362834"
 
 [[tools.hadolint]]
 version = "2.15.1"
@@ -46,24 +47,26 @@ url_api = "https://api.github.com/repos/hadolint/hadolint/releases/assets/496546
 provenance = "github-attestations"
 
 [[tools.just]]
-version = "1.58.0"
+version = "1.59.0"
 backend = "aqua:casey/just"
 specifiers = ["latest"]
 
 [tools.just."platforms.linux-x64"]
-checksum = "sha256:4a5cc2f53e6f0f8c59092a6cc38291eb729d46a7dd95d3ae582008881b84931d"
-url = "https://github.com/casey/just/releases/download/1.58.0/just-1.58.0-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/casey/just/releases/assets/500509978"
+checksum = "sha256:409044617b6f06517c1035e55ca38c8c856ff8b650e41bc2aa1ef82d5903a23e"
+checksum_source = "mise-versions"
+url = "https://github.com/casey/just/releases/download/1.59.0/just-1.59.0-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/casey/just/releases/assets/642949555"
 
 [[tools.pre-commit]]
-version = "4.6.1"
+version = "4.7.0"
 backend = "aqua:pre-commit/pre-commit"
 specifiers = ["latest"]
 
 [tools.pre-commit."platforms.linux-x64"]
-checksum = "sha256:6768cc8f4f810509b9272211c70ef7bb405c52da2ba81b673b2c361a72f1815d"
-url = "https://github.com/pre-commit/pre-commit/releases/download/v4.6.1/pre-commit-4.6.1.pyz"
-url_api = "https://api.github.com/repos/pre-commit/pre-commit/releases/assets/485150759"
+checksum = "sha256:393488513aed286d7a5a978a1fe79b2f5a8802927242a2d241ff10c1a8e8c885"
+checksum_source = "mise-versions"
+url = "https://github.com/pre-commit/pre-commit/releases/download/v4.7.0/pre-commit-4.7.0.pyz"
+url_api = "https://api.github.com/repos/pre-commit/pre-commit/releases/assets/637459099"
 
 [[tools.shellcheck]]
 version = "0.11.0"
@@ -76,24 +79,25 @@ url = "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellche
 url_api = "https://api.github.com/repos/koalaman/shellcheck/releases/assets/279056942"
 
 [[tools.shfmt]]
-version = "3.13.1"
+version = "3.14.1"
 backend = "aqua:mvdan/sh"
 specifiers = ["latest"]
 
 [tools.shfmt."platforms.linux-x64"]
-checksum = "sha256:fb096c5d1ac6beabbdbaa2874d025badb03ee07929f0c9ff67563ce8c75398b1"
-url = "https://github.com/mvdan/sh/releases/download/v3.13.1/shfmt_v3.13.1_linux_amd64"
-url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/390322866"
+checksum = "sha256:76e77641faa025814b77f153b29796b8e6fa2fca03e0c76a691608b86c7ea7bf"
+checksum_source = "mise-versions"
+url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_linux_amd64"
+url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320883"
 
 [[tools.uv]]
-version = "0.13.5"
+version = "0.13.8"
 backend = "aqua:astral-sh/uv"
 specifiers = ["latest"]
 
 [tools.uv."platforms.linux-x64"]
-checksum = "sha256:f68d291c75783122dad58ab77def0e13f3233f358731db5d6d7e8715603b928f"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.5/uv-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/664336023"
+checksum = "sha256:5acfd9177cfecf0bf87578f059728215ccc884388988f55f7a65041b57387d91"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313966"
 provenance = "github-attestations"
 
 [[tools.yamlfmt]]
